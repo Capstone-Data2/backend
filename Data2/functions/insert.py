@@ -8,19 +8,19 @@ client = MongoClient(os.getenv('DATABASE_URL'))
 db = client.dota2
 
 def findRank(rank):
-    if rank > 10 and rank < 20:
+    if rank >= 10 and rank < 20:
         coll = "heraldmatches"
-    if rank > 20 and rank < 30:
+    if rank >= 20 and rank < 30:
         coll = "guardianmatches"
-    if rank > 30 and rank < 40:
+    if rank >= 30 and rank < 40:
         coll = "crusadermatches"
-    if rank > 40 and rank < 50:
+    if rank >= 40 and rank < 50:
         coll = "archonmatches"
-    if rank > 50 and rank < 60:
+    if rank >= 50 and rank < 60:
         coll = "legendmatches"
-    if rank > 60 and rank < 70:
+    if rank >= 60 and rank < 70:
         coll = "ancientmatches"
-    if rank > 70 and rank < 80:
+    if rank >= 70 and rank < 80:
         coll = "divinematches"
     if rank == 80:
         coll = "immortalmatches"

@@ -11,6 +11,8 @@ db = client.dota2
 
 def get_data_set():
     response = requests.get(f'https://api.opendota.com/api/publicMatches').json()
+    max_match = response[len(response)-1]
+    response = requests.get(f'https://api.opendota.com/api/publicMatches?less_than_match_id={max_match["match_id"]}').json()
     sanitize(response)
 
 get_data_set()

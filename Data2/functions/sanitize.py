@@ -13,21 +13,21 @@ db = client.dota2
 def sanitizeMatches(response):
     all_matches = []
     for data in response:
-        if data['lobby_type'] in lobby_types:
-            if data['duration'] > 900:
-                matchdata = {
-                    "match_id": data['match_id'],
-                    "radiant_win": data['radiant_win'],
-                    "start_time": data["start_time"],
-                    "duration": data['duration'],
-                    "lobby_type": data['lobby_type'],
-                    "game_mode": data['game_mode'],
-                    "avg_rank_tier": data['avg_rank_tier'],
-                    "radiant_team": data['radiant_team'],
-                    "dire_team": data['dire_team'],
-                }
-                all_matches.append(matchdata)
-        continue
+        if db.allmatches.count_documents({'match_id': data['match_id']}) == 0:
+            if data['lobby_type'] in lobby_types:
+                if data['duration'] > 900:
+                    matchdata = {
+                        "match_id": data['match_id'],
+                        "radiant_win": data['radiant_win'],
+                        "start_time": data["start_time"],
+                        "duration": data['duration'],
+                        "lobby_type": data['lobby_type'],
+                        "game_mode": data['game_mode'],
+                        "avg_rank_tier": data['avg_rank_tier'],
+                        "radiant_team": data['radiant_team'],
+                        "dire_team": data['dire_team'],
+                    }
+                    all_matches.append(matchdata)
     return all_matches
 
 def sanitizeMatch(response, avg_rank):
@@ -140,21 +140,95 @@ def sanitizePlayer(player):
     }
     return playerdata
 
+def parse(response, match_id):
+    if "replay_url" not in response.keys() or response["radiant_gold_adv"] == None:
+        print("------------------------")
+        print("REQUEST: ", match_id)
+
+        #limit calls to max 60 a minute
+        time.sleep(1.5) 
+        x = requests.post(f'https://api.opendota.com/api/request/{match_id}').json()
+        print("JOB: ", x["job"]["jobId"])
+
+        #wait for match to be parsed by API
+        parsed = False
+        count = 0
+        while not parsed:
+            #if parse takes more than 45 seconds, skip and check later
+            if count > 2:
+                print("Unparsed -- too long")
+                return [False, "failed"]
+            time.sleep(15)
+            y = requests.get(f'https://api.opendota.com/api/request/{x["job"]["jobId"]}').json()
+            
+            print(y)
+            if y is None:
+                time.sleep(1)
+                response = requests.get(f'https://api.opendota.com/api/matches/{match_id}').json()
+                if response["radiant_gold_adv"] == None:
+                    print("Unparsed -- didn't work")
+                    return [False, "failed"]
+                print("Parsed")
+                print("------------------------")
+                return [True, response]
+            count += 1
+    else:
+        return [True, response]
+
 def sanitize(res):
     alldata = sanitizeMatches(res)
+    #get oldest matches first, helps with parsing
+    alldata.reverse()
+    unparsed = []
+    count = 0
     for match in alldata:
-        if db.allmatches.count_documents({'match_id': match['match_id']}) == 0:
-            insertMatch(match, "allmatches")
-            query = match['match_id']
-            print(query)
-            response = requests.get(f'https://api.opendota.com/api/matches/{query}').json()
-            if "replay_url" not in response.keys() or "radiant_gold_adv" not in response.keys():
-                time.sleep(1.5)
-                requests.post(f'https://api.opendota.com/api/request/{query}')
-                time.sleep(3)
-                response = requests.get(f'https://api.opendota.com/api/matches/{query}').json()
-            data = sanitizeMatch(response, match['avg_rank_tier'])
+        insertMatch(match, "allmatches")
+        match_id = match['match_id']
+        response = requests.get(f'https://api.opendota.com/api/matches/{match_id}').json()
+
+        #check if match data is parsed or not
+        parsed_res = parse(response, match_id)
+
+        #get parsed match data if parsed successfully
+        if parsed_res[0]:
+            data = sanitizeMatch(parsed_res[1], match['avg_rank_tier'])
             if data != False:
-                insertData(data, query, match['avg_rank_tier'])
-            time.sleep(1.5)
-        
+                insertData(data, match_id, match['avg_rank_tier'])
+                count += 1
+        else:
+            unparsed.append(match_id)
+        print(count, "out of", len(alldata), "matches parsed.")
+        print(len(unparsed), "matches unable to parse.")
+        time.sleep(1.5)
+
+    #check if unparsed matches have been / can be parsed now
+    print("------------------------")
+    print("------------------------")
+    print("Unparsed Matches")
+    print("vvvvvvvvvvvvvvvvvvvvvvvv")
+    allparsed = False
+    unparsed_len = len(unparsed)
+    if unparsed_len < 0:
+        allparsed = True
+
+    count = 0
+
+    while not allparsed:
+        for unparsed_id in unparsed:
+            response = requests.get(f'https://api.opendota.com/api/matches/{unparsed_id}').json()
+            parsed_res = parse(response, unparsed_id)
+            
+            if parsed_res[0]:
+                data = sanitizeMatch(parsed_res[1], match['avg_rank_tier'])
+                if data != False:
+                    insertData(data, match_id, match['avg_rank_tier'])
+                    unparsed.remove(unparsed_id)
+                    count += 1
+            else:
+                print("Failed parse, staying in list")
+                
+            print(count, "out of", unparsed_len, "unparsed matches parsed.")
+            print(len(unparsed), "matches unable to parse.")
+        if len(unparsed) == 0:
+            allparsed = True
+
