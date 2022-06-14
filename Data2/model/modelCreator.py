@@ -15,7 +15,7 @@ def posModel(rank, position):
     collection = rankCollection.find({'ml_lane_role': position, }, {'_id':0})
     df = pd.DataFrame(list(collection))
     y = df['win']
-    x = df[posfeatures()].values
+    x = df[posfeatures(position)].values
     #Creation of model
     logreg = LogisticRegression(random_state=0, max_iter=1000).fit(x, y)
     #Saving the model
