@@ -1,3 +1,4 @@
+from operator import contains
 from pymongo import MongoClient
 import requests
 import time
@@ -167,6 +168,7 @@ def parse(response, match_id):
                 response = requests.get(f'https://api.opendota.com/api/matches/{match_id}').json()
                 if response["radiant_gold_adv"] == None:
                     print("Unparsed -- didn't work")
+                    print("------------------------")
                     return [False, "failed"]
                 print("Parsed")
                 print("------------------------")
@@ -175,30 +177,32 @@ def parse(response, match_id):
     else:
         return [True, response]
 
-def sanitize(res):
+def sanitize(res, filter):
     alldata = sanitizeMatches(res)
     #get oldest matches first, helps with parsing
     alldata.reverse()
     unparsed = []
     count = 0
     for match in alldata:
-        insertMatch(match, "allmatches")
-        match_id = match['match_id']
-        response = requests.get(f'https://api.opendota.com/api/matches/{match_id}').json()
+        rank = match['avg_rank_tier'] // 10
+        if rank in filter or len(filter) == 0:
+            insertMatch(match, "allmatches")
+            match_id = match['match_id']
+            response = requests.get(f'https://api.opendota.com/api/matches/{match_id}').json()
 
-        #check if match data is parsed or not
-        parsed_res = parse(response, match_id)
-
-        #get parsed match data if parsed successfully
-        if parsed_res[0]:
-            data = sanitizeMatch(parsed_res[1], match['avg_rank_tier'])
-            if data != False:
-                insertData(data, match_id, match['avg_rank_tier'])
-                count += 1
-        else:
-            unparsed.append(match_id)
-        print(count, "out of", len(alldata), "matches parsed.")
-        print(len(unparsed), "matches unable to parse.")
+            #check if match data is parsed or not
+            parsed_res = parse(response, match_id)
+            
+            #get parsed match data if parsed successfully
+            if parsed_res[0]:
+                data = sanitizeMatch(parsed_res[1], match['avg_rank_tier'])
+                if data != False:
+                    insertData(data, match_id, match['avg_rank_tier'])
+                    count += 1
+            else:
+                unparsed.append(match_id)
+            print(count, "out of", len(alldata), "matches parsed.")
+            print(len(unparsed), "matches unable to parse.")
         time.sleep(1.5)
 
     #check if unparsed matches have been / can be parsed now
@@ -206,29 +210,22 @@ def sanitize(res):
     print("------------------------")
     print("Unparsed Matches")
     print("vvvvvvvvvvvvvvvvvvvvvvvv")
-    allparsed = False
-    unparsed_len = len(unparsed)
-    if unparsed_len < 0:
-        allparsed = True
 
+    unparsed_len = len(unparsed)
     count = 0
 
-    while not allparsed:
-        for unparsed_id in unparsed:
-            response = requests.get(f'https://api.opendota.com/api/matches/{unparsed_id}').json()
-            parsed_res = parse(response, unparsed_id)
-            
-            if parsed_res[0]:
-                data = sanitizeMatch(parsed_res[1], match['avg_rank_tier'])
-                if data != False:
-                    insertData(data, match_id, match['avg_rank_tier'])
-                    unparsed.remove(unparsed_id)
-                    count += 1
-            else:
-                print("Failed parse, staying in list")
-                
-            print(count, "out of", unparsed_len, "unparsed matches parsed.")
-            print(len(unparsed), "matches unable to parse.")
-        if len(unparsed) == 0:
-            allparsed = True
+    for unparsed_id in unparsed:
+        response = requests.get(f'https://api.opendota.com/api/matches/{unparsed_id}').json()
+        parsed_res = parse(response, unparsed_id)
+        
+        if parsed_res[0]:
+            data = sanitizeMatch(parsed_res[1], match['avg_rank_tier'])
+            if data != False:
+                insertData(data, match_id, match['avg_rank_tier'])
+                count += 1
+        else:
+            print("Failed parse, removing from DB")
+            db.allmatches.delete_one({'match_id': unparsed_id})
+
+        print(count, "out of", unparsed_len, "unparsed matches parsed.")
 
