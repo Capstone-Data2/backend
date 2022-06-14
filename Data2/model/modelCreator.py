@@ -19,7 +19,7 @@ def posModel(rank, position):
     #Creation of model
     logreg = LogisticRegression(random_state=0, max_iter=1000).fit(x, y)
     #Saving the model
-    modelfile = 'model/models/{rank}_pos{position}_win.sav'
+    modelfile = 'models/{rank}_pos{position}_win.sav'
     joblib.dump(logreg, modelfile)
 
 
