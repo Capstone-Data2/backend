@@ -24,7 +24,7 @@ def posModel(rank, position):
     modelfile = f'models/{rank}/pos{position}_win.sav'
     joblib.dump(logreg, modelfile)
 
-def coreModels(rank):
+def coreModel(rank):
     rankCollection= db[rank + matchPlayers]
     collection = rankCollection.find({}, {'last_hits': 1, 'obs_placed': 1, 'gpm': 1, '_id': 0})
     df = pd.DataFrame(list(collection))
@@ -47,4 +47,4 @@ def coreModels(rank):
 
 #Example line to generate a model
 #posModel('crusader', 1)
-coreModels('legend')
+#coreModel('legend')

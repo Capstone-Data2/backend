@@ -1,4 +1,3 @@
-from operator import contains
 from pymongo import MongoClient
 import requests
 import time
