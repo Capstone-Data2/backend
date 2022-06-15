@@ -1,14 +1,9 @@
-from pymongo import MongoClient
 import requests
-import os
-import time
-from dotenv import load_dotenv
 from sanitize import sanitize
+from utils import get_db_handle
 
-load_dotenv()
-client = MongoClient(os.getenv('DATABASE_URL'))
+db, client = get_db_handle()
 lobby_types = [5, 6, 7]
-db = client.dota2
 
 def get_data_set(filter):
     response = requests.get(f'https://api.opendota.com/api/publicMatches').json()

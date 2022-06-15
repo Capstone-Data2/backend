@@ -1,11 +1,7 @@
-from pymongo import MongoClient
-import os
 from player import findRole
-from dotenv import load_dotenv
+from utils import get_db_handle
 
-load_dotenv()
-client = MongoClient(os.getenv('DATABASE_URL'))
-db = client.dota2
+db, client = get_db_handle()
 matchPlayers =  'matches_players'
 
 def updateMLLaneRole():
