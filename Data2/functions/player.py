@@ -45,9 +45,8 @@ def findRole(player, medal):
     df = pd.DataFrame(X)
     scaledX = loaded_scaler.transform(df)
     role = findCore(scaledX, player['lane_role'], loaded_model)
-    player['ml_lane_role'] = role
-    print(player['ml_lane_role'])
+    return role
 
 
 #testing legend role model
-#findRole({"last_hits": 500, "obs_placed":5, "gpm": 300, "lane_role": 2}, 52)
+#print(findRole({"last_hits": 500, "obs_placed":5, "gpm": 300, "lane_role": 3}, 80))
