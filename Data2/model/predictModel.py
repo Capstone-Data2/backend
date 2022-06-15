@@ -1,6 +1,6 @@
 import joblib
 
-player = [[8, 2, 11, 600, 500, 1800, 300, 10000]]
+#player = [[8, 2, 11, 600, 500, 1800, 300, 10000]]
 
 
 def predictModel(rank, pos, player):
@@ -9,4 +9,4 @@ def predictModel(rank, pos, player):
     return(y[0][1])
 
 
-print(predictModel('herald', 1, player))
+#print(predictModel('herald', 1, player))

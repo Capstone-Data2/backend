@@ -1,16 +1,15 @@
 import pandas as pd
-from pymongo import MongoClient
 from sklearn.linear_model import LogisticRegression
 from sklearn.cluster import KMeans
 from sklearn import preprocessing
 import joblib
+from utils import get_db_handle
 
 #Getting specific features to look at depending on the rank
 from positionFeatures import posfeatures
 
 matchPlayers =  'matches_players'
-client = MongoClient("mongodb+srv://testadmin:testadmin@dbtest.37wj1.mongodb.net/dbtest?retryWrites=true&w=majority")
-db = client.dota2
+db, client = get_db_handle()
 
 def posModel(rank, position):
     rankCollection= db[rank + matchPlayers]
