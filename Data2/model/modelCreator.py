@@ -18,10 +18,11 @@ def posModel(rank, position):
     df = pd.DataFrame(list(collection))
     y = df['win']
     x = df[posfeatures(position)].values
+    
     #Creation of model
     logreg = LogisticRegression(random_state=0, max_iter=1000).fit(x, y)
     #Saving the model
-    modelfile = f'models/{rank}/pos{position}_win.sav'
+    modelfile = f'backend/data2/model/models/{rank}/pos{position}_win.sav'
     joblib.dump(logreg, modelfile)
 
 def coreModels(rank):
@@ -46,5 +47,5 @@ def coreModels(rank):
 
 
 #Example line to generate a model
-#posModel('crusader', 1)
-coreModels('legend')
+#posModel('archon', 1)
+#coreModels('legend')

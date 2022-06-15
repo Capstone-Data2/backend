@@ -1,15 +1,12 @@
 from modelCreator import posModel
 
+ranks = ['herald', 'guardian', 'crusader', 'archon', 'legend', 'ancient', 'divine', 'immortal']
+positions = [1, 2, 3, 4, 5]
+
 
 def createAllModels():
-    for x in range(1, 6):
-        posModel('herald', x)
-        posModel('guardian', x)
-        posModel('crusader', x)
-        posModel('archon', x)
-        posModel('legend', x)
-        posModel('ancient', x)
-        posModel('divine', x)
-        posModel('immortal', x)
+    for rank in ranks:
+        for position in positions:
+            posModel(rank, position)
 
-#createAllModels()
+createAllModels()
