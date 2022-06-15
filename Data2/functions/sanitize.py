@@ -203,7 +203,7 @@ def sanitize(res, filter):
                 unparsed.append(match_id)
             print(count, "out of", len(alldata), "matches parsed.")
             print(len(unparsed), "matches unable to parse.")
-        time.sleep(1.5)
+            time.sleep(1.5)
 
     #check if unparsed matches have been / can be parsed now
     print("------------------------")
