@@ -1,7 +1,7 @@
 import joblib
 import os
-player = [[8, 2, 11, 600, 500, 1800, 300, 10000]]
 
+#player = [[8, 2, 11, 600, 500, 1800, 300, 10000]]
 cwd = os.getcwd()  # Get the current working directory (cwd)
 
 def predictModel(rank, pos, player):

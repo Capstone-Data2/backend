@@ -1,5 +1,5 @@
 import requests
-from sanitize import sanitize
+from functions.sanitize import sanitize
 from utils import get_db_handle
 
 db, client = get_db_handle()
@@ -11,4 +11,3 @@ def get_data_set(filter):
     response = requests.get(f'https://api.opendota.com/api/publicMatches?less_than_match_id={max_match["match_id"]}').json()
     sanitize(response, filter)
 
-get_data_set([])

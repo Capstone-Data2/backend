@@ -1,5 +1,6 @@
 import pandas as pd
 import joblib
+import os
 
 def findRank(rank):
     if rank >= 10 and rank < 20:
@@ -39,8 +40,9 @@ def findCore(scaledX, laneRole, loaded_model):
 
 def findRole(player, medal):
     rank = findRank(medal)
-    loaded_scaler = joblib.load(f"../model/models/{rank}/core_scaler.sav")
-    loaded_model = joblib.load(f"../model/models/{rank}/core_model.sav")
+    cwd = os.getcwd()  # Get the current working directory (cwd)
+    loaded_scaler = joblib.load(f"{cwd}/model/models/{rank}/core_scaler.sav")
+    loaded_model = joblib.load(f"{cwd}/model/models/{rank}/core_model.sav")
     X = [[player['last_hits'], player['obs_placed'], player['gpm']]]
     df = pd.DataFrame(X)
     scaledX = loaded_scaler.transform(df)

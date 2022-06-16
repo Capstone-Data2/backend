@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 import sys
 sys.path.append('../functions/')
-sys.path.append('/model/')
+sys.path.append('../model/')
 from django.urls import path, include
 
 urlpatterns = [
