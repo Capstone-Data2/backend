@@ -1,4 +1,4 @@
-from player import findRank, findRole
+from functions.player import findRank, findRole
 from utils import get_db_handle
 
 db, client = get_db_handle()

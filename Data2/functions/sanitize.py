@@ -1,6 +1,6 @@
 import requests
 import time
-from insert import insertData, insertMatch
+from functions import insert
 from utils import get_db_handle
 
 db, client = get_db_handle()
@@ -183,7 +183,7 @@ def sanitize(res, filter):
     for match in alldata:
         rank = match['avg_rank_tier'] // 10
         if rank in filter or len(filter) == 0:
-            insertMatch(match, "allmatches")
+            insert.insertMatch(match, "allmatches")
             match_id = match['match_id']
             response = requests.get(f'https://api.opendota.com/api/matches/{match_id}').json()
 
@@ -194,7 +194,7 @@ def sanitize(res, filter):
             if parsed_res[0]:
                 data = sanitizeMatch(parsed_res[1], match['avg_rank_tier'])
                 if data != False:
-                    insertData(data, match_id, match['avg_rank_tier'])
+                    insert.insertData(data, match_id, match['avg_rank_tier'])
                     count += 1
             else:
                 unparsed.append(match_id)
@@ -218,7 +218,7 @@ def sanitize(res, filter):
         if parsed_res[0]:
             data = sanitizeMatch(parsed_res[1], match['avg_rank_tier'])
             if data != False:
-                insertData(data, match_id, match['avg_rank_tier'])
+                insert.insertData(data, match_id, match['avg_rank_tier'])
                 count += 1
         else:
             print("Failed parse, removing from DB")

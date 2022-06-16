@@ -1,4 +1,4 @@
-from player import findRole
+from functions.player import findRole
 from utils import get_db_handle
 
 db, client = get_db_handle()
@@ -18,5 +18,3 @@ def updateMLLaneRole():
             count += 1
         else:
             loop = False
-
-updateMLLaneRole()
