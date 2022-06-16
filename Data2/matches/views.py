@@ -11,7 +11,6 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 import requests
-import pandas as pd
 
 db, client = get_db_handle()
 # Create your views here.
