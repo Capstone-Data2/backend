@@ -1,6 +1,8 @@
 import pandas as pd
 import joblib
 import os
+from model.predictModel import predictModel
+from model.positionFeatures import positionFiller
 
 def findRank(rank):
     if rank >= 10 and rank < 20:
@@ -97,3 +99,118 @@ def percentageGoldGained(gold_gained):
   total_avaiable = total_avaiable + 80 + (36 * 2) + 45 #Runes that are avaible for one team before 10 min
   return gold_gained/total_avaiable
 
+
+def rivalResponse(player, rank):
+  player_resp = common(player, rank)
+  if player['ml_lane_role'] >= 1 and player['ml_lane_role'] <= 3:
+    player_resp.update(commonCore(player))
+    if player['ml_lane_role'] == 1:
+      player_resp.update(pos1Rival(player))
+    elif player['ml_lane_role'] == 2:
+      player_resp.update(pos2Rival(player))
+    elif player['ml_lane_role'] == 3:
+      player_resp.update(pos3Rival(player))
+  elif player['ml_lane_role'] >= 4 and player['ml_lane_role'] <= 5:
+    player_resp.update(commonSup(player))
+    if player['ml_lane_role'] == 4:
+      player_resp.update(pos4Rival(player))
+    elif player['ml_lane_role'] == 5:
+      player_resp.update(pos5Rival(player))
+  
+  return player_resp
+        
+
+def common(player, rank):
+  all_items = [
+    player['item_0'],
+    player['item_1'],
+    player['item_2'],
+    player['item_3'],
+    player['item_4'],
+    player['item_5'],
+    player['item_neutral'],
+    player['backpack_0'], player['backpack_1'],
+    player['backpack_2']
+  ]
+  player_resp = {
+    "hero_id": player['hero_id'],
+    "ml_lane_role": player['ml_lane_role'],
+    "items": all_items,
+    "level": player['level'],
+    "net_worth": player['net_worth'],
+    "kills": player['kills'],
+    "assists": player['assists'],
+    "deaths": player['deaths'],
+    "hero_damage": player['hero_damage'],
+    "HDM": perMin(player['hero_damage'], player['duration']),
+    "permanent_buffs": player['permanent_buffs'],
+    "rank_tier": player['rank_tier'],
+    "life_state_dead": player['life_state_dead'],
+    "predicted_win": predictModel(rank, player['ml_lane_role'], [positionFiller(player, player['ml_lane_role'])]),
+    "buybacks": player['buyback_log'],
+    "deaths_per_min": perMin(player['deaths'], player['duration']),
+  }
+  return player_resp
+
+def commonCore(player):
+  resp = {
+    "last_hits": player['last_hits'],
+    "lane_kills": (killsPerMinTen(player['kills_log']))*10,
+    "multi_kills": player['multi_kills'],
+    "xpm": player['xpm'],
+    "gpm": player['gpm'],
+    "kill_streaks": player['kill_streaks'],
+    "lane_performance": percentageGoldGained(player['gold_t'][10]),
+  }
+  return resp
+
+def pos1Rival(player):
+  resp = {
+    "kpm": perMin(player['kills'], player['duration']),
+    "max_hero_hit": player['max_hero_hit'],
+    "lowest_gpm": lowestGPMFiveMin(player['gold_t']),
+    "lhm": perMin(player['last_hits'], player['duration']),
+  }
+  return resp
+
+def pos2Rival(player):
+  resp = {
+    "runes_picked_up": player['runes_log'],
+    "kpm": perMin(player['kills'], player['duration']),
+    "max_hero_hit": player['max_hero_hit'],
+    "lowest_gpm": lowestGPMFiveMin(player['gold_t']),
+    "lhm": perMin(player['last_hits'], player['duration']),
+  }
+  return resp
+
+def pos3Rival(player):
+  resp = {
+    "tower_damage": player['tower_damage'],
+    "tdm": perMin(player['tower_damage'], player['duration']),
+    "damage_taken": player['damage_taken'],
+    "stuns": player['stuns'],
+  }
+  return resp
+
+def pos4Rival(player):
+  resp = {
+    "runes_picked_up": player['runes_log'],
+    "is_roaming": player['is_roaming'],
+  }
+  return resp
+
+def pos5Rival(player):
+  resp = {
+    "obs_placed": player['obs_placed'],
+    "sen_placed": player['sen_placed'],
+    "hero_healing": player['hero_healing'],
+    "hhm": perMin(player['hero_healing'], player['duration']),
+  }
+  return resp
+
+def commonSup(player):
+  resp = {
+    "camps_stacked": player['camps_stacked'],
+    "stuns": player['stuns']
+  }
+  return resp
