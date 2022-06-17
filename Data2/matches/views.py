@@ -1,6 +1,5 @@
-from django.views import View
 from utils import get_db_handle
-from functions.player import findRank, perMin, lowestGPMFiveMin, killParticipation, killsPerMinTen, percentageGoldGained
+from functions.player import findRank, perMin, lowestGPMFiveMin, killParticipation, killsPerMinTen, percentageGoldGained, rivalResponse
 from functions.time import getTimeDiff 
 from functions.data_set import get_data_set
 from functions.sanitize import parse, sanitizeMatch
@@ -12,11 +11,10 @@ from rest_framework.response import Response
 from rest_framework import status
 import requests
 
-db, client = get_db_handle()
 # Create your views here.
 db, client = get_db_handle()
-matchPlayers =  'matches_players'
-matchData =  'matches_data'
+match_players =  'matches_players'
+match_data =  'matches_data'
 
 class RecentMatches(APIView):
   
@@ -40,14 +38,14 @@ class Match(APIView):
   def get(self, request, match_id, *args, **kwargs):
     data = db.allmatches.find_one({"match_id": match_id}, {"_id": 0})
     rank = findRank(data['avg_rank_tier'])
-    match = db[rank + matchData].find_one({"match_id": match_id}, {"_id": 0})
+    match = db[rank + match_data].find_one({"match_id": match_id}, {"_id": 0})
     match = getTimeDiff(match)
 
     players = []
     radiant_win = 0
     dire_win = 0
     for player in match['players']:
-      player_details = db[rank + matchPlayers].find_one({"_id": player['_id']}, {"_id": 0})
+      player_details = db[rank + match_players].find_one({"_id": player['_id']}, {"_id": 0})
       player = player_details
       players.append(player_details)
 
@@ -110,7 +108,7 @@ class Match(APIView):
     else:
       return Response({"error": "Match already in DB"},status=status.HTTP_400_BAD_REQUEST)
 
-class Player(View):
+class Player(APIView):
   
   def get(self, request, match_id, hero_id):
     rankData = db.allmatches.find_one({"match_id": match_id, }, {"_id": 0})
@@ -136,10 +134,30 @@ class Player(View):
     
     return Response(resp)
     
-class Rivals(View):
+class Rivals(APIView):
 
   def get(self, request, match_id, hero_id, *args, **kwargs):
-    print("hi")
-  
-  def post(self, request, match_id, hero_id, *args, **kwargs):
-    print("hi")
+    data = db.allmatches.find_one({"match_id": match_id, }, {"_id": 0})
+    rank = findRank(data['avg_rank_tier'])
+    selected_player = db[rank + match_players].find_one({"match_id": match_id, "hero_id": hero_id,}, {"_id": 0})
+    match = db[rank + match_data].find_one({"match_id": match_id, }, {"_id": 0})
+    rival = None
+    for player in match['players']:
+      player_details = db[rank + match_players].find_one({"_id": player['_id']}, {"_id": 0})
+      
+      if selected_player['hero_id'] is not player_details['hero_id']:
+        if player_details['ml_lane_role'] is selected_player['ml_lane_role']:
+          rival = player_details
+
+    players = [selected_player, rival]
+
+    if rival == None:
+      print("None")
+      return Response(status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+    else:
+      formatted_players = []
+      for player in players:
+        player_resp = rivalResponse(player, rank)
+        formatted_players.append(player_resp)
+      resp = {"rivals": formatted_players}
+      return Response(resp, status=status.HTTP_200_OK)
