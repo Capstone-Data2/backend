@@ -26,7 +26,7 @@ class RecentMatches(APIView):
       match_list.append(getTimeDiff(match))
 
     res_object = {"matches": (sorted(match_list, key=lambda x: x["time_difference"]))}
-    return Response(res_object)
+    return Response(res_object, status=status.HTTP_200_OK)
 
   def post(self, request, *args, **kwargs):
     filter = request.data['filter']
@@ -60,7 +60,7 @@ class Match(APIView):
     match['radiant_win_proba'] = radiant_win
     match['dire_win_proba'] = dire_win
     match['players'] = players
-    return Response(match)
+    return Response(match, status=status.HTTP_200_OK)
   
   def post(self, request, match_id, *args, **kwargs):
     if db.allmatches.count_documents({'match_id': match_id}) == 0:
@@ -161,3 +161,41 @@ class Rivals(APIView):
         formatted_players.append(player_resp)
       resp = {"rivals": formatted_players}
       return Response(resp, status=status.HTTP_200_OK)
+
+class Items(APIView):
+
+  def get(self, request, match_id, *args, **kwargs):
+    data = db.allmatches.find_one({"match_id": match_id, }, {"_id": 0})
+    rank = findRank(data['avg_rank_tier'])
+    players = db[rank + match_players].find({"match_id": match_id}, {"_id": 0})
+    player_items = {}
+    for player in players:
+      items = player['purchase_log']
+      player_items.update({player['hero_id']: items})
+
+    return Response(player_items, status=status.HTTP_200_OK)
+
+class GraphData(APIView):
+
+  def get(self, request, match_id, *args, **kwargs):
+    data = db.allmatches.find_one({"match_id": match_id, }, {"_id": 0})
+    rank = findRank(data['avg_rank_tier'])
+    match = db[rank + match_data].find_one({"match_id": match_id, }, {"_id": 0})
+    players = db[rank + match_players].find({"match_id": match_id}, {"_id": 0})
+
+    radiant_advantage = {"team_gold": match['radiant_gold_adv'], "team_xp": match['radiant_xp_adv']}
+    xp = {}
+    gold = {}
+    last_hits = {}
+    for player in players:
+      xp.update({player['hero_id']: player['xp_t']})
+      gold.update({player['hero_id']: player['gold_t']})
+      last_hits.update({player['hero_id']: player['lh_t']})
+    
+    resp = {
+      "radiant_advantage": radiant_advantage,
+      "hero_xp": xp,
+      "hero_gold": gold,
+      "hero_last_hits": last_hits
+    }
+    return Response(resp, status=status.HTTP_200_OK)
