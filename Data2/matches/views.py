@@ -199,3 +199,50 @@ class GraphData(APIView):
       "hero_last_hits": last_hits
     }
     return Response(resp, status=status.HTTP_200_OK)
+
+class WardData(APIView):
+
+  def get(self, request, match_id, *args, **kwargs):
+    data = db.allmatches.find_one({"match_id": match_id, }, {"_id": 0})
+    rank = findRank(data['avg_rank_tier'])
+    players = db[rank + match_players].find({"match_id": match_id}, {"_id": 0})
+
+    obs = {}
+    sen = {}
+    obs_died = {}
+    sen_died = {}
+    for player in players:
+      obs.update({player['hero_id']: player['obs_log']})
+      sen.update({player['hero_id']: player['sen_log']})
+      obs_died.update({player['hero_id']: player['obs_left_log']})
+      sen_died.update({player['hero_id']: player['sen_left_log']})
+    
+    resp = {
+      "obs_wards": obs,
+      "sen_wards": sen,
+      "obs_wards_died": obs_died,
+      "sen_wards_died": sen_died
+    }
+    return Response(resp, status=status.HTTP_200_OK)
+
+class CombatData(APIView):
+
+  def get(self, request, match_id, *args, **kwargs):
+    data = db.allmatches.find_one({"match_id": match_id, }, {"_id": 0})
+    rank = findRank(data['avg_rank_tier'])
+    players = db[rank + match_players].find({"match_id": match_id}, {"_id": 0})
+
+    damage_inflictors = {}
+    damage_inflictors_received = {}
+    damage_targets = {}
+    for player in players:
+      damage_inflictors.update({player['hero_id']: player['damage_inflictor']})
+      damage_inflictors_received.update({player['hero_id']: player['damage_inflictor_received']})
+      damage_targets.update({player['hero_id']: player['damage_targets']})
+    
+    resp = {
+      "damage_inflictor": damage_inflictors,
+      "damage_inflictor_received": damage_inflictors_received,
+      "damage_targets": damage_targets,
+    }
+    return Response(resp, status=status.HTTP_200_OK)
