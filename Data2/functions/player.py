@@ -1,13 +1,12 @@
 import pandas as pd
 import joblib
 import os
-#from model.predictModel import predictModel
-#from model.positionFeatures import positionFiller
+from model.predictModel import predictModel
+from model.positionFeatures import positionFiller
 from collections import Counter
-#from utils import get_db_handle
-import time
+from utils import get_db_handle
 
-#db, client = get_db_handle()
+db, client = get_db_handle()
 
 def findRank(rank):
     if rank >= 10 and rank < 20:
@@ -224,60 +223,66 @@ def commonSup(player):
   return resp
 
 def checkRanks(players):
+  even = False
+  while not even:
+    radiant_roles = []
+    dire_roles = []
+    radiant_players = []
+    dire_players = []
 
-  radiant_roles = []
-  dire_roles = []
-  radiant_players = []
-  dire_players = []
+    for player in players:
+      if player['ml_lane_role'] == None:
+        player['ml_lane_role'] = 4
+      if player['is_radiant']:
+        radiant_roles.append(player['ml_lane_role'])
+        radiant_players.append(player)
+      else:
+        dire_roles.append(player['ml_lane_role'])
+        dire_players.append(player)
 
-  for player in players:
-    if player['is_radiant']:
-      radiant_roles.append(player['ml_lane_role'])
-      radiant_players.append(player)
+    print("radiant roles:", radiant_roles)
+    print("dire roles:", dire_roles)
+    print("---------------")
+    radiant_counts = Counter(radiant_roles)
+    dire_counts = Counter(dire_roles)
+    radiant_excess_roles = []
+    radiant_missing_roles = []
+    dire_excess_roles = []
+    dire_missing_roles = []
+
+    for role in range(1,6):
+      if role not in radiant_counts.keys():
+
+        radiant_missing_roles.append(role)
+      elif role not in dire_counts.keys():
+        
+        dire_missing_roles.append(role)
+
+    for count in radiant_counts:
+      if radiant_counts[count] > 1:
+        radiant_excess_roles.append(count)
+      elif radiant_counts[count] < 1:
+        radiant_missing_roles.append(count)
+    
+    for count in dire_counts:
+      if dire_counts[count] > 1:
+        dire_excess_roles.append(count)
+      elif dire_counts[count] < 1:
+        dire_missing_roles.append(count)
+    
+    if len(radiant_excess_roles) == 0 and len(dire_excess_roles) == 0:
+      even = True
     else:
-      dire_roles.append(player['ml_lane_role'])
-      dire_players.append(player)
-
-  print(radiant_roles)
-  print(dire_roles)
-  radiant_counts = Counter(radiant_roles)
-  dire_counts = Counter(dire_roles)
-  radiant_excess_roles = []
-  radiant_missing_roles = []
-  dire_excess_roles = []
-  dire_missing_roles = []
-
-  for role in range(1,6):
-    if role not in radiant_counts.keys():
+      print("---------------")
       print(radiant_counts)
-      radiant_missing_roles.append(role)
-    elif role not in dire_counts.keys():
       print(dire_counts)
-      dire_missing_roles.append(role)
-
-  for count in radiant_counts:
-    if radiant_counts[count] > 1:
-      radiant_excess_roles.append(count)
-    elif radiant_counts[count] < 1:
-      radiant_missing_roles.append(count)
-  
-  for count in dire_counts:
-    if dire_counts[count] > 1:
-      dire_excess_roles.append(count)
-    elif dire_counts[count] < 1:
-      dire_missing_roles.append(count)
-      
-  if len(radiant_excess_roles) == 0 and len(dire_excess_roles) == 0:
-    return players
-  else:
-    if len(radiant_excess_roles) > 0:
-      print("rad excess", radiant_excess_roles)
-      new_players = findExcess(radiant_excess_roles, radiant_missing_roles, radiant_players)
-    if len(dire_excess_roles) > 0:
-      print("dire excess", dire_excess_roles)
-      new_players = findExcess(dire_excess_roles, dire_missing_roles, dire_players)
-  time.sleep(0.5)
-  return checkRanks(new_players)
+      if len(radiant_excess_roles) > 0:
+        print("rad excess", radiant_excess_roles)
+        findExcess(radiant_excess_roles, radiant_missing_roles, radiant_players)
+      if len(dire_excess_roles) > 0:
+        print("dire excess", dire_excess_roles)
+        findExcess(dire_excess_roles, dire_missing_roles, dire_players)
+  return players
 
 
 def findExcess(excess, missing, players):
@@ -288,31 +293,40 @@ def findExcess(excess, missing, players):
         excess_players.append(player)
 
     max_net_player, lowest_net_player = findHighestAndLowest(excess_players)
-
+    print("---------------")
     print("role:", excess)
-    new_players = []
     print("missing:", missing)
     for player in players:
       if player['hero_id'] == max_net_player['hero_id']:
-        player['ml_lane_role'] = player['lane_role']
+        if player['lane_role'] == 4:
+          player['ml_lane_role'] = 3
+        else:
+          player['ml_lane_role'] = player['lane_role']
+        print("highest:", player['ml_lane_role'])
       
       if player['hero_id'] == lowest_net_player['hero_id']:
+        print("lowest:", player['ml_lane_role'])
         if len(missing) == 1:
           player['ml_lane_role'] = missing[0]
-          print(player['ml_lane_role'])
+          print("fixed with:", player['ml_lane_role'])
         elif player['ml_lane_role'] == 1:
           player['ml_lane_role'] = 5
         elif player['ml_lane_role'] == 2:
-          player['ml_lane_role'] = 4
+          if 4 in missing:
+            player['ml_lane_role'] = 4
+          elif 3 in missing:
+            player['ml_lane_role'] = 3
+          elif 5 in missing:
+            player['ml_lane_role'] = 5
+          elif 1 in missing:
+            player['ml_lane_role'] = 1
         elif player['ml_lane_role'] == 3:
           player['ml_lane_role'] = 4
-        elif player['ml_lane_role'] == None:
-          player['ml_lane_role'] = 4
-      new_players.append(player)
-    return new_players
-
-  
-
+        elif player['ml_lane_role'] == 4:
+          if 2 in missing:
+            player['ml_lane_role'] = 2
+          if 5 in missing:
+            player['ml_lane_role'] = 5
 
 def findHighestAndLowest(excess):
   max_net_worth = excess[0]['net_worth']
@@ -328,18 +342,3 @@ def findHighestAndLowest(excess):
       lowest_net_player = excess_player
   
   return max_net_player, lowest_net_player
-
-
-"""data = db.allmatches.find_one({"match_id": 6617411609}, {"_id": 0})
-rank = findRank(data['avg_rank_tier'])
-rankCollection = db[rank + "matches_players"]
-players = rankCollection.find({"match_id": 6617411609})
-ranks = []
-clean_players = []
-for player in players:
-  ranks.append(player['ml_lane_role'])
-  clean_players.append(player)
-checked_players = checkRanks(clean_players, ranks)
-for player in checked_players:
-  rankCollection.update_one({'_id':player['_id']}, {"$set": {"ml_lane_role": player['ml_lane_role']}})"""
-

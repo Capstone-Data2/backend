@@ -29,7 +29,11 @@ class RecentMatches(APIView):
     return Response(res_object, status=status.HTTP_200_OK)
 
   def post(self, request, *args, **kwargs):
-    filter = request.data['filter']
+    print(request.data)
+    if request.data == {}:
+      filter = [0]
+    else:
+      filter = request.data['filter']
     get_data_set(filter)
     return Response(status=status.HTTP_201_CREATED)
 

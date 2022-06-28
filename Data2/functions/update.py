@@ -1,13 +1,11 @@
-from re import M
-#from functions.player import findRole
-#from utils import get_db_handle
 from player import checkRanks
-import requests
 from pymongo import MongoClient
-import time
+from dotenv import load_dotenv
+import os
 
-#db, client = get_db_handle()
-client = MongoClient("mongodb+srv://testadmin:testadmin@dbtest.37wj1.mongodb.net/dbtest?retryWrites=true&w=majority")
+load_dotenv()
+
+client = MongoClient(os.getenv('DATABASE_URL'))
 db = client.dota2
 matchPlayers =  'matches_players'
 """
@@ -64,7 +62,7 @@ def updateWardAndCombat():
             loop = False
 """
 def updateMLRoles():
-    ranks = ['herald']#, 'guardian', 'crusader', 'archon', 'legend', 'ancient', 'divine', 'immortal']
+    ranks = ['herald', 'guardian', 'crusader', 'archon', 'legend', 'ancient', 'divine', 'immortal']
     loop = True
     count = 1
     while loop:
@@ -73,6 +71,7 @@ def updateMLRoles():
             rankCollection = db[ranks[count-1] + matchPlayers]
             matchcount = 1
             for match in matchCollection:
+                print("---------------")
                 print(matchcount)
                 print(match['match_id'])
                 collection = rankCollection.find({'match_id': match['match_id']})
