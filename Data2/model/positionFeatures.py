@@ -70,7 +70,12 @@ def posfeatures(position):
 
 def positionFiller(playermatch, position):
     if position == 1:
-         return [
+        """feature_names = posfeatures(1)
+        features = []
+        for feature in feature_names:
+            features.append(playermatch[feature])
+        return features"""
+        return [
             playermatch['kills'], 
             playermatch['deaths'], 
             playermatch['assists'], 
@@ -79,7 +84,7 @@ def positionFiller(playermatch, position):
             playermatch['duration'],
             playermatch['last_hits'],
             playermatch['hero_damage'],
-            ]
+        ]
     if position == 2:
         return [
             playermatch['kills'], 
@@ -131,3 +136,10 @@ def positionFiller(playermatch, position):
             playermatch['obs_placed'],
             playermatch['sen_placed']
             ]
+
+
+
+
+
+obj = {"kills": 5, "deaths": 2, "assists": 10, "gpm": 500, "xpm": 400, "duration": 700, "last_hits": 150, "hero_damage": 15000}
+print(positionFiller(obj, 1))
