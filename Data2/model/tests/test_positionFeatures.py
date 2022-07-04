@@ -1,4 +1,3 @@
-from turtle import position
 from model.positionFeatures import positionFiller, posfeatures
 
 obj = {

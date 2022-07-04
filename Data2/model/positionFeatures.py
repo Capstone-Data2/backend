@@ -1,4 +1,3 @@
-
 def posfeatures(position):
     common = ['kills', 'deaths', 'assists', 'gpm', 'xpm', 'duration',]
     common_core = ['last_hits', 'hero_damage',]
