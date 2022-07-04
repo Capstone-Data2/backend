@@ -1,3 +1,4 @@
+from decimal import ROUND_CEILING
 from utils import get_db_handle
 from functions.player import findRank, perMin, lowestGPMFiveMin, killParticipation, killsPerMinTen, percentageGoldGained, rivalResponse
 from functions.time import getTimeDiff 
@@ -116,23 +117,27 @@ class Player(APIView):
     match = db[f"{rank}"+'matches_players'].find_one({"match_id": match_id, "hero_id": hero_id,}, {"_id": 0})
     matchData = db[f"{rank}" + 'matches_data'].find_one({"match_id": match_id, }, {"_id": 0})
     
-    resp = {
-      'LHM': perMin(match['last_hits'], match['duration']),
-      'Denies per min': perMin(match['denies'], match['duration']),
-      'Deaths per min': perMin(match['deaths'], match['duration']),
-      'HDM': perMin(match['hero_damage'], match['duration']),
-      'Kill Participation': killParticipation(match['is_radiant'], matchData['radiant_score'], matchData['dire_score'], match['kills'], match['assists']),
-      'Hero Healing per min' : perMin(match['hero_healing'], match['duration']),
-      'TDM' : perMin(match['tower_damage'], match['duration']),
-      'Lowest GPM in 5 min interval' : lowestGPMFiveMin(match['gold_t']),
-      'KPM10' : killsPerMinTen(match['kills_log']),
-      'XPM10' : match['xp_t'][10]/10,
-      'LHM10' : match['lh_t'][10]/10,
-      'Percentage of gained gold vs total available10' : percentageGoldGained(match['gold_t'][10]),
-      'Model Prediction': predictModel(findRank(rankData['avg_rank_tier']), match['ml_lane_role'], [positionFiller(match, match['ml_lane_role'])])
-    }
+    if rankData == None:
+      return Response({"error": "Match does not exist"},status=status.HTTP_400_BAD_REQUEST)
     
-    return Response(resp)
+    else:
+      resp = {
+        'LHM': perMin(match['last_hits'], match['duration']),
+        'Denies per min': perMin(match['denies'], match['duration']),
+        'Deaths per min': perMin(match['deaths'], match['duration']),
+        'HDM': perMin(match['hero_damage'], match['duration']),
+        'Kill Participation': killParticipation(match['is_radiant'], matchData['radiant_score'], matchData['dire_score'], match['kills'], match['assists']),
+        'Hero Healing per min' : perMin(match['hero_healing'], match['duration']),
+        'TDM' : perMin(match['tower_damage'], match['duration']),
+        'Lowest GPM in 5 min interval' : lowestGPMFiveMin(match['gold_t']),
+        'KPM10' : killsPerMinTen(match['kills_log']),
+        'XPM10' : match['xp_t'][10]/10,
+        'LHM10' : match['lh_t'][10]/10,
+        'Percentage of gained gold vs total available10' : percentageGoldGained(match['gold_t'][10]),
+        'Model Prediction': predictModel(findRank(rankData['avg_rank_tier']), match['ml_lane_role'], [positionFiller(match, match['ml_lane_role'])])
+      }
+      
+      return Response(resp)
     
 class Rivals(APIView):
 
@@ -244,5 +249,71 @@ class CombatData(APIView):
       "damage_inflictor": damage_inflictors,
       "damage_inflictor_received": damage_inflictors_received,
       "damage_targets": damage_targets,
+    }
+    return Response(resp, status=status.HTTP_200_OK)
+
+class Log(APIView):
+  def get(self, request, match_id):
+    data = db.allmatches.find_one({"match_id": match_id, }, {"_id": 0})
+    rank = findRank(data['avg_rank_tier'])
+    match = db[rank + match_data].find_one({"match_id": match_id}, {"_id": 0})
+    
+    objectives = match['objectives']
+    
+    players = db[rank + match_players].find({"match_id": match_id}, {"_id": 0})
+    
+    player_kills = []
+    player_runes = []
+    count = 0
+    for player in players:  
+      player_kill_log = {
+        player['hero_id']: player['kills_log']
+      }
+      player_rune_log = {
+        player['hero_id']: player['runes_log']
+      }
+      player_kills.append(player_kill_log)
+      player_runes.append(player_rune_log)
+    
+    towers = []
+    roshans_kills = []
+    roshan_pickups = []
+
+    for objective in objectives:
+      if objective['type'] == 'building_kill':
+        towerData = {
+          'time' : objective['time'],
+          'tower' : objective['key'],
+          'unit' : objective['unit'],
+        }
+        towers.append(towerData)
+      
+      elif objective['type'] == 'CHAT_MESSAGE_ROSHAN_KILL':
+        roshans_kills.append({
+          'time': objective['time'],
+          'team' : objective['team'] 
+        })
+
+      elif objective['type'] == 'CHAT_MESSAGE_AEGIS':
+        roshan_pickups.append({
+          'time': objective['time'],
+          'player_slot': objective['player_slot'] 
+        })
+    roshan = []
+    count = 0
+    for kills in roshans_kills:
+      roshan.append({
+        'rosh_kill_time': kills['time'],
+        'rosh_kill_team': kills['team'],
+        'rosh_pickup_time': roshan_pickups[count]['time'],
+        'rosh_pickup_player_slot': roshan_pickups[count]['player_slot'],
+      })
+      count = count + 1 
+      
+    resp = {
+      'Kills': player_kills,
+      'Buildings': towers,
+      'Roshan': roshan,
+      'Runes' : player_runes,
     }
     return Response(resp, status=status.HTTP_200_OK)
