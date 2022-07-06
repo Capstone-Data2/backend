@@ -19,8 +19,19 @@ match_players =  'matches_players'
 class RecentMatches(APIView):
   
   def get(self, request, *args, **kwargs):
-    collection = db.allmatches
-    data = collection.find({}, {"_id": 0}).sort("_id", -1).limit(20)
+    rank = request.GET.get('rank')
+    print(rank)
+    if rank == "9":
+      collection = db.promatches
+      data = collection.find({}, {"_id": 0}).sort("_id", -1).limit(20)
+    
+
+    else:
+      collection = db.allmatches
+      if rank == "0":
+        data = collection.find({}, {"_id": 0}).sort("start_time", -1).limit(20)
+      else:
+        data = collection.find({"avg_rank_tier": {"$gt": (int(rank)*10)-1, "$lt": (int(rank)*10)+6}}, {"_id": 0}).sort("start_time", -1).limit(20)
     match_list = []
     for match in data:
       match_list.append(getTimeDiff(match))
@@ -31,7 +42,7 @@ class RecentMatches(APIView):
   def post(self, request, *args, **kwargs):
     print(request.data)
     if request.data == {}:
-      filter = [0]
+      filter = []
     else:
       filter = request.data['filter']
     get_data_set(filter)
