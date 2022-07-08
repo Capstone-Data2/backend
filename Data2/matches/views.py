@@ -25,7 +25,6 @@ class RecentMatches(APIView):
       collection = db.promatches
       data = collection.find({}, {"_id": 0}).sort("_id", -1).limit(20)
     
-
     else:
       collection = db.allmatches
       if rank == "0":
@@ -36,6 +35,7 @@ class RecentMatches(APIView):
     for match in data:
       match_list.append(getTimeDiff(match))
 
+    print(match_list[0])
     res_object = {"matches": (sorted(match_list, key=lambda x: x["time_difference"]))}
     return Response(res_object, status=status.HTTP_200_OK)
 
@@ -86,9 +86,9 @@ class Match(APIView):
               total_rank += player['rank_tier']
               count += 1
             if player['isRadiant']:
-              radiant_heroes.append(player['hero_id'])
+              radiant_heroes.append(str(player['hero_id']))
             else:
-              dire_heroes.append(player['hero_id'])
+              dire_heroes.append(str(player['hero_id']))
           avg_rank = total_rank / count
           match = {
             "match_id": response['match_id'],
@@ -98,8 +98,8 @@ class Match(APIView):
             "lobby_type": response['lobby_type'],
             "game_mode": response['game_mode'],
             "avg_rank_tier": avg_rank,
-            "radiant_team": radiant_heroes,
-            "dire_team": dire_heroes
+            "radiant_team": ",".join(radiant_heroes),
+            "dire_team": ",".join(dire_heroes)
           }
           parsed_res = parse(response, match_id)
           if parsed_res[0]:
