@@ -35,8 +35,8 @@ class RecentMatches(APIView):
     for match in data:
       match_list.append(getTimeDiff(match))
 
-    print(match_list[0])
-    res_object = {"matches": (sorted(match_list, key=lambda x: x["time_difference"]))}
+    #res_object = {"matches": (sorted(match_list, key=lambda x: x["match_id"]))}
+    res_object = {"matches": match_list}
     return Response(res_object, status=status.HTTP_200_OK)
 
   def post(self, request, *args, **kwargs):
