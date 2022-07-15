@@ -1,6 +1,6 @@
 from decimal import ROUND_CEILING
 from utils import get_db_handle
-from functions.player import findRank, perMin, lowestGPMFiveMin, killParticipation, killsPerMinTen, percentageGoldGained, rivalResponse
+from functions.player import perMin, lowestGPMFiveMin, killParticipation, killsPerMinTen, percentageGoldGained, rivalResponse
 from functions.time import getTimeDiff 
 from functions.data_set import get_data_set
 from functions.sanitize import parse, sanitizeMatch
@@ -11,44 +11,53 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 import requests
+from functions.common import JSONResponseReturn, dataAccess
 
 # Create your views here.
 db, client = get_db_handle()
 match_players =  'matches_players'
-match_data =  'matches_data'
 
 class RecentMatches(APIView):
   
   def get(self, request, *args, **kwargs):
-    collection = db.allmatches
-    data = collection.find({}, {"_id": 0}).sort("_id", -1).limit(20)
+    rank = request.GET.get('rank')
+    print(rank)
+    if rank == "9":
+      collection = db.promatches
+      data = collection.find({}, {"_id": 0}).sort("_id", -1).limit(20)
+    
+    else:
+      collection = db.allmatches
+      if rank == "0":
+        data = collection.find({}, {"_id": 0}).sort("start_time", -1).limit(20)
+      else:
+        data = collection.find({"avg_rank_tier": {"$gt": (int(rank)*10)-1, "$lt": (int(rank)*10)+6}}, {"_id": 0}).sort("start_time", -1).limit(20)
     match_list = []
     for match in data:
       match_list.append(getTimeDiff(match))
 
-    res_object = {"matches": (sorted(match_list, key=lambda x: x["time_difference"]))}
+    #res_object = {"matches": (sorted(match_list, key=lambda x: x["match_id"]))}
+    res_object = {"matches": match_list}
     return Response(res_object, status=status.HTTP_200_OK)
 
   def post(self, request, *args, **kwargs):
-    filter = request.data['filter']
+    print(request.data)
+    if request.data == {}:
+      filter = []
+    else:
+      filter = request.data['filter']
     get_data_set(filter)
     return Response(status=status.HTTP_201_CREATED)
 
 class Match(APIView):
   
   def get(self, request, match_id, *args, **kwargs):
-    data = db.allmatches.find_one({"match_id": match_id}, {"_id": 0})
-    rank = findRank(data['avg_rank_tier'])
-    match = db[rank + match_data].find_one({"match_id": match_id}, {"_id": 0})
+    data, rank, match, players = dataAccess(match_id)
     match = getTimeDiff(match)
 
-    players = []
     radiant_win = 0
     dire_win = 0
-    for player in match['players']:
-      player_details = db[rank + match_players].find_one({"_id": player['_id']}, {"_id": 0})
-      player = player_details
-      players.append(player_details)
+    for player in players:
 
       if player['rank_tier'] == None:
         player['rank_tier'] = data['avg_rank_tier']
@@ -78,9 +87,9 @@ class Match(APIView):
               total_rank += player['rank_tier']
               count += 1
             if player['isRadiant']:
-              radiant_heroes.append(player['hero_id'])
+              radiant_heroes.append(str(player['hero_id']))
             else:
-              dire_heroes.append(player['hero_id'])
+              dire_heroes.append(str(player['hero_id']))
           avg_rank = total_rank / count
           match = {
             "match_id": response['match_id'],
@@ -90,8 +99,8 @@ class Match(APIView):
             "lobby_type": response['lobby_type'],
             "game_mode": response['game_mode'],
             "avg_rank_tier": avg_rank,
-            "radiant_team": radiant_heroes,
-            "dire_team": dire_heroes
+            "radiant_team": ",".join(radiant_heroes),
+            "dire_team": ",".join(dire_heroes)
           }
           parsed_res = parse(response, match_id)
           if parsed_res[0]:
@@ -112,10 +121,7 @@ class Match(APIView):
 class Player(APIView):
   
   def get(self, request, match_id, hero_id):
-    rankData = db.allmatches.find_one({"match_id": match_id, }, {"_id": 0})
-    rank = findRank(rankData['avg_rank_tier'])
-    match = db[f"{rank}"+'matches_players'].find_one({"match_id": match_id, "hero_id": hero_id,}, {"_id": 0})
-    matchData = db[f"{rank}" + 'matches_data'].find_one({"match_id": match_id, }, {"_id": 0})
+    data, rank, match, selected_player = dataAccess(match_id, hero_id)
     
     if rankData == None:
       return Response({"error": "Match does not exist"},status=status.HTTP_400_BAD_REQUEST)
@@ -142,10 +148,7 @@ class Player(APIView):
 class Rivals(APIView):
 
   def get(self, request, match_id, hero_id, *args, **kwargs):
-    data = db.allmatches.find_one({"match_id": match_id, }, {"_id": 0})
-    rank = findRank(data['avg_rank_tier'])
-    selected_player = db[rank + match_players].find_one({"match_id": match_id, "hero_id": hero_id,}, {"_id": 0})
-    match = db[rank + match_data].find_one({"match_id": match_id, }, {"_id": 0})
+    data, rank, match, selected_player = dataAccess(match_id, hero_id)
     rival = None
     for player in match['players']:
       player_details = db[rank + match_players].find_one({"_id": player['_id']}, {"_id": 0})
@@ -170,9 +173,7 @@ class Rivals(APIView):
 class Items(APIView):
 
   def get(self, request, match_id, *args, **kwargs):
-    data = db.allmatches.find_one({"match_id": match_id, }, {"_id": 0})
-    rank = findRank(data['avg_rank_tier'])
-    players = db[rank + match_players].find({"match_id": match_id}, {"_id": 0})
+    data, rank, match, players = dataAccess(match_id)
     player_items = {}
     for player in players:
       items = player['purchase_log']
@@ -183,73 +184,28 @@ class Items(APIView):
 class GraphData(APIView):
 
   def get(self, request, match_id, *args, **kwargs):
-    data = db.allmatches.find_one({"match_id": match_id, }, {"_id": 0})
-    rank = findRank(data['avg_rank_tier'])
-    match = db[rank + match_data].find_one({"match_id": match_id, }, {"_id": 0})
-    players = db[rank + match_players].find({"match_id": match_id}, {"_id": 0})
+    data, rank, match, players = dataAccess(match_id)
 
-    radiant_advantage = {"team_gold": match['radiant_gold_adv'], "team_xp": match['radiant_xp_adv']}
-    xp = {}
-    gold = {}
-    last_hits = {}
-    for player in players:
-      xp.update({player['hero_id']: player['xp_t']})
-      gold.update({player['hero_id']: player['gold_t']})
-      last_hits.update({player['hero_id']: player['lh_t']})
+    resp = {"radiant_advantage": {"team_gold": match['radiant_gold_adv'], "team_xp": match['radiant_xp_adv']}}
+    resp.update(JSONResponseReturn(["xp_t", "gold_t", "lh_t"], players))
     
-    resp = {
-      "radiant_advantage": radiant_advantage,
-      "hero_xp": xp,
-      "hero_gold": gold,
-      "hero_last_hits": last_hits
-    }
     return Response(resp, status=status.HTTP_200_OK)
 
 class WardData(APIView):
 
   def get(self, request, match_id, *args, **kwargs):
-    data = db.allmatches.find_one({"match_id": match_id, }, {"_id": 0})
-    rank = findRank(data['avg_rank_tier'])
-    players = db[rank + match_players].find({"match_id": match_id}, {"_id": 0})
+    data, rank, match, players = dataAccess(match_id)
 
-    obs = {}
-    sen = {}
-    obs_died = {}
-    sen_died = {}
-    for player in players:
-      obs.update({player['hero_id']: player['obs_log']})
-      sen.update({player['hero_id']: player['sen_log']})
-      obs_died.update({player['hero_id']: player['obs_left_log']})
-      sen_died.update({player['hero_id']: player['sen_left_log']})
-    
-    resp = {
-      "obs_wards": obs,
-      "sen_wards": sen,
-      "obs_wards_died": obs_died,
-      "sen_wards_died": sen_died
-    }
+    resp = JSONResponseReturn(["obs_log", "sen_log", "obs_left_log", "sen_left_log"], players)
+
     return Response(resp, status=status.HTTP_200_OK)
 
 class CombatData(APIView):
 
   def get(self, request, match_id, *args, **kwargs):
-    data = db.allmatches.find_one({"match_id": match_id, }, {"_id": 0})
-    rank = findRank(data['avg_rank_tier'])
-    players = db[rank + match_players].find({"match_id": match_id}, {"_id": 0})
+    data, rank, match, players = dataAccess(match_id)
 
-    damage_inflictors = {}
-    damage_inflictors_received = {}
-    damage_targets = {}
-    for player in players:
-      damage_inflictors.update({player['hero_id']: player['damage_inflictor']})
-      damage_inflictors_received.update({player['hero_id']: player['damage_inflictor_received']})
-      damage_targets.update({player['hero_id']: player['damage_targets']})
-    
-    resp = {
-      "damage_inflictor": damage_inflictors,
-      "damage_inflictor_received": damage_inflictors_received,
-      "damage_targets": damage_targets,
-    }
+    resp = JSONResponseReturn(["damage_inflictor", "damage_inflictor_received", "damage_targets"], players)
     return Response(resp, status=status.HTTP_200_OK)
 
 class Log(APIView):
