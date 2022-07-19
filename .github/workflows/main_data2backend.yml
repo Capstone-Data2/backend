@@ -13,7 +13,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    env:
+      DATABASE_URL: mongodb+srv://testadmin:testadmin@dbtest.37wj1.mongodb.net/?retryWrites=true&w=majority
     steps:
       - uses: actions/checkout@v2
 
@@ -28,7 +29,9 @@ jobs:
           source venv/bin/activate
       
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: |
+          cd data2
+          pip install -r requirements.txt
         
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
       
