@@ -1,6 +1,6 @@
 from decimal import ROUND_CEILING
 from utils import get_db_handle
-from functions.player import perMin, lowestGPMFiveMin, killParticipation, killsPerMinTen, percentageGoldGained, rivalResponse
+from functions.player import perMin, lowestGPMFiveMin, killParticipation, killsPerMinTen, percentageGoldGained, rivalResponse, findRank
 from functions.time import getTimeDiff 
 from functions.data_set import get_data_set
 from functions.sanitize import parse, sanitizeMatch
@@ -16,7 +16,7 @@ from functions.common import JSONResponseReturn, dataAccess
 # Create your views here.
 db, client = get_db_handle()
 match_players =  'matches_players'
-
+match_data = 'matches_data'
 class RecentMatches(APIView):
   
   def get(self, request, *args, **kwargs):
@@ -123,24 +123,24 @@ class Player(APIView):
   def get(self, request, match_id, hero_id):
     data, rank, match, selected_player = dataAccess(match_id, hero_id)
     
-    if rankData == None:
+    if rank == None:
       return Response({"error": "Match does not exist"},status=status.HTTP_400_BAD_REQUEST)
     
     else:
       resp = {
-        'LHM': perMin(match['last_hits'], match['duration']),
-        'Denies per min': perMin(match['denies'], match['duration']),
-        'Deaths per min': perMin(match['deaths'], match['duration']),
-        'HDM': perMin(match['hero_damage'], match['duration']),
-        'Kill Participation': killParticipation(match['is_radiant'], matchData['radiant_score'], matchData['dire_score'], match['kills'], match['assists']),
-        'Hero Healing per min' : perMin(match['hero_healing'], match['duration']),
-        'TDM' : perMin(match['tower_damage'], match['duration']),
-        'Lowest GPM in 5 min interval' : lowestGPMFiveMin(match['gold_t']),
-        'KPM10' : killsPerMinTen(match['kills_log']),
-        'XPM10' : match['xp_t'][10]/10,
-        'LHM10' : match['lh_t'][10]/10,
-        'Percentage of gained gold vs total available10' : percentageGoldGained(match['gold_t'][10]),
-        'Model Prediction': predictModel(findRank(rankData['avg_rank_tier']), match['ml_lane_role'], [positionFiller(match, match['ml_lane_role'])])
+        'LHM': perMin(selected_player['last_hits'], match['duration']),
+        'Denies per min': perMin(selected_player['denies'], match['duration']),
+        'Deaths per min': perMin(selected_player['deaths'], match['duration']),
+        'HDM': perMin(selected_player['hero_damage'], match['duration']),
+        'Kill Participation': killParticipation(selected_player['is_radiant'], match['radiant_score'], match['dire_score'], selected_player['kills'], selected_player['assists']),
+        'Hero Healing per min' : perMin(selected_player['hero_healing'], match['duration']),
+        'TDM' : perMin(selected_player['tower_damage'], match['duration']),
+        'Lowest GPM in 5 min interval' : lowestGPMFiveMin(selected_player['gold_t']),
+        'KPM10' : killsPerMinTen(selected_player['kills_log']),
+        'XPM10' : selected_player['xp_t'][10]/10,
+        'LHM10' : selected_player['lh_t'][10]/10,
+        'Percentage of gained gold vs total available10' : percentageGoldGained(selected_player['gold_t'][10]),
+        'Model Prediction': predictModel(rank, selected_player['ml_lane_role'], [positionFiller(selected_player, selected_player['ml_lane_role'])])
       }
       
       return Response(resp)
@@ -233,7 +233,6 @@ class Log(APIView):
     
     towers = []
     roshans_kills = []
-    roshan_pickups = []
 
     for objective in objectives:
       if objective['type'] == 'building_kill':
@@ -250,19 +249,12 @@ class Log(APIView):
           'team' : objective['team'] 
         })
 
-      elif objective['type'] == 'CHAT_MESSAGE_AEGIS':
-        roshan_pickups.append({
-          'time': objective['time'],
-          'player_slot': objective['player_slot'] 
-        })
     roshan = []
     count = 0
     for kills in roshans_kills:
       roshan.append({
         'rosh_kill_time': kills['time'],
         'rosh_kill_team': kills['team'],
-        'rosh_pickup_time': roshan_pickups[count]['time'],
-        'rosh_pickup_player_slot': roshan_pickups[count]['player_slot'],
       })
       count = count + 1 
       
