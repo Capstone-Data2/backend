@@ -73,8 +73,8 @@ class Match(APIView):
 
 
     
-    match['radiant_win_proba'] = radiant_win
-    match['dire_win_proba'] = dire_win
+    match['radiant_win_proba'] = round(radiant_win, 2)
+    match['dire_win_proba'] = round(dire_win, 2)
     match['players'] = players
     match['radiant_name'] = radiant_name
     match['dire_name'] = dire_name
@@ -151,8 +151,8 @@ class Performance(APIView):
           'KPM @ 10' : killsPerMinTen(selected_player['kills_log']),
           'XPM @ 10' : selected_player['xp_t'][10]/10,
           'LHM @ 10' : selected_player['lh_t'][10]/10,
-          '% of Gold @ 10' : round(percentageGoldGained(selected_player['gold_t'][10]), 3),
-          'ML Score': round(predictModel(rank, selected_player['ml_lane_role'], [positionFiller(selected_player, selected_player['ml_lane_role'])])*100, 3)
+          '% of Gold @ 10' : round(percentageGoldGained(selected_player['gold_t'][10]), 2),
+          'ML Score': round(predictModel(rank, selected_player['ml_lane_role'], [positionFiller(selected_player, selected_player['ml_lane_role'])])*100, 2)
         }
         response.update({selected_player['hero_id']: resp})
       

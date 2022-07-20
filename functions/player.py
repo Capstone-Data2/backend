@@ -99,7 +99,7 @@ def killsPerMinTen(kills_log):
     return kill_count/10
 
 def perMin(num, duration):
-  return(round(num / (duration/60), 3))
+  return(round(num / (duration/60), 2))
 
 def percentageGoldGained(gold_gained):
   total_avaiable = (((3 * 34 + 43) * 10 * 2) - 1) + 59 #Gold from creepwaves -1 for the last round that the wave spawns on +59 siege creep
