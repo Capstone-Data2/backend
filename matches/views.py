@@ -37,7 +37,6 @@ class RecentMatches(APIView):
     return Response(res_object, status=status.HTTP_200_OK)
 
   def post(self, request, *args, **kwargs):
-    print(request.data)
     if request.data == {}:
       filter = []
     if request.data == {"filter": "pro"}:
@@ -51,26 +50,34 @@ class RecentMatches(APIView):
 class Match(APIView):
   
   def get(self, request, match_id, *args, **kwargs):
-    print(request.GET.get('filter'))
-    print(request)
-    data, rank, match, players = dataAccess(match_id, request.GET.get('filter'))
+    data, rank, match, players = dataAccess(match_id)
     match = getTimeDiff(match)
 
     radiant_win = 0
     dire_win = 0
     for player in players:
+      radiant_name = "Radiant"
+      dire_name = "Dire"
 
-      if player['rank_tier'] == None:
-        player['rank_tier'] = data['avg_rank_tier']
+      if "radiant_name" in data:
+        radiant_name = data["radiant_name"]
+        dire_name = data["dire_name"]
+      else: 
+        if player['rank_tier'] == None:
+          player['rank_tier'] = data['avg_rank_tier']
 
       if player['is_radiant']:
         radiant_win += predictModel(rank, player['ml_lane_role'], [positionFiller(player, player['ml_lane_role'])])
       else:
         dire_win += predictModel(rank, player['ml_lane_role'], [positionFiller(player, player['ml_lane_role'])])
+
+
     
     match['radiant_win_proba'] = radiant_win
     match['dire_win_proba'] = dire_win
     match['players'] = players
+    match['radiant_name'] = radiant_name
+    match['dire_name'] = dire_name
     return Response(match, status=status.HTTP_200_OK)
   
   def post(self, request, match_id, *args, **kwargs):
@@ -216,13 +223,9 @@ class CombatData(APIView):
 
 class Log(APIView):
   def get(self, request, match_id):
-    data = db.allmatches.find_one({"match_id": match_id, }, {"_id": 0})
-    rank = findRank(data['avg_rank_tier'])
-    match = db[rank + match_data].find_one({"match_id": match_id}, {"_id": 0})
+    data, rank, match, players = dataAccess(match_id)
     
     objectives = match['objectives']
-    
-    players = db[rank + match_players].find({"match_id": match_id}, {"_id": 0})
     
     player_kills = []
     player_runes = []

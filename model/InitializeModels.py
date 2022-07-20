@@ -3,7 +3,7 @@ import sys
 sys.path.append('../functions/')
 from player import findRole
 
-ranks = ['herald', 'guardian', 'crusader', 'archon', 'legend', 'ancient', 'divine', 'immortal']
+ranks = ['herald', 'guardian', 'crusader', 'archon', 'legend', 'ancient', 'divine', 'immortal', 'pro']
 positions = [1, 2, 3, 4, 5]
 
 def createAllModels():

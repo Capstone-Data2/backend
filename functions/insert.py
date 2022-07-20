@@ -20,10 +20,10 @@ def insertData(data, query, rank):
 
 def insertPlayerData(playerdata, coll, rank):
     match_ranks = []
-    """    for player in playerdata:
-        player['ml_lane_role'] = findRole(player, rank)
+    for player in playerdata:
+        player['ml_lane_role'] = findRole(player, coll)
         match_ranks.append(player['ml_lane_role'])
-    checked_players = checkRanks(playerdata)"""
+    checked_players = checkRanks(playerdata)
     playercollection = db[coll + matchPlayers]
     playercollection.insert_many(playerdata)
 

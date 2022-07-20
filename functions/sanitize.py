@@ -260,8 +260,9 @@ def sanitizePro(res):
                 dire_heroes.append(str(player["hero_id"]))
         match["radiant_team"] = ",".join(radiant_heroes)
         match["dire_team"] = ",".join(dire_heroes)
-        insert.insertMatch(match, "promatches")
-        data = sanitizeMatch(response, 90)
-        if data != False:
-            insert.insertData(data, match_id, 90)
+        if "lane" in response["players"][0]:
+            insert.insertMatch(match, "promatches")
+            data = sanitizeMatch(response, 90)
+            if data != False:
+                insert.insertData(data, match_id, 90)
         time.sleep(1.5)
