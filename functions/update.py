@@ -1,11 +1,14 @@
-from player import checkRanks
+#from player import checkRanks
 from pymongo import MongoClient
 from dotenv import load_dotenv
 import os
+import requests
+import time
+import certifi
 
 load_dotenv()
 
-client = MongoClient(os.getenv('DATABASE_URL'))
+client = MongoClient(os.getenv('DATABASE_URL'),  tlsCAFile=certifi.where())
 db = client.dota2
 matchPlayers =  'matches_players'
 """
@@ -23,7 +26,7 @@ def updateMLLaneRole():
             count += 1
         else:
             loop = False
-
+"""
 def updateWardAndCombat():
     ranks = ['herald', 'guardian', 'crusader', 'archon', 'legend', 'ancient', 'divine', 'immortal']
     loop = True
@@ -86,4 +89,6 @@ def updateMLRoles():
         else:
             loop = False
 
-updateMLRoles()
+#updateMLRoles() """
+
+updateWardAndCombat()

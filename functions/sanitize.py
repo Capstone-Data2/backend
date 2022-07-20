@@ -11,23 +11,35 @@ lobby_types = [5, 6, 7]
 def sanitizeMatches(response):
     all_matches = []
     for data in response:
-        if db.allmatches.count_documents({'match_id': data['match_id']}) == 0:
-            if data['lobby_type'] in lobby_types:
-                if data['duration'] > 900:
-                    matchdata = {
-                        "match_id": data['match_id'],
-                        "radiant_win": data['radiant_win'],
-                        "start_time": data["start_time"],
-                        "duration": data['duration'],
-                        "lobby_type": data['lobby_type'],
-                        "game_mode": data['game_mode'],
-                        "avg_rank_tier": data['avg_rank_tier'],
-                        "radiant_team": data['radiant_team'],
-                        "dire_team": data['dire_team'],
-                    }
-                    all_matches.append(matchdata)
+        if data["leagueid"] == None:
+            if db.allmatches.count_documents({'match_id': data['match_id']}) == 0:
+                if data['lobby_type'] in lobby_types:
+                    if data['duration'] > 900:
+                        matchdata = {
+                            "match_id": data['match_id'],
+                            "radiant_win": data['radiant_win'],
+                            "start_time": data["start_time"],
+                            "duration": data['duration'],
+                            "lobby_type": data['lobby_type'],
+                            "game_mode": data['game_mode'],
+                            "avg_rank_tier": data['avg_rank_tier'],
+                            "radiant_team": data['radiant_team'],
+                            "dire_team": data['dire_team'],
+                        }
+                        all_matches.append(matchdata)
+        else:
+            if db.promatches.count_documents({'match_id': data['match_id']}) == 0:
+                matchdata = {
+                    "match_id": data['match_id'],
+                    "radiant_win": data['radiant_win'],
+                    "start_time": data["start_time"],
+                    "duration": data['duration'],
+                    "radiant_name": data['radiant_name'],
+                    "dire_name": data['dire_name'],
+                }
+                all_matches.append(matchdata)
     return all_matches
-
+    
 def sanitizeMatch(response, avg_rank):
     if response['dire_score'] != 0 or response['radiant_score'] != 0:
         if "comeback" not in response.keys():
@@ -134,6 +146,13 @@ def sanitizePlayer(player):
         'is_roaming': player['is_roaming'],
         'life_state_dead': player['life_state_dead'], 
         'rank_tier': player['rank_tier'],
+        "damage_inflictor": player['damage_inflictor'],
+        "damage_inflictor_received": player['damage_inflictor_received'],
+        "damage_targets": player['damage_targets'],
+        "obs_log": player['obs_log'],
+        "obs_left_log": player['obs_left_log'],
+        "sen_log": player['sen_log'],
+        "sen_left_log": player['sen_left_log'],
         'ml_lane_role': 0,
     }
     return playerdata
@@ -226,3 +245,23 @@ def sanitize(res, filter):
 
         print(count, "out of", unparsed_len, "unparsed matches parsed.")
 
+def sanitizePro(res):
+    alldata = sanitizeMatches(res)
+    for match in alldata:
+        
+        match_id = match['match_id']
+        response = requests.get(f'https://api.opendota.com/api/matches/{match_id}').json()
+        radiant_heroes = []
+        dire_heroes = []
+        for player in response["players"]:
+            if player["isRadiant"]:
+                radiant_heroes.append(str(player["hero_id"]))
+            else:
+                dire_heroes.append(str(player["hero_id"]))
+        match["radiant_team"] = ",".join(radiant_heroes)
+        match["dire_team"] = ",".join(dire_heroes)
+        insert.insertMatch(match, "promatches")
+        data = sanitizeMatch(response, 90)
+        if data != False:
+            insert.insertData(data, match_id, 90)
+        time.sleep(1.5)
