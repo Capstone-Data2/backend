@@ -9,7 +9,11 @@ def dataAccess(match_id, hero_id=None):
     rank = findRank(data['avg_rank_tier'])
     match = db[rank + match_data].find_one({"match_id": match_id, }, {"_id": 0})
     if hero_id == None:
-        players = list(db[rank + match_players].find({"match_id": match_id}, {"_id": 0}))
+        players = []
+        
+        for player in match["players"]:
+            players.append(db[rank + match_players].find_one({"_id": player["_id"]}, {"_id": 0}))
+
         return data, rank, match, players
     else:
         selected_player = db[rank + match_players].find_one({"match_id": match_id, "hero_id": hero_id,}, {"_id": 0})
