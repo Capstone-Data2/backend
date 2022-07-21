@@ -23,7 +23,9 @@ def findRank(rank):
         coll = "ancient"
     if rank >= 70 and rank < 80:
         coll = "divine"
-    if rank == 80:
+    if rank >= 80:
+        coll = "immortal"
+    if rank >= 80:
         coll = "immortal"
     return coll
 
@@ -47,8 +49,7 @@ def findCore(scaledX, laneRole, loaded_model):
     else:
       return 4
 
-def findRole(player, medal):
-    rank = findRank(medal)
+def findRole(player, rank):
     cwd = os.getcwd()  # Get the current working directory (cwd)
     loaded_scaler = joblib.load(f"{cwd}/model/models/{rank}/core_scaler.sav")
     loaded_model = joblib.load(f"{cwd}/model/models/{rank}/core_model.sav")
@@ -98,7 +99,7 @@ def killsPerMinTen(kills_log):
     return kill_count/10
 
 def perMin(num, duration):
-  return(num / (duration/60))
+  return(round(num / (duration/60), 2))
 
 def percentageGoldGained(gold_gained):
   total_avaiable = (((3 * 34 + 43) * 10 * 2) - 1) + 59 #Gold from creepwaves -1 for the last round that the wave spawns on +59 siege creep

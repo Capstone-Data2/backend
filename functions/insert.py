@@ -6,7 +6,10 @@ matchPlayers =  'matches_players'
 matchData =  'matches_data'
 
 def insertData(data, query, rank):
-    coll = findRank(rank)
+    if rank == 90:
+        coll = "pro"
+    else:
+        coll = findRank(rank)
     insertPlayerData(data[1], coll, rank)
     playercollection = db[coll + matchPlayers].find({'match_id': query}, {'_id': 1})
     playerids = []
@@ -18,11 +21,11 @@ def insertData(data, query, rank):
 def insertPlayerData(playerdata, coll, rank):
     match_ranks = []
     for player in playerdata:
-        player['ml_lane_role'] = findRole(player, rank)
+        player['ml_lane_role'] = findRole(player, coll)
         match_ranks.append(player['ml_lane_role'])
     checked_players = checkRanks(playerdata)
     playercollection = db[coll + matchPlayers]
-    playercollection.insert_many(checked_players)
+    playercollection.insert_many(playerdata)
 
 def insertMatchData(matchdata, coll):
     matchdatacollection = db[coll + matchData]

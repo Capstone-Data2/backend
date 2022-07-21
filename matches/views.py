@@ -1,8 +1,7 @@
-from decimal import ROUND_CEILING
 from utils import get_db_handle
 from functions.player import perMin, lowestGPMFiveMin, killParticipation, killsPerMinTen, percentageGoldGained, rivalResponse, findRank
 from functions.time import getTimeDiff 
-from functions.data_set import get_data_set
+from functions.data_set import get_data_set, get_pro_data_set
 from functions.sanitize import parse, sanitizeMatch
 from functions.insert import insertMatch, insertData
 from model.predictModel import predictModel
@@ -21,11 +20,9 @@ class RecentMatches(APIView):
   
   def get(self, request, *args, **kwargs):
     rank = request.GET.get('rank')
-    print(rank)
     if rank == "9":
       collection = db.promatches
       data = collection.find({}, {"_id": 0}).sort("_id", -1).limit(20)
-    
     else:
       collection = db.allmatches
       if rank == "0":
@@ -36,14 +33,15 @@ class RecentMatches(APIView):
     for match in data:
       match_list.append(getTimeDiff(match))
 
-    #res_object = {"matches": (sorted(match_list, key=lambda x: x["match_id"]))}
     res_object = {"matches": match_list}
     return Response(res_object, status=status.HTTP_200_OK)
 
   def post(self, request, *args, **kwargs):
-    print(request.data)
     if request.data == {}:
       filter = []
+    if request.data == {"filter": "pro"}:
+      get_pro_data_set()
+      return Response(status=status.HTTP_201_CREATED)
     else:
       filter = request.data['filter']
     get_data_set(filter)
@@ -58,18 +56,28 @@ class Match(APIView):
     radiant_win = 0
     dire_win = 0
     for player in players:
+      radiant_name = "Radiant"
+      dire_name = "Dire"
 
-      if player['rank_tier'] == None:
-        player['rank_tier'] = data['avg_rank_tier']
+      if "radiant_name" in data:
+        radiant_name = data["radiant_name"]
+        dire_name = data["dire_name"]
+      else: 
+        if player['rank_tier'] == None:
+          player['rank_tier'] = data['avg_rank_tier']
 
       if player['is_radiant']:
         radiant_win += predictModel(rank, player['ml_lane_role'], [positionFiller(player, player['ml_lane_role'])])
       else:
         dire_win += predictModel(rank, player['ml_lane_role'], [positionFiller(player, player['ml_lane_role'])])
+
+
     
-    match['radiant_win_proba'] = radiant_win
-    match['dire_win_proba'] = dire_win
+    match['radiant_win_proba'] = round(radiant_win, 2)
+    match['dire_win_proba'] = round(dire_win, 2)
     match['players'] = players
+    match['radiant_name'] = radiant_name
+    match['dire_name'] = dire_name
     return Response(match, status=status.HTTP_200_OK)
   
   def post(self, request, match_id, *args, **kwargs):
@@ -118,32 +126,37 @@ class Match(APIView):
     else:
       return Response({"error": "Match already in DB"},status=status.HTTP_400_BAD_REQUEST)
 
-class Player(APIView):
+class Performance(APIView):
   
-  def get(self, request, match_id, hero_id):
-    data, rank, match, selected_player = dataAccess(match_id, hero_id)
+  def get(self, request, match_id):
+    data, rank, match, players = dataAccess(match_id)
     
     if rank == None:
       return Response({"error": "Match does not exist"},status=status.HTTP_400_BAD_REQUEST)
-    
     else:
-      resp = {
-        'LHM': perMin(selected_player['last_hits'], match['duration']),
-        'Denies per min': perMin(selected_player['denies'], match['duration']),
-        'Deaths per min': perMin(selected_player['deaths'], match['duration']),
-        'HDM': perMin(selected_player['hero_damage'], match['duration']),
-        'Kill Participation': killParticipation(selected_player['is_radiant'], match['radiant_score'], match['dire_score'], selected_player['kills'], selected_player['assists']),
-        'Hero Healing per min' : perMin(selected_player['hero_healing'], match['duration']),
-        'TDM' : perMin(selected_player['tower_damage'], match['duration']),
-        'Lowest GPM in 5 min interval' : lowestGPMFiveMin(selected_player['gold_t']),
-        'KPM10' : killsPerMinTen(selected_player['kills_log']),
-        'XPM10' : selected_player['xp_t'][10]/10,
-        'LHM10' : selected_player['lh_t'][10]/10,
-        'Percentage of gained gold vs total available10' : percentageGoldGained(selected_player['gold_t'][10]),
-        'Model Prediction': predictModel(rank, selected_player['ml_lane_role'], [positionFiller(selected_player, selected_player['ml_lane_role'])])
-      }
+      response = {}
+      for selected_player in players:
+        resp = {
+          'GPM': selected_player['gpm'],
+          'XPM': selected_player['xpm'],
+          'LHM': perMin(selected_player['last_hits'], match['duration']),
+          'DNM': perMin(selected_player['denies'], match['duration']),
+          'DPM': perMin(selected_player['deaths'], match['duration']),
+          'HDM': perMin(selected_player['hero_damage'], match['duration']),
+          'KPM': perMin(selected_player['kills'], match['duration']),
+          'KP': round(killParticipation(selected_player['is_radiant'], match['radiant_score'], match['dire_score'], selected_player['kills'], selected_player['assists']), 3),
+          'HHM' : perMin(selected_player['hero_healing'], match['duration']),
+          'TDM' : perMin(selected_player['tower_damage'], match['duration']),
+          'Lowest GPM' : lowestGPMFiveMin(selected_player['gold_t']),
+          'KPM @ 10' : killsPerMinTen(selected_player['kills_log']),
+          'XPM @ 10' : selected_player['xp_t'][10]/10,
+          'LHM @ 10' : selected_player['lh_t'][10]/10,
+          '% of Gold @ 10' : round(percentageGoldGained(selected_player['gold_t'][10]), 2),
+          'ML Score': round(predictModel(rank, selected_player['ml_lane_role'], [positionFiller(selected_player, selected_player['ml_lane_role'])])*100, 2)
+        }
+        response.update({selected_player['hero_id']: resp})
       
-      return Response(resp)
+      return Response(response)
     
 class Rivals(APIView):
 
@@ -210,13 +223,9 @@ class CombatData(APIView):
 
 class Log(APIView):
   def get(self, request, match_id):
-    data = db.allmatches.find_one({"match_id": match_id, }, {"_id": 0})
-    rank = findRank(data['avg_rank_tier'])
-    match = db[rank + match_data].find_one({"match_id": match_id}, {"_id": 0})
+    data, rank, match, players = dataAccess(match_id)
     
     objectives = match['objectives']
-    
-    players = db[rank + match_players].find({"match_id": match_id}, {"_id": 0})
     
     player_kills = []
     player_runes = []
