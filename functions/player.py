@@ -141,8 +141,23 @@ def common(player, rank):
     player['backpack_2']
   ]
   player_resp = {
+    "name": player["personaname"],
     "hero_id": player['hero_id'],
+    "gold_t": player['gold_t'],
+    "xp_t": player['xp_t'],
+    "lh_t": player['lh_t'],
+    "is_radiant": player['is_radiant'],
     "ml_lane_role": player['ml_lane_role'],
+    "item_0": player['item_0'],
+    "item_1": player['item_1'],
+    "item_2": player['item_2'],
+    "item_3": player['item_3'],
+    "item_4": player['item_4'],
+    "item_5": player['item_5'],
+    "item_neutral": player['item_neutral'],
+    "backpack_0": player['backpack_0'],
+    "backpack_1": player['backpack_1'],
+    "backpack_2": player['backpack_2'],
     "items": all_items,
     "level": player['level'],
     "net_worth": player['net_worth'],
@@ -154,7 +169,7 @@ def common(player, rank):
     "permanent_buffs": player['permanent_buffs'],
     "rank_tier": player['rank_tier'],
     "life_state_dead": player['life_state_dead'],
-    "predicted_win": predictModel(rank, player['ml_lane_role'], [positionFiller(player, player['ml_lane_role'])]),
+    "predicted_win": round(predictModel(rank, player['ml_lane_role'], [positionFiller(player, player['ml_lane_role'])])*100, 3),
     "buybacks": player['buyback_log'],
     "deaths_per_min": perMin(player['deaths'], player['duration']),
   }
@@ -165,38 +180,38 @@ def commonCore(player):
     "last_hits": player['last_hits'],
     "lane_kills": (killsPerMinTen(player['kills_log']))*10,
     "multi_kills": player['multi_kills'],
-    "xpm": player['xpm'],
-    "gpm": player['gpm'],
+    "XPM": player['xpm'],
+    "GPM": player['gpm'],
     "kill_streaks": player['kill_streaks'],
-    "lane_performance": percentageGoldGained(player['gold_t'][10]),
+    "lane_performance": round(percentageGoldGained(player['gold_t'][10]), 3),
   }
   return resp
 
 def pos1Rival(player):
   resp = {
-    "kpm": perMin(player['kills'], player['duration']),
+    "KPM": perMin(player['kills'], player['duration']),
     "max_hero_hit": player['max_hero_hit'],
     "lowest_gpm": lowestGPMFiveMin(player['gold_t']),
-    "lhm": perMin(player['last_hits'], player['duration']),
+    "LHM": perMin(player['last_hits'], player['duration']),
   }
   return resp
 
 def pos2Rival(player):
   resp = {
     "runes_picked_up": player['runes_log'],
-    "kpm": perMin(player['kills'], player['duration']),
+    "KPM": perMin(player['kills'], player['duration']),
     "max_hero_hit": player['max_hero_hit'],
     "lowest_gpm": lowestGPMFiveMin(player['gold_t']),
-    "lhm": perMin(player['last_hits'], player['duration']),
+    "LHM": perMin(player['last_hits'], player['duration']),
   }
   return resp
 
 def pos3Rival(player):
   resp = {
     "tower_damage": player['tower_damage'],
-    "tdm": perMin(player['tower_damage'], player['duration']),
+    "TDM": perMin(player['tower_damage'], player['duration']),
     "damage_taken": player['damage_taken'],
-    "stuns": player['stuns'],
+    "stuns": round(player['stuns'], 2),
   }
   return resp
 
@@ -212,7 +227,7 @@ def pos5Rival(player):
     "obs_placed": player['obs_placed'],
     "sen_placed": player['sen_placed'],
     "hero_healing": player['hero_healing'],
-    "hhm": perMin(player['hero_healing'], player['duration']),
+    "HHM": perMin(player['hero_healing'], player['duration']),
   }
   return resp
 

@@ -164,8 +164,7 @@ class Rivals(APIView):
     data, rank, match, selected_player = dataAccess(match_id, hero_id)
     rival = None
     for player in match['players']:
-      player_details = db[rank + match_players].find_one({"_id": player['_id']}, {"_id": 0})
-      
+      player_details = db[rank + match_players].find_one({'_id': player['_id']}, {"_id": 0})
       if selected_player['hero_id'] is not player_details['hero_id']:
         if player_details['ml_lane_role'] is selected_player['ml_lane_role']:
           rival = player_details
