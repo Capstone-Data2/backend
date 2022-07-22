@@ -29,7 +29,10 @@ ALLOWED_HOSTS = ['data2backend.azurewebsites.net', '*']
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
-    "https://frontend-blue-seven.vercel.app"
+    "https://frontend-blue-seven.vercel.app",
+    "https://frontend-capstone-data2.vercel.app",
+    "https://frontend-git-main-capstone-data2.vercel.app",
+    "https://frontend-8va9gu7df-capstone-data2.vercel.app"
 ]
 
 # Application definition
