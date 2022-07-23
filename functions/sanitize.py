@@ -11,7 +11,7 @@ lobby_types = [5, 6, 7]
 def sanitizeMatches(response):
     all_matches = []
     for data in response:
-        if data["leagueid"] == None:
+        if "leagueid" not in data:
             if db.allmatches.count_documents({'match_id': data['match_id']}) == 0:
                 if data['lobby_type'] in lobby_types:
                     if data['duration'] > 900:
