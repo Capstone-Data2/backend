@@ -231,10 +231,10 @@ class Log(APIView):
     count = 0
     for player in players:  
       player_kill_log = {
-        player['hero_id']: player['kills_log']
+        str(player['hero_id']): player['kills_log']
       }
       player_rune_log = {
-        player['hero_id']: player['runes_log']
+        str(player['hero_id']): player['runes_log']
       }
       player_kills.append(player_kill_log)
       player_runes.append(player_rune_log)

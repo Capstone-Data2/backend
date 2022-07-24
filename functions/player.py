@@ -86,10 +86,14 @@ def lowestGPMFiveMin(gold_array):
 
 
 def killParticipation(radiant, dire_score, radiant_score, kills, assists):
-    if radiant:
-        return (kills + assists) / radiant_score
+    if((radiant==True and radiant_score==0) or (radiant==False and dire_score == 0)):
+        return 0
     else:
-        return (kills + assists) / dire_score
+        if radiant:
+            
+            return (kills + assists) / radiant_score
+        else:
+            return (kills + assists) / dire_score
 
 
 def killsPerMinTen(kills_log):
