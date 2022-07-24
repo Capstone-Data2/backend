@@ -1,14 +1,11 @@
 import requests
 import time
 from functions import insert
-from utils import get_db_handle
-
-db, client = get_db_handle()
 
 lobby_types = [5, 6, 7]
 
 
-def sanitizeMatches(response):
+def sanitizeMatches(response, db):
     all_matches = []
     for data in response:
         if "leagueid" not in data:
@@ -165,6 +162,7 @@ def parse(response, match_id):
         #limit calls to max 60 a minute
         time.sleep(1.5) 
         x = requests.post(f'https://api.opendota.com/api/request/{match_id}').json()
+        print(x)
         print("JOB: ", x["job"]["jobId"])
 
         #wait for match to be parsed by API
@@ -179,7 +177,7 @@ def parse(response, match_id):
             y = requests.get(f'https://api.opendota.com/api/request/{x["job"]["jobId"]}').json()
             
             print(y)
-            if y is None:
+            if len(y) == 0:
                 time.sleep(1)
                 response = requests.get(f'https://api.opendota.com/api/matches/{match_id}').json()
                 if response["radiant_gold_adv"] == None:
@@ -193,8 +191,8 @@ def parse(response, match_id):
     else:
         return [True, response]
 
-def sanitize(res, filter):
-    alldata = sanitizeMatches(res)
+def sanitize(db, res, filter):
+    alldata = sanitizeMatches(res, db)
     #get oldest matches first, helps with parsing
     alldata.reverse()
     unparsed = []
@@ -202,18 +200,16 @@ def sanitize(res, filter):
     for match in alldata:
         rank = match['avg_rank_tier'] // 10
         if rank in filter or len(filter) == 0:
-            insert.insertMatch(match, "allmatches")
+            insert.insertMatch(db, match, "allmatches")
             match_id = match['match_id']
             response = requests.get(f'https://api.opendota.com/api/matches/{match_id}').json()
-
             #check if match data is parsed or not
             parsed_res = parse(response, match_id)
-            
             #get parsed match data if parsed successfully
             if parsed_res[0]:
                 data = sanitizeMatch(parsed_res[1], match['avg_rank_tier'])
                 if data != False:
-                    insert.insertData(data, match_id, match['avg_rank_tier'])
+                    insert.insertData(db, data, match_id, match['avg_rank_tier'])
                     count += 1
             else:
                 unparsed.append(match_id)
@@ -245,8 +241,8 @@ def sanitize(res, filter):
 
         print(count, "out of", unparsed_len, "unparsed matches parsed.")
 
-def sanitizePro(res):
-    alldata = sanitizeMatches(res)
+def sanitizePro(db, res):
+    alldata = sanitizeMatches(res, db)
     for match in alldata:
         
         match_id = match['match_id']
@@ -261,8 +257,8 @@ def sanitizePro(res):
         match["radiant_team"] = ",".join(radiant_heroes)
         match["dire_team"] = ",".join(dire_heroes)
         if "lane" in response["players"][0]:
-            insert.insertMatch(match, "promatches")
+            insert.insertMatch(db, match, "promatches")
             data = sanitizeMatch(response, 90)
             if data != False:
-                insert.insertData(data, match_id, 90)
+                insert.insertData(db, data, match_id, 90)
         time.sleep(1.5)

@@ -8,6 +8,7 @@ def insertData(db, data, query, rank):
         coll = "pro"
     else:
         coll = findRank(rank)
+
     insertPlayerData(db, data[1], coll)
     playercollection = db[coll + matchPlayers].find({'match_id': query}, {'_id': 1})
     playerids = []
