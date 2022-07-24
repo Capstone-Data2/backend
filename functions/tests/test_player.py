@@ -49,8 +49,8 @@ class TestPerformance:
         gold_array_2 = [1,2,3,4,5,6,7,8,9,10,100,100,130,130,130, 130, 130, 150, 1100] 
         #too short of a game
         gold_array_3 = [1,2,3,4,5,6,7,8,9,10]
-        assert lowestGPMFiveMin(gold_array_1) == (10, 10)
-        assert lowestGPMFiveMin(gold_array_2) == (4, 12)
+        assert lowestGPMFiveMin(gold_array_1) == [10, 10]
+        assert lowestGPMFiveMin(gold_array_2) == [4, 12]
         assert lowestGPMFiveMin(gold_array_3) == 0
 
     def test_kills_per_min_for_ten_min(self):

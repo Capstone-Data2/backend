@@ -154,7 +154,7 @@ class Performance(APIView):
           '% of Gold @ 10' : round(percentageGoldGained(selected_player['gold_t'][10]), 2),
           'ML Score': round(predictModel(rank, selected_player['ml_lane_role'], [positionFiller(selected_player, selected_player['ml_lane_role'])])*100, 2)
         }
-        response.update({selected_player['hero_id']: resp})
+        response.update({str(selected_player['hero_id']): resp})
       
       return Response(response)
     
