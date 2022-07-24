@@ -1,5 +1,6 @@
 from utils import get_db_handle
 from functions.player import perMin, lowestGPMFiveMin, killParticipation, killsPerMinTen, percentageGoldGained, rivalResponse, findRank
+from functions.log import getObjectiveData, getPlayerData
 from functions.time import getTimeDiff 
 from functions.data_set import get_data_set, get_pro_data_set
 from functions.sanitize import parse, sanitizeMatch
@@ -225,46 +226,8 @@ class Log(APIView):
     data, rank, match, players = dataAccess(db, match_id)
     
     objectives = match['objectives']
-    
-    player_kills = []
-    player_runes = []
-    count = 0
-    for player in players:  
-      player_kill_log = {
-        str(player['hero_id']): player['kills_log']
-      }
-      player_rune_log = {
-        str(player['hero_id']): player['runes_log']
-      }
-      player_kills.append(player_kill_log)
-      player_runes.append(player_rune_log)
-    
-    towers = []
-    roshans_kills = []
-
-    for objective in objectives:
-      if objective['type'] == 'building_kill':
-        towerData = {
-          'time' : objective['time'],
-          'tower' : objective['key'],
-          'unit' : objective['unit'],
-        }
-        towers.append(towerData)
-      
-      elif objective['type'] == 'CHAT_MESSAGE_ROSHAN_KILL':
-        roshans_kills.append({
-          'time': objective['time'],
-          'team' : objective['team'] 
-        })
-
-    roshan = []
-    count = 0
-    for kills in roshans_kills:
-      roshan.append({
-        'rosh_kill_time': kills['time'],
-        'rosh_kill_team': kills['team'],
-      })
-      count = count + 1 
+    player_kills, player_runes = getPlayerData(players)
+    towers, roshan = getObjectiveData(objectives)
       
     resp = {
       'Kills': player_kills,
