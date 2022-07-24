@@ -152,7 +152,7 @@ class TestRivals:
         expected_resp = {
             "KPM": 0.48,
             "max_hero_hit": player["max_hero_hit"],
-            "lowest_gpm": (1.0, 10),
+            "lowest_gpm": [1.0, 10],
             "LHM": 6.0,
         }
         assert pos1Rival_resp == expected_resp
@@ -164,7 +164,7 @@ class TestRivals:
             "runes_picked_up": player["runes_log"],
             "KPM": 0.48,
             "max_hero_hit": player["max_hero_hit"],
-            "lowest_gpm": (1.0, 10),
+            "lowest_gpm": [1.0, 10],
             "LHM": 6.0,
         }
         assert pos2Rival_resp == expected_resp
@@ -216,7 +216,7 @@ class TestRivals:
         player["lane_performance"] = 0.003
         player["LHM"] = 6.0
         player["KPM"] = 0.48
-        player["lowest_gpm"] = (1.0, 10)
+        player["lowest_gpm"] = [1.0, 10]
         del (
             player["gpm"],
             player["xpm"],
@@ -253,7 +253,7 @@ class TestRivals:
         player["lane_performance"] = 0.003
         player["LHM"] = 6.0
         player["KPM"] = 0.48
-        player["lowest_gpm"] = (1.0, 10)
+        player["lowest_gpm"] = [1.0, 10]
         player["runes_picked_up"] = player["runes_log"]
         del (
             player["gpm"],
