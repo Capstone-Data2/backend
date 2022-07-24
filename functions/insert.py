@@ -18,12 +18,12 @@ def insertData(db, data, query, rank):
 
 def insertPlayerData(db, playerdata, coll, rank):
     match_ranks = []
-    #for player in playerdata:
-       # player['ml_lane_role'] = findRole(player, coll)
-      #  match_ranks.append(player['ml_lane_role'])
-   # checked_players = checkRanks(playerdata)
+    for player in playerdata:
+        player['ml_lane_role'] = findRole(player, coll)
+        match_ranks.append(player['ml_lane_role'])
+    checked_players = checkRanks(playerdata)
     playercollection = db[coll + matchPlayers]
-    playercollection.insert_many(playerdata)
+    playercollection.insert_many(checked_players)
 
 def insertMatchData(db, matchdata, coll):
     matchdatacollection = db[coll + matchData]
