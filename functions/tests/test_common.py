@@ -3,29 +3,54 @@ import mongomock
 
 class TestDataAcess:
 
-    def test_dataAccess(self):
-        db = mongomock.MongoClient().db
-        data_obj = {"match_id": 6674091014, "avg_rank_tier": 31}
-        match_obj = {"match_id": 6674091014, "players": [{"_id" : 1}, {"_id": 2}]}
-        player_arr = [{"_id" : 1, "hero": 1}, {"_id": 2, "hero": 2}, {"_id": 3, "hero": 3}]
-        db["allmatches"].insert_one(data_obj)
-        db["crusadermatches_data"].insert_one(match_obj)
-        db["crusadermatches_players"].insert_many(player_arr)
-        data, rank, match, players = dataAccess(db, 6674091014)
+    def _dataAccess_test_setup(self, db, id, type, rank, tier = 0):
+        data_obj = {"match_id": id, "avg_rank_tier": tier}
+        match_obj = {"match_id": id, "players": [{"_id" : 1}, {"_id": 2}]}
+        player_objs = [{"_id" : 1, "match_id": id, "hero_id": 1}, {"_id": 2, "match_id": id, "hero_id": 2}, {"_id": 3, "match_id": id, "hero_id": 3}]
+        db[f"{type}matches"].insert_one(data_obj)
+        db[f"{rank}matches_data"].insert_one(match_obj)
+        db[f"{rank}matches_players"].insert_many(player_objs)
+        return data_obj, match_obj, player_objs
+    
+    def _dataAccess_asserts(self, db, id, data_obj, match_obj, player_objs, rank_obj, hero_id = None):
+        data, rank, match, players = dataAccess(db, id, hero_id)
         assert(hasattr(data, "_id") == False)
         assert(hasattr(match, "_id") == False)
-        for player in players:
-            assert(hasattr(player, "_id") == False)
         del data_obj["_id"]
         del match_obj["_id"]
-        for player in player_arr:
-            del player["_id"]
         assert(data == data_obj)
-        assert(rank == "crusader")
+        assert(rank == rank_obj)
         assert(match == match_obj)
-        assert(len(players) == len(player_arr)-1)
-        player_arr.pop()
-        assert(players == player_arr)
+        for player in player_objs:
+            del player["_id"]
+        if hero_id == None:
+            for player in players:
+                assert(hasattr(player, "_id") == False)
+            assert(len(players) == len(player_objs)-1)
+            
+            player_objs.pop()
+            assert(players == player_objs)
+        else:
+            assert(len([players]) == 1)
+            assert(players == player_objs[2])
+
+
+    def test_dataAccessPublicMatches(self):
+        db = mongomock.MongoClient().db
+        data_obj, match_obj, player_objs = self._dataAccess_test_setup(db, 6674091014, "all", "crusader", 31)
+        self._dataAccess_asserts(db, 6674091014, data_obj, match_obj, player_objs, "crusader")
+        
+    
+    def test_dataAccessProMatches(self):
+        db = mongomock.MongoClient().db
+        data_obj, match_obj, player_objs = self._dataAccess_test_setup(db, 6672384255, "pro", "pro")
+        self._dataAccess_asserts(db, 6672384255, data_obj, match_obj, player_objs, "pro")
+    
+    def test_dataAccessHeroID(self):
+        db = mongomock.MongoClient().db
+        data_obj, match_obj, player_objs = self._dataAccess_test_setup(db, 6674091014, "all", "legend", 53)
+        self._dataAccess_asserts(db, 6674091014, data_obj, match_obj, player_objs, "legend", 3)
+
         
 
 def test_JSONResponseReturn():
