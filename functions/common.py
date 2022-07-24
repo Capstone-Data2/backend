@@ -1,10 +1,8 @@
 from functions.player import findRank
-from utils import get_db_handle
-db, client = get_db_handle()
 match_players =  'matches_players'
 match_data =  'matches_data'
 
-def dataAccess(match_id, hero_id=None):
+def dataAccess(db, match_id, hero_id=None):
     data = db.allmatches.find_one({"match_id": match_id, }, {"_id": 0})
     if data is not None:
         rank = findRank(data['avg_rank_tier'])

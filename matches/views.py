@@ -50,7 +50,7 @@ class RecentMatches(APIView):
 class Match(APIView):
   
   def get(self, request, match_id, *args, **kwargs):
-    data, rank, match, players = dataAccess(match_id)
+    data, rank, match, players = dataAccess(db, match_id)
     match = getTimeDiff(match)
 
     radiant_win = 0
@@ -129,7 +129,7 @@ class Match(APIView):
 class Performance(APIView):
   
   def get(self, request, match_id):
-    data, rank, match, players = dataAccess(match_id)
+    data, rank, match, players = dataAccess(db, match_id)
     
     if rank == None:
       return Response({"error": "Match does not exist"},status=status.HTTP_400_BAD_REQUEST)
@@ -161,7 +161,7 @@ class Performance(APIView):
 class Rivals(APIView):
 
   def get(self, request, match_id, hero_id, *args, **kwargs):
-    data, rank, match, selected_player = dataAccess(match_id, hero_id)
+    data, rank, match, selected_player = dataAccess(db, match_id, hero_id)
     rival = None
     for player in match['players']:
       player_details = db[rank + match_players].find_one({'_id': player['_id']}, {"_id": 0})
@@ -185,7 +185,7 @@ class Rivals(APIView):
 class Items(APIView):
 
   def get(self, request, match_id, *args, **kwargs):
-    data, rank, match, players = dataAccess(match_id)
+    data, rank, match, players = dataAccess(db,match_id)
     player_items = {}
     for player in players:
       items = player['purchase_log']
@@ -196,7 +196,7 @@ class Items(APIView):
 class GraphData(APIView):
 
   def get(self, request, match_id, *args, **kwargs):
-    data, rank, match, players = dataAccess(match_id)
+    data, rank, match, players = dataAccess(db, match_id)
 
     resp = {"radiant_advantage": {"team_gold": match['radiant_gold_adv'], "team_xp": match['radiant_xp_adv']}}
     resp.update(JSONResponseReturn(["xp_t", "gold_t", "lh_t"], players))
@@ -206,7 +206,7 @@ class GraphData(APIView):
 class WardData(APIView):
 
   def get(self, request, match_id, *args, **kwargs):
-    data, rank, match, players = dataAccess(match_id)
+    data, rank, match, players = dataAccess(db, match_id)
 
     resp = JSONResponseReturn(["obs_log", "sen_log", "obs_left_log", "sen_left_log"], players)
 
@@ -215,14 +215,14 @@ class WardData(APIView):
 class CombatData(APIView):
 
   def get(self, request, match_id, *args, **kwargs):
-    data, rank, match, players = dataAccess(match_id)
+    data, rank, match, players = dataAccess(db, match_id)
 
     resp = JSONResponseReturn(["damage_inflictor", "damage_inflictor_received", "damage_targets"], players)
     return Response(resp, status=status.HTTP_200_OK)
 
 class Log(APIView):
   def get(self, request, match_id):
-    data, rank, match, players = dataAccess(match_id)
+    data, rank, match, players = dataAccess(db, match_id)
     
     objectives = match['objectives']
     
