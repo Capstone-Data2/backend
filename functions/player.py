@@ -140,18 +140,6 @@ def rivalResponse(player, rank):
 
 
 def common(player, rank):
-    all_items = [
-        player["item_0"],
-        player["item_1"],
-        player["item_2"],
-        player["item_3"],
-        player["item_4"],
-        player["item_5"],
-        player["item_neutral"],
-        player["backpack_0"],
-        player["backpack_1"],
-        player["backpack_2"],
-    ]
     player_resp = {
         "name": player["personaname"],
         "hero_id": player["hero_id"],
@@ -170,7 +158,6 @@ def common(player, rank):
         "backpack_0": player["backpack_0"],
         "backpack_1": player["backpack_1"],
         "backpack_2": player["backpack_2"],
-        "items": all_items,
         "level": player["level"],
         "net_worth": player["net_worth"],
         "kills": player["kills"],
@@ -208,6 +195,9 @@ def commonCore(player):
     }
     return resp
 
+def commonSup(player):
+    resp = {"camps_stacked": player["camps_stacked"], "stuns": player["stuns"]}
+    return resp
 
 def pos1Rival(player):
     resp = {
@@ -255,11 +245,6 @@ def pos5Rival(player):
         "hero_healing": player["hero_healing"],
         "HHM": perMin(player["hero_healing"], player["duration"]),
     }
-    return resp
-
-
-def commonSup(player):
-    resp = {"camps_stacked": player["camps_stacked"], "stuns": player["stuns"]}
     return resp
 
 
@@ -319,14 +304,15 @@ def checkRanks(players):
             print(dire_counts)
             if len(radiant_excess_roles) > 0:
                 print("rad excess", radiant_excess_roles)
-                findExcess(radiant_excess_roles, radiant_missing_roles, radiant_players)
+                radiant_players = fixExcess(radiant_excess_roles, radiant_missing_roles, radiant_players)
             if len(dire_excess_roles) > 0:
                 print("dire excess", dire_excess_roles)
-                findExcess(dire_excess_roles, dire_missing_roles, dire_players)
+                dire_players = fixExcess(dire_excess_roles, dire_missing_roles, dire_players)
+    players = radiant_players + dire_players
     return players
 
 
-def findExcess(excess, missing, players):
+def fixExcess(excess, missing, players):
     for rank in excess:
         excess_players = []
         for player in players:
@@ -337,8 +323,10 @@ def findExcess(excess, missing, players):
         print("---------------")
         print("role:", excess)
         print("missing:", missing)
-        for player in players:
+        for player in excess_players:
+            print("hi")
             if player["hero_id"] == max_net_player["hero_id"]:
+                print("hehe")
                 if player["lane_role"] == 4:
                     player["ml_lane_role"] = 3
                 else:
@@ -347,7 +335,7 @@ def findExcess(excess, missing, players):
 
             if player["hero_id"] == lowest_net_player["hero_id"]:
                 print("lowest:", player["ml_lane_role"])
-                if len(missing) == 1:
+                if len(missing) == 1 and missing[0] > 3:
                     player["ml_lane_role"] = missing[0]
                     print("fixed with:", player["ml_lane_role"])
                 elif player["ml_lane_role"] == 1:
@@ -368,6 +356,8 @@ def findExcess(excess, missing, players):
                         player["ml_lane_role"] = 2
                     if 5 in missing:
                         player["ml_lane_role"] = 5
+    print(players)
+    return players
 
 
 def findHighestAndLowest(excess):
