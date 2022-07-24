@@ -1,0 +1,486 @@
+{
+    "Kills": [
+        {
+            "13": [
+                {
+                    "time": 329,
+                    "key": "npc_dota_hero_earthshaker"
+                },
+                {
+                    "time": 382,
+                    "key": "npc_dota_hero_earthshaker"
+                },
+                {
+                    "time": 392,
+                    "key": "npc_dota_hero_witch_doctor"
+                },
+                {
+                    "time": 485,
+                    "key": "npc_dota_hero_witch_doctor"
+                },
+                {
+                    "time": 508,
+                    "key": "npc_dota_hero_tusk"
+                },
+                {
+                    "time": 782,
+                    "key": "npc_dota_hero_witch_doctor"
+                },
+                {
+                    "time": 831,
+                    "key": "npc_dota_hero_earthshaker"
+                },
+                {
+                    "time": 953,
+                    "key": "npc_dota_hero_witch_doctor"
+                },
+                {
+                    "time": 961,
+                    "key": "npc_dota_hero_chen"
+                },
+                {
+                    "time": 1045,
+                    "key": "npc_dota_hero_witch_doctor"
+                },
+                {
+                    "time": 1056,
+                    "key": "npc_dota_hero_earthshaker"
+                },
+                {
+                    "time": 1142,
+                    "key": "npc_dota_hero_witch_doctor"
+                },
+                {
+                    "time": 1255,
+                    "key": "npc_dota_hero_witch_doctor"
+                }
+            ]
+        },
+        {
+            "102": [
+                {
+                    "time": 256,
+                    "key": "npc_dota_hero_tusk"
+                },
+                {
+                    "time": 368,
+                    "key": "npc_dota_hero_tusk"
+                },
+                {
+                    "time": 910,
+                    "key": "npc_dota_hero_earthshaker"
+                },
+                {
+                    "time": 972,
+                    "key": "npc_dota_hero_tusk"
+                },
+                {
+                    "time": 985,
+                    "key": "npc_dota_hero_phantom_assassin"
+                },
+                {
+                    "time": 1271,
+                    "key": "npc_dota_hero_chen"
+                },
+                {
+                    "time": 1271,
+                    "key": "npc_dota_hero_tusk"
+                }
+            ]
+        },
+        {
+            "73": [
+                {
+                    "time": 121,
+                    "key": "npc_dota_hero_tusk"
+                },
+                {
+                    "time": 892,
+                    "key": "npc_dota_hero_chen"
+                },
+                {
+                    "time": 897,
+                    "key": "npc_dota_hero_tusk"
+                },
+                {
+                    "time": 930,
+                    "key": "npc_dota_hero_phantom_assassin"
+                },
+                {
+                    "time": 1242,
+                    "key": "npc_dota_hero_phantom_assassin"
+                }
+            ]
+        },
+        {
+            "86": [
+                {
+                    "time": 469,
+                    "key": "npc_dota_hero_phantom_assassin"
+                },
+                {
+                    "time": 814,
+                    "key": "npc_dota_hero_tusk"
+                },
+                {
+                    "time": 873,
+                    "key": "npc_dota_hero_witch_doctor"
+                },
+                {
+                    "time": 1126,
+                    "key": "npc_dota_hero_tusk"
+                }
+            ]
+        },
+        {
+            "135": [
+                {
+                    "time": 145,
+                    "key": "npc_dota_hero_witch_doctor"
+                },
+                {
+                    "time": 223,
+                    "key": "npc_dota_hero_witch_doctor"
+                },
+                {
+                    "time": 247,
+                    "key": "npc_dota_hero_phantom_assassin"
+                },
+                {
+                    "time": 305,
+                    "key": "npc_dota_hero_witch_doctor"
+                },
+                {
+                    "time": 350,
+                    "key": "npc_dota_hero_phantom_assassin"
+                },
+                {
+                    "time": 404,
+                    "key": "npc_dota_hero_tusk"
+                },
+                {
+                    "time": 701,
+                    "key": "npc_dota_hero_witch_doctor"
+                },
+                {
+                    "time": 1167,
+                    "key": "npc_dota_hero_phantom_assassin"
+                },
+                {
+                    "time": 1211,
+                    "key": "npc_dota_hero_tusk"
+                },
+                {
+                    "time": 1262,
+                    "key": "npc_dota_hero_earthshaker"
+                }
+            ]
+        },
+        {
+            "66": [
+                {
+                    "time": 412,
+                    "key": "npc_dota_hero_rubick"
+                },
+                {
+                    "time": 498,
+                    "key": "npc_dota_hero_dawnbreaker"
+                },
+                {
+                    "time": 655,
+                    "key": "npc_dota_hero_dawnbreaker"
+                }
+            ]
+        },
+        {
+            "44": [
+                {
+                    "time": 12,
+                    "key": "npc_dota_hero_dawnbreaker"
+                },
+                {
+                    "time": 226,
+                    "key": "npc_dota_hero_rubick"
+                },
+                {
+                    "time": 310,
+                    "key": "npc_dota_hero_dawnbreaker"
+                },
+                {
+                    "time": 521,
+                    "key": "npc_dota_hero_abaddon"
+                },
+                {
+                    "time": 562,
+                    "key": "npc_dota_hero_rubick"
+                },
+                {
+                    "time": 976,
+                    "key": "npc_dota_hero_dawnbreaker"
+                }
+            ]
+        },
+        {
+            "7": [
+                {
+                    "time": 172,
+                    "key": "npc_dota_hero_alchemist"
+                },
+                {
+                    "time": 265,
+                    "key": "npc_dota_hero_alchemist"
+                },
+                {
+                    "time": 296,
+                    "key": "npc_dota_hero_abaddon"
+                },
+                {
+                    "time": 321,
+                    "key": "npc_dota_hero_alchemist"
+                },
+                {
+                    "time": 732,
+                    "key": "npc_dota_hero_puck"
+                },
+                {
+                    "time": 770,
+                    "key": "npc_dota_hero_rubick"
+                },
+                {
+                    "time": 781,
+                    "key": "npc_dota_hero_dawnbreaker"
+                },
+                {
+                    "time": 884,
+                    "key": "npc_dota_hero_puck"
+                },
+                {
+                    "time": 985,
+                    "key": "npc_dota_hero_abaddon"
+                },
+                {
+                    "time": 1048,
+                    "key": "npc_dota_hero_dawnbreaker"
+                },
+                {
+                    "time": 1254,
+                    "key": "npc_dota_hero_puck"
+                }
+            ]
+        },
+        {
+            "30": [
+                {
+                    "time": 150,
+                    "key": "npc_dota_hero_dawnbreaker"
+                },
+                {
+                    "time": 387,
+                    "key": "npc_dota_hero_abaddon"
+                },
+                {
+                    "time": 604,
+                    "key": "npc_dota_hero_dawnbreaker"
+                },
+                {
+                    "time": 986,
+                    "key": "npc_dota_hero_puck"
+                }
+            ]
+        },
+        {
+            "100": [
+                {
+                    "time": 470,
+                    "key": "npc_dota_hero_rubick"
+                },
+                {
+                    "time": 684,
+                    "key": "npc_dota_hero_alchemist"
+                }
+            ]
+        }
+    ],
+    "Buildings": [
+        {
+            "time": 444,
+            "tower": "npc_dota_badguys_tower1_top",
+            "unit": "npc_dota_hero_witch_doctor"
+        },
+        {
+            "time": 834,
+            "tower": "npc_dota_badguys_tower1_bot",
+            "unit": "npc_dota_hero_puck"
+        },
+        {
+            "time": 885,
+            "tower": "npc_dota_badguys_tower1_mid",
+            "unit": "npc_dota_hero_alchemist"
+        },
+        {
+            "time": 1285,
+            "tower": "npc_dota_badguys_fort",
+            "unit": "dota_unknown"
+        }
+    ],
+    "Roshan": [
+        {
+            "rosh_kill_time": 1181,
+            "rosh_kill_team": 3
+        }
+    ],
+    "Runes": [
+        {
+            "13": [
+                {
+                    "time": 343,
+                    "key": 7
+                },
+                {
+                    "time": 362,
+                    "key": 5
+                },
+                {
+                    "time": 368,
+                    "key": 5
+                },
+                {
+                    "time": 1149,
+                    "key": 2
+                }
+            ]
+        },
+        {
+            "102": [
+                {
+                    "time": 484,
+                    "key": 6
+                },
+                {
+                    "time": 558,
+                    "key": 5
+                }
+            ]
+        },
+        {
+            "73": [
+                {
+                    "time": 604,
+                    "key": 4
+                },
+                {
+                    "time": 994,
+                    "key": 5
+                }
+            ]
+        },
+        {
+            "86": [
+                {
+                    "time": 6,
+                    "key": 5
+                },
+                {
+                    "time": 194,
+                    "key": 5
+                },
+                {
+                    "time": 862,
+                    "key": 5
+                },
+                {
+                    "time": 933,
+                    "key": 5
+                },
+                {
+                    "time": 971,
+                    "key": 5
+                },
+                {
+                    "time": 1072,
+                    "key": 5
+                },
+                {
+                    "time": 1238,
+                    "key": 5
+                }
+            ]
+        },
+        {
+            "135": [
+                {
+                    "time": 3,
+                    "key": 5
+                }
+            ]
+        },
+        {
+            "66": [
+                {
+                    "time": 374,
+                    "key": 5
+                },
+                {
+                    "time": 550,
+                    "key": 5
+                },
+                {
+                    "time": 724,
+                    "key": 5
+                },
+                {
+                    "time": 1082,
+                    "key": 5
+                }
+            ]
+        },
+        {
+            "44": [
+                {
+                    "time": 847,
+                    "key": 3
+                },
+                {
+                    "time": 1083,
+                    "key": 5
+                }
+            ]
+        },
+        {
+            "7": [
+                {
+                    "time": 1,
+                    "key": 5
+                }
+            ]
+        },
+        {
+            "30": [
+                {
+                    "time": 364,
+                    "key": 0
+                },
+                {
+                    "time": 1007,
+                    "key": 6
+                }
+            ]
+        },
+        {
+            "100": [
+                {
+                    "time": 0,
+                    "key": 5
+                },
+                {
+                    "time": 732,
+                    "key": 0
+                },
+                {
+                    "time": 749,
+                    "key": 5
+                }
+            ]
+        }
+    ]
+}
