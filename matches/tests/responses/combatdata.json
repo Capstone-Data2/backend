@@ -1,0 +1,549 @@
+{
+    "damage_inflictor": {
+        "69": {
+            "null": 1655,
+            "doom_bringer_scorched_earth": 9595,
+            "satyr_soulstealer_mana_burn": 735,
+            "doom_bringer_doom": 2340,
+            "doom_bringer_infernal_blade": 1127,
+            "paintball": 480
+        },
+        "92": {
+            "null": 6343,
+            "visage_soul_assumption": 5203,
+            "visage_summon_familiars_stone_form": 1479,
+            "wraith_pact": 1836
+        },
+        "21": {
+            "windrunner_powershot": 8189,
+            "null": 9289,
+            "maelstrom": 5166
+        },
+        "46": {
+            "templar_assassin_meld": 1777,
+            "null": 6788,
+            "templar_assassin_psi_blades": 551,
+            "chipped_vest": 42,
+            "templar_assassin_trap": 1918
+        },
+        "83": {
+            "null": 2263,
+            "orb_of_venom": 45,
+            "treant_natures_grasp": 4843,
+            "treant_leech_seed": 1880,
+            "treant_overgrowth": 1288
+        },
+        "90": {
+            "null": 2010,
+            "keeper_of_the_light_illuminate": 3416,
+            "keeper_of_the_light_blinding_light": 1161,
+            "keeper_of_the_light_spirit_form_illuminate": 7967,
+            "ethereal_blade": 640
+        },
+        "70": {
+            "null": 26562,
+            "orb_of_venom": 43,
+            "ursa_earthshock": 2489
+        },
+        "136": {
+            "null": 7550,
+            "marci_grapple": 2127,
+            "marci_companion_run": 1638,
+            "marci_unleash": 1634,
+            "chipped_vest": 1355,
+            "blade_mail": 1078
+        },
+        "58": {
+            "null": 8933,
+            "enchantress_impetus": 6429,
+            "dust": 18
+        },
+        "63": {
+            "weaver_shukuchi": 3490,
+            "null": 6169,
+            "weaver_the_swarm": 4117,
+            "urn_of_shadows": 1202,
+            "maelstrom": 147,
+            "gungir": 341
+        }
+    },
+    "damage_inflictor_received": {
+        "69": {
+            "null": 17107,
+            "orb_of_venom": 25,
+            "ursa_earthshock": 1030,
+            "enchantress_impetus": 2300,
+            "marci_grapple": 894,
+            "marci_unleash": 297,
+            "weaver_the_swarm": 1443,
+            "keeper_of_the_light_blinding_light": 159,
+            "keeper_of_the_light_spirit_form_illuminate": 1479,
+            "weaver_shukuchi": 786,
+            "urn_of_shadows": 342,
+            "chipped_vest": 11,
+            "keeper_of_the_light_illuminate": 982,
+            "ethereal_blade": 267,
+            "marci_companion_run": 422,
+            "blade_mail": 128,
+            "gungir": 120
+        },
+        "92": {
+            "null": 11257,
+            "orb_of_venom": 16,
+            "ursa_earthshock": 382,
+            "enchantress_impetus": 1994,
+            "keeper_of_the_light_illuminate": 339,
+            "chipped_vest": 363,
+            "marci_unleash": 351,
+            "weaver_shukuchi": 157,
+            "urn_of_shadows": 234,
+            "weaver_the_swarm": 1218,
+            "keeper_of_the_light_blinding_light": 122,
+            "keeper_of_the_light_spirit_form_illuminate": 1631,
+            "marci_grapple": 178,
+            "blade_mail": 26,
+            "ethereal_blade": 148,
+            "maelstrom": 42
+        },
+        "21": {
+            "null": 5671,
+            "keeper_of_the_light_illuminate": 1300,
+            "keeper_of_the_light_blinding_light": 487,
+            "keeper_of_the_light_spirit_form_illuminate": 2354,
+            "enchantress_impetus": 822,
+            "weaver_shukuchi": 854,
+            "weaver_the_swarm": 772,
+            "urn_of_shadows": 356,
+            "ursa_earthshock": 567,
+            "chipped_vest": 844,
+            "marci_grapple": 390,
+            "marci_companion_run": 526,
+            "marci_unleash": 362,
+            "blade_mail": 807,
+            "maelstrom": 105
+        },
+        "46": {
+            "null": 8205,
+            "weaver_shukuchi": 693,
+            "marci_grapple": 217,
+            "weaver_the_swarm": 149,
+            "marci_companion_run": 345,
+            "keeper_of_the_light_illuminate": 375,
+            "enchantress_impetus": 331,
+            "dust": 18,
+            "keeper_of_the_light_spirit_form_illuminate": 420,
+            "marci_unleash": 325,
+            "chipped_vest": 62,
+            "urn_of_shadows": 90,
+            "ursa_earthshock": 168,
+            "gungir": 221
+        },
+        "83": {
+            "null": 8924,
+            "marci_grapple": 448,
+            "weaver_shukuchi": 1000,
+            "weaver_the_swarm": 535,
+            "marci_companion_run": 345,
+            "urn_of_shadows": 180,
+            "enchantress_impetus": 982,
+            "orb_of_venom": 2,
+            "ursa_earthshock": 342,
+            "marci_unleash": 299,
+            "chipped_vest": 75,
+            "keeper_of_the_light_blinding_light": 393,
+            "keeper_of_the_light_spirit_form_illuminate": 2083,
+            "ethereal_blade": 225,
+            "keeper_of_the_light_illuminate": 420,
+            "blade_mail": 117
+        },
+        "90": {
+            "windrunner_powershot": 1419,
+            "null": 1221,
+            "doom_bringer_scorched_earth": 1070,
+            "templar_assassin_trap": 450,
+            "treant_natures_grasp": 737,
+            "paintball": 240,
+            "satyr_soulstealer_mana_burn": 75,
+            "wraith_pact": 264,
+            "treant_overgrowth": 224,
+            "treant_leech_seed": 180,
+            "maelstrom": 315
+        },
+        "70": {
+            "null": 7813,
+            "doom_bringer_scorched_earth": 2516,
+            "visage_soul_assumption": 2563,
+            "satyr_soulstealer_mana_burn": 315,
+            "windrunner_powershot": 2317,
+            "treant_leech_seed": 260,
+            "treant_natures_grasp": 1160,
+            "visage_summon_familiars_stone_form": 369,
+            "doom_bringer_infernal_blade": 469,
+            "paintball": 30,
+            "maelstrom": 1551,
+            "wraith_pact": 494,
+            "templar_assassin_trap": 108,
+            "treant_overgrowth": 56
+        },
+        "136": {
+            "treant_natures_grasp": 1357,
+            "templar_assassin_meld": 775,
+            "null": 6586,
+            "orb_of_venom": 21,
+            "treant_leech_seed": 840,
+            "templar_assassin_psi_blades": 316,
+            "doom_bringer_scorched_earth": 1578,
+            "treant_overgrowth": 336,
+            "visage_soul_assumption": 808,
+            "visage_summon_familiars_stone_form": 255,
+            "doom_bringer_doom": 2040,
+            "maelstrom": 1290,
+            "windrunner_powershot": 1739,
+            "wraith_pact": 220,
+            "doom_bringer_infernal_blade": 304,
+            "paintball": 150
+        },
+        "58": {
+            "doom_bringer_scorched_earth": 1811,
+            "null": 3991,
+            "visage_soul_assumption": 957,
+            "satyr_soulstealer_mana_burn": 270,
+            "treant_natures_grasp": 469,
+            "windrunner_powershot": 1374,
+            "treant_leech_seed": 360,
+            "templar_assassin_trap": 410,
+            "doom_bringer_infernal_blade": 213,
+            "visage_summon_familiars_stone_form": 330,
+            "treant_overgrowth": 560,
+            "templar_assassin_meld": 388,
+            "orb_of_venom": 2,
+            "wraith_pact": 352,
+            "maelstrom": 1155
+        },
+        "63": {
+            "null": 6787,
+            "orb_of_venom": 22,
+            "treant_natures_grasp": 1120,
+            "templar_assassin_meld": 614,
+            "templar_assassin_psi_blades": 235,
+            "treant_leech_seed": 240,
+            "chipped_vest": 42,
+            "visage_summon_familiars_stone_form": 525,
+            "doom_bringer_scorched_earth": 2620,
+            "doom_bringer_doom": 300,
+            "doom_bringer_infernal_blade": 141,
+            "visage_soul_assumption": 875,
+            "templar_assassin_trap": 950,
+            "treant_overgrowth": 112,
+            "maelstrom": 855,
+            "windrunner_powershot": 1340,
+            "paintball": 60,
+            "satyr_soulstealer_mana_burn": 75,
+            "wraith_pact": 506
+        }
+    },
+    "damage_targets": {
+        "69": {
+            "null": {
+                "npc_dota_hero_ursa": 999,
+                "npc_dota_hero_enchantress": 247,
+                "npc_dota_hero_weaver": 308,
+                "npc_dota_hero_marci": 101
+            },
+            "doom_bringer_scorched_earth": {
+                "npc_dota_hero_ursa": 2516,
+                "npc_dota_hero_enchantress": 1811,
+                "npc_dota_hero_marci": 1578,
+                "npc_dota_hero_weaver": 2620,
+                "npc_dota_hero_keeper_of_the_light": 1070
+            },
+            "satyr_soulstealer_mana_burn": {
+                "npc_dota_hero_enchantress": 270,
+                "npc_dota_hero_ursa": 315,
+                "npc_dota_hero_weaver": 75,
+                "npc_dota_hero_keeper_of_the_light": 75
+            },
+            "doom_bringer_doom": {
+                "npc_dota_hero_weaver": 300,
+                "npc_dota_hero_marci": 2040
+            },
+            "doom_bringer_infernal_blade": {
+                "npc_dota_hero_weaver": 141,
+                "npc_dota_hero_enchantress": 213,
+                "npc_dota_hero_ursa": 469,
+                "npc_dota_hero_marci": 304
+            },
+            "paintball": {
+                "npc_dota_hero_weaver": 60,
+                "npc_dota_hero_ursa": 30,
+                "npc_dota_hero_keeper_of_the_light": 240,
+                "npc_dota_hero_marci": 150
+            }
+        },
+        "92": {
+            "null": {
+                "npc_dota_hero_ursa": 3359,
+                "npc_dota_hero_enchantress": 1029,
+                "npc_dota_hero_weaver": 943,
+                "npc_dota_hero_marci": 1012
+            },
+            "visage_soul_assumption": {
+                "npc_dota_hero_ursa": 2563,
+                "npc_dota_hero_enchantress": 957,
+                "npc_dota_hero_weaver": 875,
+                "npc_dota_hero_marci": 808
+            },
+            "visage_summon_familiars_stone_form": {
+                "npc_dota_hero_weaver": 525,
+                "npc_dota_hero_marci": 255,
+                "npc_dota_hero_enchantress": 330,
+                "npc_dota_hero_ursa": 369
+            },
+            "wraith_pact": {
+                "npc_dota_hero_ursa": 494,
+                "npc_dota_hero_weaver": 506,
+                "npc_dota_hero_marci": 220,
+                "npc_dota_hero_keeper_of_the_light": 264,
+                "npc_dota_hero_enchantress": 352
+            }
+        },
+        "21": {
+            "windrunner_powershot": {
+                "npc_dota_hero_keeper_of_the_light": 1419,
+                "npc_dota_hero_ursa": 2317,
+                "npc_dota_hero_enchantress": 1374,
+                "npc_dota_hero_marci": 1739,
+                "npc_dota_hero_weaver": 1340
+            },
+            "null": {
+                "npc_dota_hero_keeper_of_the_light": 1146,
+                "npc_dota_hero_enchantress": 1163,
+                "npc_dota_hero_marci": 2462,
+                "npc_dota_hero_weaver": 1494,
+                "npc_dota_hero_ursa": 3024
+            },
+            "maelstrom": {
+                "npc_dota_hero_marci": 1290,
+                "npc_dota_hero_weaver": 855,
+                "npc_dota_hero_ursa": 1551,
+                "npc_dota_hero_enchantress": 1155,
+                "npc_dota_hero_keeper_of_the_light": 315
+            }
+        },
+        "46": {
+            "templar_assassin_meld": {
+                "npc_dota_hero_marci": 775,
+                "npc_dota_hero_weaver": 614,
+                "npc_dota_hero_enchantress": 388
+            },
+            "null": {
+                "npc_dota_hero_marci": 2020,
+                "npc_dota_hero_weaver": 2889,
+                "npc_dota_hero_enchantress": 1448,
+                "npc_dota_hero_ursa": 431
+            },
+            "templar_assassin_psi_blades": {
+                "npc_dota_hero_marci": 316,
+                "npc_dota_hero_weaver": 235
+            },
+            "chipped_vest": {
+                "npc_dota_hero_weaver": 42
+            },
+            "templar_assassin_trap": {
+                "npc_dota_hero_enchantress": 410,
+                "npc_dota_hero_weaver": 950,
+                "npc_dota_hero_keeper_of_the_light": 450,
+                "npc_dota_hero_ursa": 108
+            }
+        },
+        "83": {
+            "null": {
+                "npc_dota_hero_weaver": 1093,
+                "npc_dota_hero_marci": 991,
+                "npc_dota_hero_enchantress": 104,
+                "npc_dota_hero_keeper_of_the_light": 75
+            },
+            "orb_of_venom": {
+                "npc_dota_hero_weaver": 22,
+                "npc_dota_hero_marci": 21,
+                "npc_dota_hero_enchantress": 2
+            },
+            "treant_natures_grasp": {
+                "npc_dota_hero_marci": 1357,
+                "npc_dota_hero_weaver": 1120,
+                "npc_dota_hero_ursa": 1160,
+                "npc_dota_hero_enchantress": 469,
+                "npc_dota_hero_keeper_of_the_light": 737
+            },
+            "treant_leech_seed": {
+                "npc_dota_hero_marci": 840,
+                "npc_dota_hero_weaver": 240,
+                "npc_dota_hero_ursa": 260,
+                "npc_dota_hero_enchantress": 360,
+                "npc_dota_hero_keeper_of_the_light": 180
+            },
+            "treant_overgrowth": {
+                "npc_dota_hero_marci": 336,
+                "npc_dota_hero_weaver": 112,
+                "npc_dota_hero_enchantress": 560,
+                "npc_dota_hero_keeper_of_the_light": 224,
+                "npc_dota_hero_ursa": 56
+            }
+        },
+        "90": {
+            "null": {
+                "npc_dota_hero_templar_assassin": 379,
+                "npc_dota_hero_windrunner": 569,
+                "npc_dota_hero_doom_bringer": 888,
+                "npc_dota_hero_treant": 63,
+                "npc_dota_hero_visage": 111
+            },
+            "keeper_of_the_light_illuminate": {
+                "npc_dota_hero_windrunner": 1300,
+                "npc_dota_hero_templar_assassin": 375,
+                "npc_dota_hero_visage": 339,
+                "npc_dota_hero_doom_bringer": 982,
+                "npc_dota_hero_treant": 420
+            },
+            "keeper_of_the_light_blinding_light": {
+                "npc_dota_hero_windrunner": 487,
+                "npc_dota_hero_doom_bringer": 159,
+                "npc_dota_hero_treant": 393,
+                "npc_dota_hero_visage": 122
+            },
+            "keeper_of_the_light_spirit_form_illuminate": {
+                "npc_dota_hero_windrunner": 2354,
+                "npc_dota_hero_doom_bringer": 1479,
+                "npc_dota_hero_visage": 1631,
+                "npc_dota_hero_treant": 2083,
+                "npc_dota_hero_templar_assassin": 420
+            },
+            "ethereal_blade": {
+                "npc_dota_hero_treant": 225,
+                "npc_dota_hero_doom_bringer": 267,
+                "npc_dota_hero_visage": 148
+            }
+        },
+        "70": {
+            "null": {
+                "npc_dota_hero_doom_bringer": 9585,
+                "npc_dota_hero_visage": 5268,
+                "npc_dota_hero_treant": 3748,
+                "npc_dota_hero_windrunner": 3418,
+                "npc_dota_hero_templar_assassin": 4543
+            },
+            "orb_of_venom": {
+                "npc_dota_hero_doom_bringer": 25,
+                "npc_dota_hero_visage": 16,
+                "npc_dota_hero_treant": 2
+            },
+            "ursa_earthshock": {
+                "npc_dota_hero_doom_bringer": 1030,
+                "npc_dota_hero_visage": 382,
+                "npc_dota_hero_treant": 342,
+                "npc_dota_hero_windrunner": 567,
+                "npc_dota_hero_templar_assassin": 168
+            }
+        },
+        "136": {
+            "null": {
+                "npc_dota_hero_treant": 2430,
+                "npc_dota_hero_templar_assassin": 1808,
+                "npc_dota_hero_doom_bringer": 1004,
+                "npc_dota_hero_visage": 2132,
+                "npc_dota_hero_windrunner": 176
+            },
+            "marci_grapple": {
+                "npc_dota_hero_treant": 448,
+                "npc_dota_hero_templar_assassin": 217,
+                "npc_dota_hero_doom_bringer": 894,
+                "npc_dota_hero_windrunner": 390,
+                "npc_dota_hero_visage": 178
+            },
+            "marci_companion_run": {
+                "npc_dota_hero_templar_assassin": 345,
+                "npc_dota_hero_treant": 345,
+                "npc_dota_hero_doom_bringer": 422,
+                "npc_dota_hero_windrunner": 526
+            },
+            "marci_unleash": {
+                "npc_dota_hero_doom_bringer": 297,
+                "npc_dota_hero_treant": 299,
+                "npc_dota_hero_visage": 351,
+                "npc_dota_hero_windrunner": 362,
+                "npc_dota_hero_templar_assassin": 325
+            },
+            "chipped_vest": {
+                "npc_dota_hero_visage": 363,
+                "npc_dota_hero_treant": 75,
+                "npc_dota_hero_windrunner": 844,
+                "npc_dota_hero_doom_bringer": 11,
+                "npc_dota_hero_templar_assassin": 62
+            },
+            "blade_mail": {
+                "npc_dota_hero_doom_bringer": 128,
+                "npc_dota_hero_windrunner": 807,
+                "npc_dota_hero_visage": 26,
+                "npc_dota_hero_treant": 117
+            }
+        },
+        "58": {
+            "null": {
+                "npc_dota_hero_templar_assassin": 436,
+                "npc_dota_hero_windrunner": 795,
+                "npc_dota_hero_doom_bringer": 3627,
+                "npc_dota_hero_visage": 3280,
+                "npc_dota_hero_treant": 735,
+                "npc_dota_hero_weaver": 60
+            },
+            "enchantress_impetus": {
+                "npc_dota_hero_doom_bringer": 2300,
+                "npc_dota_hero_visage": 1994,
+                "npc_dota_hero_treant": 982,
+                "npc_dota_hero_windrunner": 822,
+                "npc_dota_hero_templar_assassin": 331
+            },
+            "dust": {
+                "npc_dota_hero_templar_assassin": 18
+            }
+        },
+        "63": {
+            "weaver_shukuchi": {
+                "npc_dota_hero_treant": 1000,
+                "npc_dota_hero_templar_assassin": 693,
+                "npc_dota_hero_windrunner": 854,
+                "npc_dota_hero_doom_bringer": 786,
+                "npc_dota_hero_visage": 157
+            },
+            "null": {
+                "npc_dota_hero_treant": 1948,
+                "npc_dota_hero_templar_assassin": 1039,
+                "npc_dota_hero_windrunner": 713,
+                "npc_dota_hero_doom_bringer": 2003,
+                "npc_dota_hero_visage": 466
+            },
+            "weaver_the_swarm": {
+                "npc_dota_hero_treant": 535,
+                "npc_dota_hero_templar_assassin": 149,
+                "npc_dota_hero_windrunner": 772,
+                "npc_dota_hero_doom_bringer": 1443,
+                "npc_dota_hero_visage": 1218
+            },
+            "urn_of_shadows": {
+                "npc_dota_hero_treant": 180,
+                "npc_dota_hero_windrunner": 356,
+                "npc_dota_hero_doom_bringer": 342,
+                "npc_dota_hero_visage": 234,
+                "npc_dota_hero_templar_assassin": 90
+            },
+            "maelstrom": {
+                "npc_dota_hero_visage": 42,
+                "npc_dota_hero_windrunner": 105
+            },
+            "gungir": {
+                "npc_dota_hero_templar_assassin": 221,
+                "npc_dota_hero_doom_bringer": 120
+            }
+        }
+    }
+}

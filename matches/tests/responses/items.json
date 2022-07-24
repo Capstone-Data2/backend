@@ -1,0 +1,1451 @@
+{
+    "69": [
+        {
+            "time": -73,
+            "key": "magic_stick"
+        },
+        {
+            "time": -72,
+            "key": "tango"
+        },
+        {
+            "time": -62,
+            "key": "tango"
+        },
+        {
+            "time": -52,
+            "key": "wind_lace"
+        },
+        {
+            "time": -49,
+            "key": "ward_sentry"
+        },
+        {
+            "time": 85,
+            "key": "flask"
+        },
+        {
+            "time": 132,
+            "key": "enchanted_mango"
+        },
+        {
+            "time": 135,
+            "key": "ward_observer"
+        },
+        {
+            "time": 205,
+            "key": "tango"
+        },
+        {
+            "time": 305,
+            "key": "boots"
+        },
+        {
+            "time": 325,
+            "key": "ward_observer"
+        },
+        {
+            "time": 359,
+            "key": "smoke_of_deceit"
+        },
+        {
+            "time": 410,
+            "key": "tranquil_boots"
+        },
+        {
+            "time": 410,
+            "key": "ring_of_regen"
+        },
+        {
+            "time": 415,
+            "key": "belt_of_strength"
+        },
+        {
+            "time": 484,
+            "key": "ward_observer"
+        },
+        {
+            "time": 511,
+            "key": "wind_lace"
+        },
+        {
+            "time": 606,
+            "key": "tome_of_knowledge"
+        },
+        {
+            "time": 680,
+            "key": "clarity"
+        },
+        {
+            "time": 685,
+            "key": "gloves"
+        },
+        {
+            "time": 778,
+            "key": "ward_observer"
+        },
+        {
+            "time": 928,
+            "key": "ogre_axe"
+        },
+        {
+            "time": 1021,
+            "key": "ward_observer"
+        },
+        {
+            "time": 1150,
+            "key": "mithril_hammer"
+        },
+        {
+            "time": 1152,
+            "key": "clarity"
+        },
+        {
+            "time": 1215,
+            "key": "black_king_bar"
+        },
+        {
+            "time": 1250,
+            "key": "smoke_of_deceit"
+        },
+        {
+            "time": 1269,
+            "key": "ward_observer"
+        },
+        {
+            "time": 1269,
+            "key": "ward_sentry"
+        },
+        {
+            "time": 1335,
+            "key": "dust"
+        },
+        {
+            "time": 1336,
+            "key": "smoke_of_deceit"
+        },
+        {
+            "time": 1401,
+            "key": "ward_observer"
+        },
+        {
+            "time": 1402,
+            "key": "ward_sentry"
+        },
+        {
+            "time": 1540,
+            "key": "branches"
+        },
+        {
+            "time": 1540,
+            "key": "branches"
+        },
+        {
+            "time": 1540,
+            "key": "magic_wand"
+        }
+    ],
+    "92": [
+        {
+            "time": -83,
+            "key": "sobi_mask"
+        },
+        {
+            "time": -82,
+            "key": "mantle"
+        },
+        {
+            "time": -82,
+            "key": "branches"
+        },
+        {
+            "time": -82,
+            "key": "branches"
+        },
+        {
+            "time": -82,
+            "key": "branches"
+        },
+        {
+            "time": -81,
+            "key": "branches"
+        },
+        {
+            "time": -81,
+            "key": "branches"
+        },
+        {
+            "time": -62,
+            "key": "tango"
+        },
+        {
+            "time": 58,
+            "key": "circlet"
+        },
+        {
+            "time": 127,
+            "key": "circlet"
+        },
+        {
+            "time": 162,
+            "key": "null_talisman"
+        },
+        {
+            "time": 162,
+            "key": "ring_of_basilius"
+        },
+        {
+            "time": 207,
+            "key": "ward_sentry"
+        },
+        {
+            "time": 318,
+            "key": "magic_stick"
+        },
+        {
+            "time": 318,
+            "key": "magic_wand"
+        },
+        {
+            "time": 502,
+            "key": "boots"
+        },
+        {
+            "time": 582,
+            "key": "belt_of_strength"
+        },
+        {
+            "time": 584,
+            "key": "robe"
+        },
+        {
+            "time": 651,
+            "key": "smoke_of_deceit"
+        },
+        {
+            "time": 726,
+            "key": "wind_lace"
+        },
+        {
+            "time": 777,
+            "key": "belt_of_strength"
+        },
+        {
+            "time": 786,
+            "key": "clarity"
+        },
+        {
+            "time": 817,
+            "key": "ancient_janggo"
+        },
+        {
+            "time": 826,
+            "key": "blades_of_attack"
+        },
+        {
+            "time": 926,
+            "key": "ring_of_protection"
+        },
+        {
+            "time": 926,
+            "key": "buckler"
+        },
+        {
+            "time": 1084,
+            "key": "lifesteal"
+        },
+        {
+            "time": 1107,
+            "key": "vladmir"
+        },
+        {
+            "time": 1138,
+            "key": "tpscroll"
+        },
+        {
+            "time": 1395,
+            "key": "point_booster"
+        },
+        {
+            "time": 1401,
+            "key": "wraith_pact"
+        }
+    ],
+    "21": [
+        {
+            "time": -84,
+            "key": "faerie_fire"
+        },
+        {
+            "time": -84,
+            "key": "branches"
+        },
+        {
+            "time": -84,
+            "key": "branches"
+        },
+        {
+            "time": -84,
+            "key": "branches"
+        },
+        {
+            "time": -83,
+            "key": "branches"
+        },
+        {
+            "time": -82,
+            "key": "tango"
+        },
+        {
+            "time": -81,
+            "key": "ward_observer"
+        },
+        {
+            "time": 102,
+            "key": "bottle"
+        },
+        {
+            "time": 198,
+            "key": "boots"
+        },
+        {
+            "time": 199,
+            "key": "clarity"
+        },
+        {
+            "time": 202,
+            "key": "ward_observer"
+        },
+        {
+            "time": 277,
+            "key": "gloves"
+        },
+        {
+            "time": 333,
+            "key": "robe"
+        },
+        {
+            "time": 360,
+            "key": "power_treads"
+        },
+        {
+            "time": 396,
+            "key": "clarity"
+        },
+        {
+            "time": 396,
+            "key": "tpscroll"
+        },
+        {
+            "time": 482,
+            "key": "javelin"
+        },
+        {
+            "time": 484,
+            "key": "clarity"
+        },
+        {
+            "time": 665,
+            "key": "mithril_hammer"
+        },
+        {
+            "time": 668,
+            "key": "maelstrom"
+        },
+        {
+            "time": 729,
+            "key": "infused_raindrop"
+        },
+        {
+            "time": 804,
+            "key": "magic_stick"
+        },
+        {
+            "time": 804,
+            "key": "magic_wand"
+        },
+        {
+            "time": 972,
+            "key": "ogre_axe"
+        },
+        {
+            "time": 1169,
+            "key": "mithril_hammer"
+        },
+        {
+            "time": 1410,
+            "key": "black_king_bar"
+        },
+        {
+            "time": 1440,
+            "key": "dust"
+        },
+        {
+            "time": 1497,
+            "key": "tpscroll"
+        }
+    ],
+    "46": [
+        {
+            "time": -89,
+            "key": "branches"
+        },
+        {
+            "time": -89,
+            "key": "slippers"
+        },
+        {
+            "time": -89,
+            "key": "magic_stick"
+        },
+        {
+            "time": -89,
+            "key": "tango"
+        },
+        {
+            "time": -89,
+            "key": "quelling_blade"
+        },
+        {
+            "time": 13,
+            "key": "tango"
+        },
+        {
+            "time": 142,
+            "key": "boots"
+        },
+        {
+            "time": 197,
+            "key": "branches"
+        },
+        {
+            "time": 262,
+            "key": "magic_wand"
+        },
+        {
+            "time": 343,
+            "key": "gloves"
+        },
+        {
+            "time": 343,
+            "key": "boots_of_elves"
+        },
+        {
+            "time": 383,
+            "key": "power_treads"
+        },
+        {
+            "time": 410,
+            "key": "smoke_of_deceit"
+        },
+        {
+            "time": 454,
+            "key": "boots_of_elves"
+        },
+        {
+            "time": 492,
+            "key": "ward_sentry"
+        },
+        {
+            "time": 553,
+            "key": "boots_of_elves"
+        },
+        {
+            "time": 657,
+            "key": "ogre_axe"
+        },
+        {
+            "time": 672,
+            "key": "clarity"
+        },
+        {
+            "time": 672,
+            "key": "clarity"
+        },
+        {
+            "time": 694,
+            "key": "dragon_lance"
+        },
+        {
+            "time": 851,
+            "key": "mithril_hammer"
+        },
+        {
+            "time": 851,
+            "key": "clarity"
+        },
+        {
+            "time": 894,
+            "key": "tpscroll"
+        },
+        {
+            "time": 1037,
+            "key": "mithril_hammer"
+        },
+        {
+            "time": 1067,
+            "key": "blight_stone"
+        },
+        {
+            "time": 1071,
+            "key": "desolator"
+        },
+        {
+            "time": 1145,
+            "key": "ward_observer"
+        },
+        {
+            "time": 1145,
+            "key": "ward_sentry"
+        },
+        {
+            "time": 1272,
+            "key": "tpscroll"
+        },
+        {
+            "time": 1351,
+            "key": "blink"
+        }
+    ],
+    "83": [
+        {
+            "time": -89,
+            "key": "orb_of_venom"
+        },
+        {
+            "time": -89,
+            "key": "tango"
+        },
+        {
+            "time": -89,
+            "key": "faerie_fire"
+        },
+        {
+            "time": -89,
+            "key": "enchanted_mango"
+        },
+        {
+            "time": -89,
+            "key": "branches"
+        },
+        {
+            "time": 9,
+            "key": "tango"
+        },
+        {
+            "time": 65,
+            "key": "flask"
+        },
+        {
+            "time": 65,
+            "key": "enchanted_mango"
+        },
+        {
+            "time": 86,
+            "key": "magic_stick"
+        },
+        {
+            "time": 117,
+            "key": "ward_sentry"
+        },
+        {
+            "time": 117,
+            "key": "ward_sentry"
+        },
+        {
+            "time": 177,
+            "key": "tango"
+        },
+        {
+            "time": 364,
+            "key": "clarity"
+        },
+        {
+            "time": 365,
+            "key": "tango"
+        },
+        {
+            "time": 445,
+            "key": "ward_sentry"
+        },
+        {
+            "time": 483,
+            "key": "boots"
+        },
+        {
+            "time": 490,
+            "key": "clarity"
+        },
+        {
+            "time": 491,
+            "key": "clarity"
+        },
+        {
+            "time": 557,
+            "key": "ward_sentry"
+        },
+        {
+            "time": 597,
+            "key": "ward_sentry"
+        },
+        {
+            "time": 597,
+            "key": "ward_observer"
+        },
+        {
+            "time": 675,
+            "key": "tpscroll"
+        },
+        {
+            "time": 777,
+            "key": "energy_booster"
+        },
+        {
+            "time": 801,
+            "key": "arcane_boots"
+        },
+        {
+            "time": 822,
+            "key": "tpscroll"
+        },
+        {
+            "time": 823,
+            "key": "clarity"
+        },
+        {
+            "time": 873,
+            "key": "ward_sentry"
+        },
+        {
+            "time": 873,
+            "key": "ward_sentry"
+        },
+        {
+            "time": 874,
+            "key": "branches"
+        },
+        {
+            "time": 874,
+            "key": "ward_observer"
+        },
+        {
+            "time": 875,
+            "key": "ward_sentry"
+        },
+        {
+            "time": 875,
+            "key": "smoke_of_deceit"
+        },
+        {
+            "time": 875,
+            "key": "dust"
+        },
+        {
+            "time": 914,
+            "key": "magic_wand"
+        },
+        {
+            "time": 944,
+            "key": "ward_sentry"
+        },
+        {
+            "time": 945,
+            "key": "ward_sentry"
+        },
+        {
+            "time": 945,
+            "key": "clarity"
+        },
+        {
+            "time": 1046,
+            "key": "ring_of_regen"
+        },
+        {
+            "time": 1046,
+            "key": "headdress"
+        },
+        {
+            "time": 1047,
+            "key": "fluffy_hat"
+        },
+        {
+            "time": 1138,
+            "key": "holy_locket"
+        },
+        {
+            "time": 1204,
+            "key": "tome_of_knowledge"
+        },
+        {
+            "time": 1206,
+            "key": "wind_lace"
+        },
+        {
+            "time": 1235,
+            "key": "ring_of_regen"
+        },
+        {
+            "time": 1259,
+            "key": "tranquil_boots"
+        },
+        {
+            "time": 1335,
+            "key": "tpscroll"
+        },
+        {
+            "time": 1374,
+            "key": "staff_of_wizardry"
+        },
+        {
+            "time": 1375,
+            "key": "clarity"
+        },
+        {
+            "time": 1580,
+            "key": "branches"
+        },
+        {
+            "time": 1603,
+            "key": "branches"
+        }
+    ],
+    "90": [
+        {
+            "time": -89,
+            "key": "null_talisman"
+        },
+        {
+            "time": -89,
+            "key": "ward_observer"
+        },
+        {
+            "time": -89,
+            "key": "tango"
+        },
+        {
+            "time": 108,
+            "key": "boots"
+        },
+        {
+            "time": 221,
+            "key": "wind_lace"
+        },
+        {
+            "time": 222,
+            "key": "ward_observer"
+        },
+        {
+            "time": 269,
+            "key": "flask"
+        },
+        {
+            "time": 487,
+            "key": "sobi_mask"
+        },
+        {
+            "time": 488,
+            "key": "ring_of_protection"
+        },
+        {
+            "time": 674,
+            "key": "staff_of_wizardry"
+        },
+        {
+            "time": 674,
+            "key": "robe"
+        },
+        {
+            "time": 675,
+            "key": "kaya"
+        },
+        {
+            "time": 875,
+            "key": "ghost"
+        },
+        {
+            "time": 940,
+            "key": "ethereal_blade"
+        },
+        {
+            "time": 1319,
+            "key": "ultimate_orb"
+        },
+        {
+            "time": 1319,
+            "key": "ring_of_health"
+        },
+        {
+            "time": 1331,
+            "key": "pers"
+        },
+        {
+            "time": 1331,
+            "key": "sphere"
+        },
+        {
+            "time": 1331,
+            "key": "void_stone"
+        },
+        {
+            "time": 1541,
+            "key": "staff_of_wizardry"
+        },
+        {
+            "time": 1541,
+            "key": "fluffy_hat"
+        },
+        {
+            "time": 1549,
+            "key": "force_staff"
+        }
+    ],
+    "70": [
+        {
+            "time": -78,
+            "key": "tango"
+        },
+        {
+            "time": -78,
+            "key": "orb_of_venom"
+        },
+        {
+            "time": -75,
+            "key": "faerie_fire"
+        },
+        {
+            "time": -75,
+            "key": "branches"
+        },
+        {
+            "time": -75,
+            "key": "branches"
+        },
+        {
+            "time": -74,
+            "key": "branches"
+        },
+        {
+            "time": -67,
+            "key": "quelling_blade"
+        },
+        {
+            "time": 80,
+            "key": "tango"
+        },
+        {
+            "time": 86,
+            "key": "faerie_fire"
+        },
+        {
+            "time": 91,
+            "key": "magic_stick"
+        },
+        {
+            "time": 193,
+            "key": "boots"
+        },
+        {
+            "time": 280,
+            "key": "chainmail"
+        },
+        {
+            "time": 320,
+            "key": "blades_of_attack"
+        },
+        {
+            "time": 326,
+            "key": "phase_boots"
+        },
+        {
+            "time": 472,
+            "key": "blade_of_alacrity"
+        },
+        {
+            "time": 494,
+            "key": "infused_raindrop"
+        },
+        {
+            "time": 608,
+            "key": "robe"
+        },
+        {
+            "time": 676,
+            "key": "diffusal_blade"
+        },
+        {
+            "time": 679,
+            "key": "dust"
+        },
+        {
+            "time": 679,
+            "key": "dust"
+        },
+        {
+            "time": 768,
+            "key": "lifesteal"
+        },
+        {
+            "time": 924,
+            "key": "blink"
+        },
+        {
+            "time": 987,
+            "key": "tpscroll"
+        },
+        {
+            "time": 987,
+            "key": "tpscroll"
+        },
+        {
+            "time": 1103,
+            "key": "mithril_hammer"
+        },
+        {
+            "time": 1103,
+            "key": "belt_of_strength"
+        },
+        {
+            "time": 1139,
+            "key": "basher"
+        },
+        {
+            "time": 1144,
+            "key": "tpscroll"
+        },
+        {
+            "time": 1356,
+            "key": "claymore"
+        },
+        {
+            "time": 1459,
+            "key": "reaver"
+        },
+        {
+            "time": 1470,
+            "key": "satanic"
+        },
+        {
+            "time": 1666,
+            "key": "javelin"
+        },
+        {
+            "time": 1666,
+            "key": "blitz_knuckles"
+        },
+        {
+            "time": 1690,
+            "key": "monkey_king_bar"
+        },
+        {
+            "time": 1690,
+            "key": "demon_edge"
+        }
+    ],
+    "136": [
+        {
+            "time": -89,
+            "key": "gauntlets"
+        },
+        {
+            "time": -89,
+            "key": "tango"
+        },
+        {
+            "time": -89,
+            "key": "faerie_fire"
+        },
+        {
+            "time": -89,
+            "key": "quelling_blade"
+        },
+        {
+            "time": -89,
+            "key": "gauntlets"
+        },
+        {
+            "time": -89,
+            "key": "branches"
+        },
+        {
+            "time": 82,
+            "key": "tango"
+        },
+        {
+            "time": 89,
+            "key": "magic_stick"
+        },
+        {
+            "time": 214,
+            "key": "boots"
+        },
+        {
+            "time": 314,
+            "key": "chainmail"
+        },
+        {
+            "time": 314,
+            "key": "tango"
+        },
+        {
+            "time": 405,
+            "key": "blades_of_attack"
+        },
+        {
+            "time": 406,
+            "key": "clarity"
+        },
+        {
+            "time": 442,
+            "key": "phase_boots"
+        },
+        {
+            "time": 450,
+            "key": "ring_of_protection"
+        },
+        {
+            "time": 482,
+            "key": "dust"
+        },
+        {
+            "time": 518,
+            "key": "soul_ring"
+        },
+        {
+            "time": 529,
+            "key": "infused_raindrop"
+        },
+        {
+            "time": 646,
+            "key": "tpscroll"
+        },
+        {
+            "time": 647,
+            "key": "ogre_axe"
+        },
+        {
+            "time": 867,
+            "key": "mithril_hammer"
+        },
+        {
+            "time": 1060,
+            "key": "black_king_bar"
+        },
+        {
+            "time": 1069,
+            "key": "tpscroll"
+        },
+        {
+            "time": 1077,
+            "key": "clarity"
+        },
+        {
+            "time": 1290,
+            "key": "broadsword"
+        },
+        {
+            "time": 1405,
+            "key": "chainmail"
+        },
+        {
+            "time": 1406,
+            "key": "dust"
+        },
+        {
+            "time": 1526,
+            "key": "blade_mail"
+        },
+        {
+            "time": 1703,
+            "key": "mithril_hammer"
+        },
+        {
+            "time": 1705,
+            "key": "blink"
+        }
+    ],
+    "58": [
+        {
+            "time": -89,
+            "key": "tango"
+        },
+        {
+            "time": -89,
+            "key": "blight_stone"
+        },
+        {
+            "time": -89,
+            "key": "ward_sentry"
+        },
+        {
+            "time": -89,
+            "key": "branches"
+        },
+        {
+            "time": -89,
+            "key": "branches"
+        },
+        {
+            "time": -89,
+            "key": "branches"
+        },
+        {
+            "time": 1,
+            "key": "ward_sentry"
+        },
+        {
+            "time": 1,
+            "key": "magic_stick"
+        },
+        {
+            "time": 90,
+            "key": "tango"
+        },
+        {
+            "time": 138,
+            "key": "magic_wand"
+        },
+        {
+            "time": 194,
+            "key": "boots"
+        },
+        {
+            "time": 195,
+            "key": "clarity"
+        },
+        {
+            "time": 282,
+            "key": "infused_raindrop"
+        },
+        {
+            "time": 370,
+            "key": "tango"
+        },
+        {
+            "time": 370,
+            "key": "ward_observer"
+        },
+        {
+            "time": 371,
+            "key": "ward_sentry"
+        },
+        {
+            "time": 433,
+            "key": "dust"
+        },
+        {
+            "time": 433,
+            "key": "dust"
+        },
+        {
+            "time": 434,
+            "key": "gloves"
+        },
+        {
+            "time": 435,
+            "key": "tpscroll"
+        },
+        {
+            "time": 504,
+            "key": "robe"
+        },
+        {
+            "time": 520,
+            "key": "power_treads"
+        },
+        {
+            "time": 522,
+            "key": "ward_sentry"
+        },
+        {
+            "time": 584,
+            "key": "ward_sentry"
+        },
+        {
+            "time": 584,
+            "key": "ward_sentry"
+        },
+        {
+            "time": 640,
+            "key": "tpscroll"
+        },
+        {
+            "time": 682,
+            "key": "ward_observer"
+        },
+        {
+            "time": 682,
+            "key": "ward_observer"
+        },
+        {
+            "time": 683,
+            "key": "smoke_of_deceit"
+        },
+        {
+            "time": 714,
+            "key": "ward_sentry"
+        },
+        {
+            "time": 715,
+            "key": "ward_sentry"
+        },
+        {
+            "time": 934,
+            "key": "ward_observer"
+        },
+        {
+            "time": 934,
+            "key": "ward_sentry"
+        },
+        {
+            "time": 951,
+            "key": "belt_of_strength"
+        },
+        {
+            "time": 951,
+            "key": "robe"
+        },
+        {
+            "time": 951,
+            "key": "wind_lace"
+        },
+        {
+            "time": 965,
+            "key": "ancient_janggo"
+        },
+        {
+            "time": 1007,
+            "key": "ward_sentry"
+        },
+        {
+            "time": 1008,
+            "key": "ward_sentry"
+        },
+        {
+            "time": 1008,
+            "key": "ward_observer"
+        },
+        {
+            "time": 1008,
+            "key": "ward_sentry"
+        },
+        {
+            "time": 1009,
+            "key": "ward_observer"
+        },
+        {
+            "time": 1112,
+            "key": "dust"
+        },
+        {
+            "time": 1113,
+            "key": "dust"
+        },
+        {
+            "time": 1190,
+            "key": "ward_observer"
+        },
+        {
+            "time": 1190,
+            "key": "ward_sentry"
+        },
+        {
+            "time": 1190,
+            "key": "ward_sentry"
+        },
+        {
+            "time": 1190,
+            "key": "ward_sentry"
+        },
+        {
+            "time": 1191,
+            "key": "ward_sentry"
+        },
+        {
+            "time": 1191,
+            "key": "smoke_of_deceit"
+        },
+        {
+            "time": 1191,
+            "key": "smoke_of_deceit"
+        },
+        {
+            "time": 1192,
+            "key": "smoke_of_deceit"
+        },
+        {
+            "time": 1267,
+            "key": "ward_observer"
+        },
+        {
+            "time": 1268,
+            "key": "ward_sentry"
+        },
+        {
+            "time": 1340,
+            "key": "tome_of_knowledge"
+        },
+        {
+            "time": 1365,
+            "key": "ward_sentry"
+        },
+        {
+            "time": 1429,
+            "key": "ward_observer"
+        },
+        {
+            "time": 1429,
+            "key": "ward_sentry"
+        },
+        {
+            "time": 1506,
+            "key": "staff_of_wizardry"
+        },
+        {
+            "time": 1506,
+            "key": "fluffy_hat"
+        },
+        {
+            "time": 1506,
+            "key": "force_staff"
+        },
+        {
+            "time": 1508,
+            "key": "ward_sentry"
+        },
+        {
+            "time": 1508,
+            "key": "ward_sentry"
+        }
+    ],
+    "63": [
+        {
+            "time": -89,
+            "key": "tango",
+            "charges": 6
+        },
+        {
+            "time": -89,
+            "key": "faerie_fire"
+        },
+        {
+            "time": -89,
+            "key": "circlet"
+        },
+        {
+            "time": -89,
+            "key": "branches"
+        },
+        {
+            "time": -89,
+            "key": "branches"
+        },
+        {
+            "time": 11,
+            "key": "flask"
+        },
+        {
+            "time": 11,
+            "key": "ward_sentry"
+        },
+        {
+            "time": 254,
+            "key": "sobi_mask"
+        },
+        {
+            "time": 311,
+            "key": "ring_of_protection"
+        },
+        {
+            "time": 313,
+            "key": "urn_of_shadows"
+        },
+        {
+            "time": 408,
+            "key": "magic_stick"
+        },
+        {
+            "time": 409,
+            "key": "tpscroll"
+        },
+        {
+            "time": 412,
+            "key": "ward_observer"
+        },
+        {
+            "time": 413,
+            "key": "ward_sentry"
+        },
+        {
+            "time": 526,
+            "key": "infused_raindrop"
+        },
+        {
+            "time": 624,
+            "key": "tome_of_knowledge"
+        },
+        {
+            "time": 626,
+            "key": "tpscroll"
+        },
+        {
+            "time": 663,
+            "key": "magic_wand"
+        },
+        {
+            "time": 678,
+            "key": "fluffy_hat"
+        },
+        {
+            "time": 701,
+            "key": "ward_sentry"
+        },
+        {
+            "time": 978,
+            "key": "tpscroll"
+        },
+        {
+            "time": 985,
+            "key": "crown"
+        },
+        {
+            "time": 985,
+            "key": "crown"
+        },
+        {
+            "time": 986,
+            "key": "staff_of_wizardry"
+        },
+        {
+            "time": 1197,
+            "key": "dust"
+        },
+        {
+            "time": 1197,
+            "key": "dust"
+        },
+        {
+            "time": 1232,
+            "key": "rod_of_atos"
+        },
+        {
+            "time": 1516,
+            "key": "mithril_hammer"
+        },
+        {
+            "time": 1518,
+            "key": "dust"
+        },
+        {
+            "time": 1619,
+            "key": "javelin"
+        },
+        {
+            "time": 1656,
+            "key": "maelstrom"
+        },
+        {
+            "time": 1706,
+            "key": "gungir"
+        }
+    ]
+}

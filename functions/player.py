@@ -328,9 +328,7 @@ def fixExcess(excess, missing, players):
         print("role:", excess)
         print("missing:", missing)
         for player in excess_players:
-            print("hi")
             if player["hero_id"] == max_net_player["hero_id"]:
-                print("hehe")
                 if player["lane_role"] == 4:
                     player["ml_lane_role"] = 3
                 else:
@@ -360,7 +358,6 @@ def fixExcess(excess, missing, players):
                         player["ml_lane_role"] = 2
                     if 5 in missing:
                         player["ml_lane_role"] = 5
-    print(players)
     return players
 
 

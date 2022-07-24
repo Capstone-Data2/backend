@@ -1,0 +1,5915 @@
+[
+    {
+        "match_id": 6676192106,
+        "ability_upgrades_arr": [
+            5078,
+            5080,
+            5080,
+            5079,
+            5079,
+            5081,
+            5079,
+            5079,
+            5080,
+            6877,
+            5080,
+            5081,
+            5078,
+            5078,
+            6295
+        ],
+        "account_id": 153553677,
+        "additional_units": null,
+        "assists": 17,
+        "backpack_0": 0,
+        "backpack_1": 0,
+        "backpack_2": 0,
+        "buyback_log": [],
+        "camps_stacked": 0,
+        "damage": {
+            "npc_dota_creep_goodguys_melee": 861,
+            "npc_dota_hero_nevermore": 2429,
+            "npc_dota_neutral_enraged_wildkin": 1255,
+            "npc_dota_creep_goodguys_ranged": 460,
+            "npc_dota_hero_windrunner": 1708,
+            "npc_dota_observer_wards": 100,
+            "npc_dota_hero_pudge": 591,
+            "npc_dota_neutral_polar_furbolg_champion": 92,
+            "npc_dota_creep_badguys_melee": 5798,
+            "npc_dota_creep_badguys_ranged": 919,
+            "npc_dota_hero_faceless_void": 1416,
+            "npc_dota_hero_earth_spirit": 821,
+            "npc_dota_neutral_dark_troll_warlord": 86,
+            "npc_dota_dark_troll_warlord_skeleton_warrior": 104,
+            "npc_dota_badguys_siege": 942,
+            "npc_dota_sentry_wards": 50,
+            "npc_dota_badguys_tower2_mid": 60,
+            "npc_dota_neutral_wildkin": 915,
+            "npc_dota_badguys_tower3_mid": 1313,
+            "npc_dota_badguys_melee_rax_mid": 1631,
+            "npc_dota_badguys_fillers": 18,
+            "npc_dota_badguys_tower4": 67,
+            "npc_dota_badguys_fort": 110
+        },
+        "damage_taken": {
+            "npc_dota_hero_nevermore": 2632,
+            "npc_dota_creep_badguys_ranged": 266,
+            "npc_dota_creep_badguys_melee": 268,
+            "npc_dota_badguys_tower1_top": 370,
+            "npc_dota_neutral_enraged_wildkin": 343,
+            "npc_dota_neutral_wildkin": 313,
+            "npc_dota_enraged_wildkin_tornado": 72,
+            "npc_dota_hero_windrunner": 2552,
+            "npc_dota_hero_pudge": 1409,
+            "npc_dota_badguys_siege": 180,
+            "npc_dota_neutral_polar_furbolg_champion": 86,
+            "npc_dota_hero_faceless_void": 1498,
+            "npc_dota_hero_earth_spirit": 474,
+            "npc_dota_neutral_black_drake": 17,
+            "npc_dota_badguys_tower2_mid": 306,
+            "npc_dota_badguys_tower3_mid": 1066,
+            "npc_dota_badguys_tower3_bot": 282,
+            "npc_dota_badguys_tower4": 414
+        },
+        "deaths": 2,
+        "denies": 9,
+        "dn_t": [
+            0,
+            1,
+            1,
+            2,
+            3,
+            3,
+            3,
+            3,
+            3,
+            7,
+            9,
+            9,
+            9,
+            9,
+            9,
+            9,
+            9,
+            9,
+            9,
+            9,
+            9,
+            9,
+            9,
+            9,
+            9,
+            9
+        ],
+        "gpm": 328,
+        "gold_t": [
+            0,
+            179,
+            279,
+            444,
+            584,
+            684,
+            989,
+            1185,
+            1420,
+            1769,
+            2097,
+            2255,
+            2518,
+            2905,
+            3155,
+            3355,
+            4016,
+            4273,
+            4379,
+            5026,
+            5132,
+            5527,
+            6203,
+            7028,
+            7510,
+            8177
+        ],
+        "hero_damage": 6965,
+        "hero_healing": 0,
+        "hero_id": 27,
+        "item_0": 214,
+        "item_1": 36,
+        "item_2": 232,
+        "item_3": 188,
+        "item_4": 0,
+        "item_5": 39,
+        "item_neutral": 359,
+        "kill_streaks": {
+            "3": 1,
+            "4": 1
+        },
+        "killed": {
+            "npc_dota_creep_goodguys_melee": 6,
+            "npc_dota_neutral_enraged_wildkin": 2,
+            "npc_dota_hero_nevermore": 1,
+            "npc_dota_observer_wards": 2,
+            "npc_dota_creep_goodguys_ranged": 3,
+            "npc_dota_creep_badguys_melee": 14,
+            "npc_dota_creep_badguys_ranged": 4,
+            "npc_dota_hero_faceless_void": 1,
+            "npc_dota_hero_windrunner": 1,
+            "npc_dota_badguys_siege": 1,
+            "npc_dota_sentry_wards": 1,
+            "npc_dota_hero_earth_spirit": 2,
+            "npc_dota_neutral_wildkin": 2,
+            "npc_dota_badguys_tower3_mid": 1,
+            "npc_dota_badguys_melee_rax_mid": 1
+        },
+        "kills": 5,
+        "kills_log": [
+            {
+                "time": 355,
+                "key": "npc_dota_hero_nevermore"
+            },
+            {
+                "time": 757,
+                "key": "npc_dota_hero_faceless_void"
+            },
+            {
+                "time": 933,
+                "key": "npc_dota_hero_windrunner"
+            },
+            {
+                "time": 1136,
+                "key": "npc_dota_hero_earth_spirit"
+            },
+            {
+                "time": 1472,
+                "key": "npc_dota_hero_earth_spirit"
+            }
+        ],
+        "last_hits": 28,
+        "level": 16,
+        "lh_t": [
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            2,
+            7,
+            12,
+            13,
+            13,
+            13,
+            13,
+            13,
+            16,
+            17,
+            18,
+            21,
+            21,
+            24,
+            26,
+            28,
+            28,
+            28
+        ],
+        "max_hero_hit": {
+            "type": "max_hero_hit",
+            "time": 1470,
+            "max": true,
+            "inflictor": "shadow_shaman_ether_shock",
+            "unit": "npc_dota_hero_shadow_shaman",
+            "key": "npc_dota_hero_nevermore",
+            "value": 195,
+            "slot": 0,
+            "player_slot": 0
+        },
+        "multi_kills": {},
+        "net_worth": 7931,
+        "obs_placed": 7,
+        "party_id": 0,
+        "permanent_buffs": [
+            {
+                "permanent_buff": 6,
+                "stack_count": 2
+            },
+            {
+                "permanent_buff": 12,
+                "stack_count": 0
+            }
+        ],
+        "purchase_log": [
+            {
+                "time": -89,
+                "key": "ward_observer"
+            },
+            {
+                "time": -89,
+                "key": "tango",
+                "charges": 6
+            },
+            {
+                "time": -89,
+                "key": "branches"
+            },
+            {
+                "time": -89,
+                "key": "branches"
+            },
+            {
+                "time": -89,
+                "key": "magic_stick"
+            },
+            {
+                "time": -79,
+                "key": "ward_sentry"
+            },
+            {
+                "time": -71,
+                "key": "clarity"
+            },
+            {
+                "time": 193,
+                "key": "boots"
+            },
+            {
+                "time": 224,
+                "key": "ward_observer"
+            },
+            {
+                "time": 314,
+                "key": "magic_wand"
+            },
+            {
+                "time": 393,
+                "key": "ward_observer"
+            },
+            {
+                "time": 394,
+                "key": "ward_sentry"
+            },
+            {
+                "time": 454,
+                "key": "tpscroll"
+            },
+            {
+                "time": 549,
+                "key": "arcane_boots"
+            },
+            {
+                "time": 549,
+                "key": "energy_booster"
+            },
+            {
+                "time": 608,
+                "key": "tome_of_knowledge"
+            },
+            {
+                "time": 610,
+                "key": "ward_observer"
+            },
+            {
+                "time": 610,
+                "key": "ward_observer"
+            },
+            {
+                "time": 616,
+                "key": "ward_sentry"
+            },
+            {
+                "time": 630,
+                "key": "smoke_of_deceit"
+            },
+            {
+                "time": 788,
+                "key": "void_stone"
+            },
+            {
+                "time": 899,
+                "key": "aether_lens"
+            },
+            {
+                "time": 944,
+                "key": "wind_lace"
+            },
+            {
+                "time": 944,
+                "key": "ring_of_regen"
+            },
+            {
+                "time": 963,
+                "key": "tranquil_boots"
+            },
+            {
+                "time": 968,
+                "key": "ward_observer"
+            },
+            {
+                "time": 969,
+                "key": "smoke_of_deceit"
+            },
+            {
+                "time": 1027,
+                "key": "tpscroll"
+            },
+            {
+                "time": 1027,
+                "key": "tpscroll"
+            },
+            {
+                "time": 1032,
+                "key": "ward_sentry"
+            },
+            {
+                "time": 1202,
+                "key": "tome_of_knowledge"
+            },
+            {
+                "time": 1306,
+                "key": "aghanims_shard"
+            },
+            {
+                "time": 1308,
+                "key": "flask"
+            },
+            {
+                "time": 1385,
+                "key": "ward_observer"
+            },
+            {
+                "time": 1385,
+                "key": "ward_sentry"
+            }
+        ],
+        "rune_pickups": 2,
+        "runes_log": [
+            {
+                "time": 8,
+                "key": 5
+            },
+            {
+                "time": 951,
+                "key": 5
+            }
+        ],
+        "sen_placed": 5,
+        "stuns": 74.381836,
+        "tower_damage": 3181,
+        "xpm": 490,
+        "xp_t": [
+            0,
+            104,
+            280,
+            355,
+            513,
+            535,
+            1094,
+            1134,
+            1304,
+            1947,
+            2354,
+            2450,
+            3739,
+            4481,
+            4703,
+            5421,
+            6016,
+            6275,
+            6397,
+            8025,
+            8063,
+            9110,
+            10415,
+            10549,
+            10921,
+            11596
+        ],
+        "personaname": "KindaCringe",
+        "duration": 1512,
+        "is_radiant": true,
+        "win": 1,
+        "total_gold": 8265,
+        "total_xp": 12348,
+        "kills_per_min": 0.19841269841269843,
+        "kda": 7,
+        "lane": 3,
+        "lane_role": 3,
+        "is_roaming": false,
+        "life_state_dead": 63,
+        "rank_tier": 41,
+        "damage_inflictor": {
+            "null": 4263,
+            "shadow_shaman_ether_shock": 1882,
+            "shadow_shaman_shackles": 820
+        },
+        "damage_inflictor_received": {
+            "null": 4168,
+            "pudge_rot": 564,
+            "pudge_meat_hook": 510,
+            "faceless_void_time_dilation": 510,
+            "earth_spirit_rolling_boulder": 240,
+            "orb_of_venom": 3,
+            "urn_of_shadows": 144,
+            "maelstrom": 840,
+            "faceless_void_time_lock": 66,
+            "nevermore_requiem": 690,
+            "windrunner_powershot": 674,
+            "pudge_dismember": 156
+        },
+        "damage_targets": {
+            "null": {
+                "npc_dota_hero_nevermore": 1611,
+                "npc_dota_hero_windrunner": 1130,
+                "npc_dota_hero_faceless_void": 833,
+                "npc_dota_hero_earth_spirit": 501,
+                "npc_dota_hero_pudge": 188
+            },
+            "shadow_shaman_ether_shock": {
+                "npc_dota_hero_nevermore": 720,
+                "npc_dota_hero_windrunner": 315,
+                "npc_dota_hero_pudge": 337,
+                "npc_dota_hero_earth_spirit": 300,
+                "npc_dota_hero_faceless_void": 210
+            },
+            "shadow_shaman_shackles": {
+                "npc_dota_hero_nevermore": 98,
+                "npc_dota_hero_pudge": 66,
+                "npc_dota_hero_windrunner": 263,
+                "npc_dota_hero_faceless_void": 373,
+                "npc_dota_hero_earth_spirit": 20
+            }
+        },
+        "obs_log": [
+            {
+                "time": -12,
+                "type": "obs_log",
+                "key": "[88, 164]",
+                "slot": 0,
+                "x": 88,
+                "y": 164,
+                "z": 128,
+                "entityleft": false,
+                "ehandle": 8079467,
+                "player_slot": 0
+            },
+            {
+                "time": 295,
+                "type": "obs_log",
+                "key": "[104, 156]",
+                "slot": 0,
+                "x": 104,
+                "y": 156,
+                "z": 132,
+                "entityleft": false,
+                "ehandle": 6538750,
+                "player_slot": 0
+            },
+            {
+                "time": 450,
+                "type": "obs_log",
+                "key": "[122, 132]",
+                "slot": 0,
+                "x": 122,
+                "y": 132,
+                "z": 128,
+                "entityleft": false,
+                "ehandle": 16025310,
+                "player_slot": 0
+            },
+            {
+                "time": 703,
+                "type": "obs_log",
+                "key": "[148, 114]",
+                "slot": 0,
+                "x": 148,
+                "y": 114,
+                "z": 130,
+                "entityleft": false,
+                "ehandle": 4359571,
+                "player_slot": 0
+            },
+            {
+                "time": 811,
+                "type": "obs_log",
+                "key": "[164, 132]",
+                "slot": 0,
+                "x": 164,
+                "y": 132,
+                "z": 132,
+                "entityleft": false,
+                "ehandle": 460897,
+                "player_slot": 0
+            },
+            {
+                "time": 1019,
+                "type": "obs_log",
+                "key": "[130, 144]",
+                "slot": 0,
+                "x": 130,
+                "y": 144,
+                "z": 130,
+                "entityleft": false,
+                "ehandle": 12289823,
+                "player_slot": 0
+            },
+            {
+                "time": 1410,
+                "type": "obs_log",
+                "key": "[150, 178]",
+                "slot": 0,
+                "x": 150,
+                "y": 178,
+                "z": 130,
+                "entityleft": false,
+                "ehandle": 7177640,
+                "player_slot": 0
+            }
+        ],
+        "obs_left_log": [
+            {
+                "time": 349,
+                "type": "obs_left_log",
+                "key": "[88, 164]",
+                "slot": 0,
+                "attackername": "npc_dota_hero_shadow_shaman",
+                "x": 88,
+                "y": 164,
+                "z": 128,
+                "entityleft": true,
+                "ehandle": 8079467,
+                "player_slot": 0
+            },
+            {
+                "time": 656,
+                "type": "obs_left_log",
+                "key": "[104, 156]",
+                "slot": 0,
+                "attackername": "npc_dota_hero_shadow_shaman",
+                "x": 104,
+                "y": 156,
+                "z": 132,
+                "entityleft": true,
+                "ehandle": 6538750,
+                "player_slot": 0
+            },
+            {
+                "time": 810,
+                "type": "obs_left_log",
+                "key": "[122, 132]",
+                "slot": 0,
+                "attackername": "npc_dota_hero_shadow_shaman",
+                "x": 122,
+                "y": 132,
+                "z": 128,
+                "entityleft": true,
+                "ehandle": 16025310,
+                "player_slot": 0
+            },
+            {
+                "time": 1063,
+                "type": "obs_left_log",
+                "key": "[148, 114]",
+                "slot": 0,
+                "attackername": "npc_dota_hero_shadow_shaman",
+                "x": 148,
+                "y": 114,
+                "z": 130,
+                "entityleft": true,
+                "ehandle": 4359571,
+                "player_slot": 0
+            },
+            {
+                "time": 1068,
+                "type": "obs_left_log",
+                "key": "[164, 132]",
+                "slot": 0,
+                "attackername": "npc_dota_hero_windrunner",
+                "x": 164,
+                "y": 132,
+                "z": 132,
+                "entityleft": true,
+                "ehandle": 460897,
+                "player_slot": 0
+            },
+            {
+                "time": 1379,
+                "type": "obs_left_log",
+                "key": "[130, 144]",
+                "slot": 0,
+                "attackername": "npc_dota_hero_shadow_shaman",
+                "x": 130,
+                "y": 144,
+                "z": 130,
+                "entityleft": true,
+                "ehandle": 12289823,
+                "player_slot": 0
+            }
+        ],
+        "sen_log": [
+            {
+                "time": -30,
+                "type": "sen_log",
+                "key": "[98, 168]",
+                "slot": 0,
+                "x": 98,
+                "y": 168,
+                "z": 128,
+                "entityleft": false,
+                "ehandle": 16451646,
+                "player_slot": 0
+            },
+            {
+                "time": 443,
+                "type": "sen_log",
+                "key": "[120, 128]",
+                "slot": 0,
+                "x": 120,
+                "y": 128,
+                "z": 128,
+                "entityleft": false,
+                "ehandle": 10798831,
+                "player_slot": 0
+            },
+            {
+                "time": 706,
+                "type": "sen_log",
+                "key": "[144, 120]",
+                "slot": 0,
+                "x": 144,
+                "y": 120,
+                "z": 132,
+                "entityleft": false,
+                "ehandle": 5162077,
+                "player_slot": 0
+            },
+            {
+                "time": 1089,
+                "type": "sen_log",
+                "key": "[164, 132]",
+                "slot": 0,
+                "x": 164,
+                "y": 132,
+                "z": 132,
+                "entityleft": false,
+                "ehandle": 4507834,
+                "player_slot": 0
+            },
+            {
+                "time": 1418,
+                "type": "sen_log",
+                "key": "[154, 170]",
+                "slot": 0,
+                "x": 154,
+                "y": 170,
+                "z": 130,
+                "entityleft": false,
+                "ehandle": 8587657,
+                "player_slot": 0
+            }
+        ],
+        "sen_left_log": [
+            {
+                "time": 390,
+                "type": "sen_left_log",
+                "key": "[98, 168]",
+                "slot": 0,
+                "attackername": "npc_dota_hero_shadow_shaman",
+                "x": 98,
+                "y": 168,
+                "z": 128,
+                "entityleft": true,
+                "ehandle": 16451646,
+                "player_slot": 0
+            },
+            {
+                "time": 863,
+                "type": "sen_left_log",
+                "key": "[120, 128]",
+                "slot": 0,
+                "attackername": "npc_dota_hero_shadow_shaman",
+                "x": 120,
+                "y": 128,
+                "z": 128,
+                "entityleft": true,
+                "ehandle": 10798831,
+                "player_slot": 0
+            },
+            {
+                "time": 1127,
+                "type": "sen_left_log",
+                "key": "[144, 120]",
+                "slot": 0,
+                "attackername": "npc_dota_hero_shadow_shaman",
+                "x": 144,
+                "y": 120,
+                "z": 132,
+                "entityleft": true,
+                "ehandle": 5162077,
+                "player_slot": 0
+            },
+            {
+                "time": 1181,
+                "type": "sen_left_log",
+                "key": "[164, 132]",
+                "slot": 0,
+                "attackername": "npc_dota_hero_windrunner",
+                "x": 164,
+                "y": 132,
+                "z": 132,
+                "entityleft": true,
+                "ehandle": 4507834,
+                "player_slot": 0
+            }
+        ],
+        "ml_lane_role": 4
+    },
+    {
+        "match_id": 6676192106,
+        "ability_upgrades_arr": [
+            5233,
+            5234,
+            5235,
+            5233,
+            5235,
+            7304,
+            5233,
+            5233,
+            5235,
+            5235,
+            5234,
+            5234,
+            7304,
+            5234
+        ],
+        "account_id": null,
+        "additional_units": null,
+        "assists": 27,
+        "backpack_0": 0,
+        "backpack_1": 0,
+        "backpack_2": 0,
+        "buyback_log": [],
+        "camps_stacked": 1,
+        "damage": {
+            "npc_dota_hero_earth_spirit": 3750,
+            "npc_dota_hero_faceless_void": 4390,
+            "npc_dota_creep_badguys_melee": 4062,
+            "npc_dota_creep_goodguys_ranged": 113,
+            "npc_dota_creep_goodguys_melee": 303,
+            "npc_dota_neutral_forest_troll_berserker": 152,
+            "npc_dota_neutral_kobold_taskmaster": 96,
+            "npc_dota_sentry_wards": 100,
+            "npc_dota_neutral_harpy_scout": 54,
+            "npc_dota_hero_windrunner": 1583,
+            "npc_dota_creep_badguys_ranged": 764,
+            "npc_dota_badguys_tower1_bot": 22,
+            "npc_dota_hero_pudge": 1127,
+            "npc_dota_observer_wards": 50,
+            "npc_dota_neutral_polar_furbolg_champion": 237,
+            "npc_dota_neutral_polar_furbolg_ursa_warrior": 229,
+            "npc_dota_neutral_centaur_outrunner": 376,
+            "npc_dota_neutral_centaur_khan": 229,
+            "npc_dota_neutral_dark_troll": 648,
+            "npc_dota_neutral_dark_troll_warlord": 261,
+            "npc_dota_dark_troll_warlord_skeleton_warrior": 76,
+            "npc_dota_hero_nevermore": 725,
+            "npc_dota_badguys_tower3_bot": 63,
+            "npc_dota_badguys_range_rax_bot": 83,
+            "npc_dota_badguys_melee_rax_bot": 132,
+            "npc_dota_badguys_tower3_top": 25,
+            "npc_dota_badguys_tower4": 56
+        },
+        "damage_taken": {
+            "npc_dota_hero_earth_spirit": 942,
+            "npc_dota_creep_badguys_ranged": 322,
+            "npc_dota_creep_badguys_melee": 347,
+            "npc_dota_neutral_forest_troll_berserker": 132,
+            "npc_dota_neutral_kobold_taskmaster": 17,
+            "npc_dota_hero_faceless_void": 2014,
+            "npc_dota_badguys_siege": 58,
+            "npc_dota_hero_windrunner": 3363,
+            "npc_dota_badguys_tower1_bot": 487,
+            "npc_dota_neutral_dark_troll_warlord": 67,
+            "npc_dota_neutral_dark_troll": 73,
+            "npc_dota_dark_troll_warlord_skeleton_warrior": 16,
+            "npc_dota_hero_pudge": 167,
+            "npc_dota_hero_nevermore": 696,
+            "npc_dota_badguys_tower3_bot": 105
+        },
+        "deaths": 4,
+        "denies": 1,
+        "dn_t": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+        ],
+        "gpm": 291,
+        "gold_t": [
+            0,
+            179,
+            279,
+            379,
+            519,
+            668,
+            809,
+            1005,
+            1111,
+            1273,
+            1666,
+            1772,
+            2043,
+            2304,
+            2741,
+            3194,
+            3487,
+            3742,
+            4019,
+            4625,
+            4731,
+            5019,
+            5432,
+            6204,
+            6686,
+            7228
+        ],
+        "hero_damage": 11575,
+        "hero_healing": 6524,
+        "hero_id": 50,
+        "item_0": 265,
+        "item_1": 43,
+        "item_2": 180,
+        "item_3": 254,
+        "item_4": 34,
+        "item_5": 0,
+        "item_neutral": 349,
+        "kill_streaks": {},
+        "killed": {
+            "npc_dota_sentry_wards": 2,
+            "npc_dota_neutral_harpy_scout": 1,
+            "npc_dota_creep_goodguys_melee": 1,
+            "npc_dota_neutral_kobold_taskmaster": 1,
+            "npc_dota_creep_badguys_ranged": 2,
+            "npc_dota_hero_windrunner": 1,
+            "npc_dota_observer_wards": 1,
+            "npc_dota_neutral_centaur_outrunner": 2,
+            "npc_dota_creep_badguys_melee": 3,
+            "npc_dota_hero_pudge": 2
+        },
+        "kills": 3,
+        "kills_log": [
+            {
+                "time": 576,
+                "key": "npc_dota_hero_windrunner"
+            },
+            {
+                "time": 886,
+                "key": "npc_dota_hero_pudge"
+            },
+            {
+                "time": 1127,
+                "key": "npc_dota_hero_pudge"
+            }
+        ],
+        "last_hits": 12,
+        "level": 14,
+        "lh_t": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            3,
+            3,
+            3,
+            4,
+            4,
+            4,
+            4,
+            5,
+            8,
+            9,
+            9,
+            10,
+            11,
+            11,
+            11,
+            11,
+            11,
+            11,
+            11,
+            12
+        ],
+        "max_hero_hit": {
+            "type": "max_hero_hit",
+            "time": 1509,
+            "max": true,
+            "inflictor": "dazzle_shadow_wave",
+            "unit": "npc_dota_hero_dazzle",
+            "key": "npc_dota_hero_earth_spirit",
+            "value": 120,
+            "slot": 1,
+            "player_slot": 1
+        },
+        "multi_kills": {},
+        "net_worth": 6453,
+        "obs_placed": 4,
+        "party_id": 0,
+        "permanent_buffs": [
+            {
+                "permanent_buff": 12,
+                "stack_count": 0
+            }
+        ],
+        "purchase_log": [
+            {
+                "time": -89,
+                "key": "magic_stick"
+            },
+            {
+                "time": -89,
+                "key": "flask"
+            },
+            {
+                "time": -89,
+                "key": "tango"
+            },
+            {
+                "time": -89,
+                "key": "enchanted_mango",
+                "charges": 3
+            },
+            {
+                "time": -86,
+                "key": "ward_observer"
+            },
+            {
+                "time": 9,
+                "key": "ward_sentry"
+            },
+            {
+                "time": 9,
+                "key": "ward_sentry"
+            },
+            {
+                "time": 147,
+                "key": "ward_sentry"
+            },
+            {
+                "time": 147,
+                "key": "ward_sentry"
+            },
+            {
+                "time": 324,
+                "key": "boots"
+            },
+            {
+                "time": 337,
+                "key": "ward_observer"
+            },
+            {
+                "time": 622,
+                "key": "energy_booster"
+            },
+            {
+                "time": 659,
+                "key": "arcane_boots"
+            },
+            {
+                "time": 712,
+                "key": "infused_raindrop"
+            },
+            {
+                "time": 713,
+                "key": "ward_sentry"
+            },
+            {
+                "time": 714,
+                "key": "ward_sentry"
+            },
+            {
+                "time": 714,
+                "key": "ward_sentry"
+            },
+            {
+                "time": 714,
+                "key": "ward_sentry"
+            },
+            {
+                "time": 891,
+                "key": "shadow_amulet"
+            },
+            {
+                "time": 967,
+                "key": "cloak"
+            },
+            {
+                "time": 1010,
+                "key": "ward_observer"
+            },
+            {
+                "time": 1011,
+                "key": "ward_sentry"
+            },
+            {
+                "time": 1011,
+                "key": "ward_sentry"
+            },
+            {
+                "time": 1039,
+                "key": "ward_sentry"
+            },
+            {
+                "time": 1149,
+                "key": "glimmer_cape"
+            },
+            {
+                "time": 1152,
+                "key": "ward_sentry"
+            },
+            {
+                "time": 1152,
+                "key": "ward_sentry"
+            },
+            {
+                "time": 1152,
+                "key": "ward_sentry"
+            },
+            {
+                "time": 1152,
+                "key": "ward_sentry"
+            },
+            {
+                "time": 1152,
+                "key": "ward_observer"
+            },
+            {
+                "time": 1154,
+                "key": "infused_raindrop"
+            },
+            {
+                "time": 1252,
+                "key": "tpscroll"
+            },
+            {
+                "time": 1380,
+                "key": "aghanims_shard"
+            }
+        ],
+        "rune_pickups": 2,
+        "runes_log": [
+            {
+                "time": 191,
+                "key": 5
+            },
+            {
+                "time": 1246,
+                "key": 5
+            }
+        ],
+        "sen_placed": 14,
+        "stuns": 14.229858,
+        "tower_damage": 381,
+        "xpm": 430,
+        "xp_t": [
+            0,
+            73,
+            305,
+            551,
+            647,
+            683,
+            943,
+            1224,
+            1351,
+            1556,
+            2045,
+            2310,
+            2370,
+            2854,
+            3147,
+            3918,
+            4909,
+            5178,
+            5338,
+            6617,
+            6655,
+            6733,
+            7605,
+            8939,
+            9146,
+            10054
+        ],
+        "personaname": "Unknown",
+        "duration": 1512,
+        "is_radiant": true,
+        "win": 1,
+        "total_gold": 7333,
+        "total_xp": 10836,
+        "kills_per_min": 0.11904761904761905,
+        "kda": 6,
+        "lane": 1,
+        "lane_role": 1,
+        "is_roaming": false,
+        "life_state_dead": 97,
+        "rank_tier": null,
+        "damage_inflictor": {
+            "null": 3696,
+            "dazzle_poison_touch": 5580,
+            "dazzle_shadow_wave": 1784,
+            "dazzle_bad_juju": 515
+        },
+        "damage_inflictor_received": {
+            "earth_spirit_rolling_boulder": 237,
+            "null": 4089,
+            "earth_spirit_boulder_smash": 360,
+            "orb_of_venom": 10,
+            "faceless_void_time_dilation": 732,
+            "faceless_void_time_lock": 29,
+            "windrunner_powershot": 686,
+            "chipped_vest": 62,
+            "maelstrom": 357,
+            "pudge_rot": 105,
+            "nevermore_requiem": 515
+        },
+        "damage_targets": {
+            "null": {
+                "npc_dota_hero_earth_spirit": 1108,
+                "npc_dota_hero_faceless_void": 1846,
+                "npc_dota_hero_windrunner": 302,
+                "npc_dota_hero_pudge": 325,
+                "npc_dota_hero_nevermore": 115
+            },
+            "dazzle_poison_touch": {
+                "npc_dota_hero_earth_spirit": 1980,
+                "npc_dota_hero_faceless_void": 1536,
+                "npc_dota_hero_windrunner": 1059,
+                "npc_dota_hero_pudge": 478,
+                "npc_dota_hero_nevermore": 527
+            },
+            "dazzle_shadow_wave": {
+                "npc_dota_hero_earth_spirit": 554,
+                "npc_dota_hero_faceless_void": 880,
+                "npc_dota_hero_windrunner": 65,
+                "npc_dota_hero_pudge": 285
+            },
+            "dazzle_bad_juju": {
+                "npc_dota_hero_faceless_void": 128,
+                "npc_dota_hero_earth_spirit": 108,
+                "npc_dota_hero_windrunner": 157,
+                "npc_dota_hero_pudge": 39,
+                "npc_dota_hero_nevermore": 83
+            }
+        },
+        "obs_log": [
+            {
+                "time": -22,
+                "type": "obs_log",
+                "key": "[114, 124]",
+                "slot": 1,
+                "x": 114,
+                "y": 124,
+                "z": 128,
+                "entityleft": false,
+                "ehandle": 1607760,
+                "player_slot": 1
+            },
+            {
+                "time": 480,
+                "type": "obs_log",
+                "key": "[150, 104]",
+                "slot": 1,
+                "x": 150,
+                "y": 104,
+                "z": 132,
+                "entityleft": false,
+                "ehandle": 3344067,
+                "player_slot": 1
+            },
+            {
+                "time": 1069,
+                "type": "obs_log",
+                "key": "[186, 126]",
+                "slot": 1,
+                "x": 186,
+                "y": 126,
+                "z": 132,
+                "entityleft": false,
+                "ehandle": 3360451,
+                "player_slot": 1
+            },
+            {
+                "time": 1368,
+                "type": "obs_log",
+                "key": "[176, 154]",
+                "slot": 1,
+                "x": 176,
+                "y": 154,
+                "z": 130,
+                "entityleft": false,
+                "ehandle": 10831599,
+                "player_slot": 1
+            }
+        ],
+        "obs_left_log": [
+            {
+                "time": 338,
+                "type": "obs_left_log",
+                "key": "[114, 124]",
+                "slot": 1,
+                "attackername": "npc_dota_hero_dazzle",
+                "x": 114,
+                "y": 124,
+                "z": 128,
+                "entityleft": true,
+                "ehandle": 1607760,
+                "player_slot": 1
+            },
+            {
+                "time": 840,
+                "type": "obs_left_log",
+                "key": "[150, 104]",
+                "slot": 1,
+                "attackername": "npc_dota_hero_dazzle",
+                "x": 150,
+                "y": 104,
+                "z": 132,
+                "entityleft": true,
+                "ehandle": 3344067,
+                "player_slot": 1
+            },
+            {
+                "time": 1430,
+                "type": "obs_left_log",
+                "key": "[186, 126]",
+                "slot": 1,
+                "attackername": "npc_dota_hero_dazzle",
+                "x": 186,
+                "y": 126,
+                "z": 128,
+                "entityleft": true,
+                "ehandle": 3360451,
+                "player_slot": 1
+            }
+        ],
+        "sen_log": [
+            {
+                "time": 56,
+                "type": "sen_log",
+                "key": "[160, 100]",
+                "slot": 1,
+                "x": 160,
+                "y": 100,
+                "z": 128,
+                "entityleft": false,
+                "ehandle": 985480,
+                "player_slot": 1
+            },
+            {
+                "time": 81,
+                "type": "sen_log",
+                "key": "[166, 92]",
+                "slot": 1,
+                "x": 166,
+                "y": 92,
+                "z": 128,
+                "entityleft": false,
+                "ehandle": 7113199,
+                "player_slot": 1
+            },
+            {
+                "time": 198,
+                "type": "sen_log",
+                "key": "[160, 100]",
+                "slot": 1,
+                "x": 160,
+                "y": 100,
+                "z": 128,
+                "entityleft": false,
+                "ehandle": 11290415,
+                "player_slot": 1
+            },
+            {
+                "time": 478,
+                "type": "sen_log",
+                "key": "[144, 102]",
+                "slot": 1,
+                "x": 144,
+                "y": 102,
+                "z": 130,
+                "entityleft": false,
+                "ehandle": 4572860,
+                "player_slot": 1
+            },
+            {
+                "time": 793,
+                "type": "sen_log",
+                "key": "[164, 92]",
+                "slot": 1,
+                "x": 164,
+                "y": 92,
+                "z": 128,
+                "entityleft": false,
+                "ehandle": 5638439,
+                "player_slot": 1
+            },
+            {
+                "time": 817,
+                "type": "sen_log",
+                "key": "[158, 120]",
+                "slot": 1,
+                "x": 158,
+                "y": 120,
+                "z": 130,
+                "entityleft": false,
+                "ehandle": 9749779,
+                "player_slot": 1
+            },
+            {
+                "time": 959,
+                "type": "sen_log",
+                "key": "[158, 134]",
+                "slot": 1,
+                "x": 158,
+                "y": 134,
+                "z": 130,
+                "entityleft": false,
+                "ehandle": 8160523,
+                "player_slot": 1
+            },
+            {
+                "time": 1071,
+                "type": "sen_log",
+                "key": "[184, 124]",
+                "slot": 1,
+                "x": 184,
+                "y": 124,
+                "z": 128,
+                "entityleft": false,
+                "ehandle": 4834417,
+                "player_slot": 1
+            },
+            {
+                "time": 1095,
+                "type": "sen_log",
+                "key": "[154, 134]",
+                "slot": 1,
+                "x": 154,
+                "y": 134,
+                "z": 130,
+                "entityleft": false,
+                "ehandle": 15894986,
+                "player_slot": 1
+            },
+            {
+                "time": 1101,
+                "type": "sen_log",
+                "key": "[150, 116]",
+                "slot": 1,
+                "x": 150,
+                "y": 116,
+                "z": 130,
+                "entityleft": false,
+                "ehandle": 3754251,
+                "player_slot": 1
+            },
+            {
+                "time": 1147,
+                "type": "sen_log",
+                "key": "[122, 144]",
+                "slot": 1,
+                "x": 122,
+                "y": 144,
+                "z": 132,
+                "entityleft": false,
+                "ehandle": 5277533,
+                "player_slot": 1
+            },
+            {
+                "time": 1236,
+                "type": "sen_log",
+                "key": "[166, 92]",
+                "slot": 1,
+                "x": 166,
+                "y": 92,
+                "z": 128,
+                "entityleft": false,
+                "ehandle": 5638503,
+                "player_slot": 1
+            },
+            {
+                "time": 1365,
+                "type": "sen_log",
+                "key": "[176, 152]",
+                "slot": 1,
+                "x": 176,
+                "y": 152,
+                "z": 130,
+                "entityleft": false,
+                "ehandle": 9471377,
+                "player_slot": 1
+            },
+            {
+                "time": 1495,
+                "type": "sen_log",
+                "key": "[168, 162]",
+                "slot": 1,
+                "x": 168,
+                "y": 162,
+                "z": 130,
+                "entityleft": false,
+                "ehandle": 9520817,
+                "player_slot": 1
+            }
+        ],
+        "sen_left_log": [
+            {
+                "time": 140,
+                "type": "sen_left_log",
+                "key": "[160, 100]",
+                "slot": 1,
+                "attackername": "npc_dota_hero_earth_spirit",
+                "x": 160,
+                "y": 100,
+                "z": 128,
+                "entityleft": true,
+                "ehandle": 985480,
+                "player_slot": 1
+            },
+            {
+                "time": 153,
+                "type": "sen_left_log",
+                "key": "[166, 92]",
+                "slot": 1,
+                "attackername": "npc_dota_hero_earth_spirit",
+                "x": 166,
+                "y": 92,
+                "z": 128,
+                "entityleft": true,
+                "ehandle": 7113199,
+                "player_slot": 1
+            },
+            {
+                "time": 618,
+                "type": "sen_left_log",
+                "key": "[160, 100]",
+                "slot": 1,
+                "attackername": "npc_dota_hero_dazzle",
+                "x": 160,
+                "y": 100,
+                "z": 128,
+                "entityleft": true,
+                "ehandle": 11290415,
+                "player_slot": 1
+            },
+            {
+                "time": 898,
+                "type": "sen_left_log",
+                "key": "[144, 102]",
+                "slot": 1,
+                "attackername": "npc_dota_hero_dazzle",
+                "x": 144,
+                "y": 102,
+                "z": 130,
+                "entityleft": true,
+                "ehandle": 4572860,
+                "player_slot": 1
+            },
+            {
+                "time": 1070,
+                "type": "sen_left_log",
+                "key": "[158, 134]",
+                "slot": 1,
+                "attackername": "npc_dota_hero_windrunner",
+                "x": 158,
+                "y": 134,
+                "z": 130,
+                "entityleft": true,
+                "ehandle": 8160523,
+                "player_slot": 1
+            },
+            {
+                "time": 1213,
+                "type": "sen_left_log",
+                "key": "[164, 92]",
+                "slot": 1,
+                "attackername": "npc_dota_hero_dazzle",
+                "x": 164,
+                "y": 92,
+                "z": 128,
+                "entityleft": true,
+                "ehandle": 5638439,
+                "player_slot": 1
+            },
+            {
+                "time": 1237,
+                "type": "sen_left_log",
+                "key": "[158, 120]",
+                "slot": 1,
+                "attackername": "npc_dota_hero_dazzle",
+                "x": 158,
+                "y": 120,
+                "z": 130,
+                "entityleft": true,
+                "ehandle": 9749779,
+                "player_slot": 1
+            },
+            {
+                "time": 1491,
+                "type": "sen_left_log",
+                "key": "[184, 124]",
+                "slot": 1,
+                "attackername": "npc_dota_hero_dazzle",
+                "x": 184,
+                "y": 124,
+                "z": 128,
+                "entityleft": true,
+                "ehandle": 4834417,
+                "player_slot": 1
+            },
+            {
+                "time": 1515,
+                "type": "sen_left_log",
+                "key": "[154, 134]",
+                "slot": 1,
+                "attackername": "npc_dota_hero_dazzle",
+                "x": 154,
+                "y": 134,
+                "z": 130,
+                "entityleft": true,
+                "ehandle": 15894986,
+                "player_slot": 1
+            },
+            {
+                "time": 1521,
+                "type": "sen_left_log",
+                "key": "[150, 116]",
+                "slot": 1,
+                "attackername": "npc_dota_hero_dazzle",
+                "x": 150,
+                "y": 116,
+                "z": 130,
+                "entityleft": true,
+                "ehandle": 3754251,
+                "player_slot": 1
+            },
+            {
+                "time": 1567,
+                "type": "sen_left_log",
+                "key": "[122, 144]",
+                "slot": 1,
+                "attackername": "npc_dota_hero_dazzle",
+                "x": 122,
+                "y": 144,
+                "z": 132,
+                "entityleft": true,
+                "ehandle": 5277533,
+                "player_slot": 1
+            },
+            {
+                "time": 1656,
+                "type": "sen_left_log",
+                "key": "[166, 92]",
+                "slot": 1,
+                "attackername": "npc_dota_hero_dazzle",
+                "x": 166,
+                "y": 92,
+                "z": 128,
+                "entityleft": true,
+                "ehandle": 5638503,
+                "player_slot": 1
+            }
+        ],
+        "ml_lane_role": 5
+    },
+    {
+        "match_id": 6676192106,
+        "ability_upgrades_arr": [
+            5154,
+            5155,
+            5154,
+            5156,
+            5154,
+            5157,
+            5155,
+            5155,
+            5155,
+            5938,
+            5156,
+            5157,
+            5156,
+            5156,
+            5907,
+            5154,
+            5157
+        ],
+        "account_id": null,
+        "additional_units": null,
+        "assists": 15,
+        "backpack_0": 0,
+        "backpack_1": 0,
+        "backpack_2": 0,
+        "buyback_log": [],
+        "camps_stacked": 0,
+        "damage": {
+            "npc_dota_creep_badguys_melee": 42061,
+            "npc_dota_hero_windrunner": 4189,
+            "npc_dota_creep_badguys_ranged": 10245,
+            "npc_dota_creep_goodguys_ranged": 925,
+            "npc_dota_creep_goodguys_melee": 3995,
+            "npc_dota_badguys_tower1_mid": 1035,
+            "npc_dota_badguys_siege": 2236,
+            "npc_dota_goodguys_siege": 261,
+            "npc_dota_hero_earth_spirit": 7340,
+            "npc_dota_hero_nevermore": 6646,
+            "npc_dota_badguys_tower1_bot": 764,
+            "npc_dota_hero_faceless_void": 5719,
+            "npc_dota_neutral_harpy_storm": 531,
+            "npc_dota_neutral_forest_troll_berserker": 3788,
+            "npc_dota_neutral_centaur_outrunner": 562,
+            "npc_dota_neutral_centaur_khan": 1280,
+            "npc_dota_hero_pudge": 6011,
+            "npc_dota_neutral_polar_furbolg_ursa_warrior": 976,
+            "npc_dota_neutral_polar_furbolg_champion": 743,
+            "npc_dota_neutral_ghost": 598,
+            "npc_dota_neutral_fel_beast": 1035,
+            "npc_dota_neutral_dark_troll_warlord": 1618,
+            "npc_dota_neutral_dark_troll": 1354,
+            "npc_dota_dark_troll_warlord_skeleton_warrior": 1627,
+            "npc_dota_neutral_ice_shaman": 1023,
+            "npc_dota_neutral_warpine_raider": 2081,
+            "npc_dota_badguys_tower2_bot": 812,
+            "npc_dota_neutral_black_drake": 1552,
+            "npc_dota_neutral_black_dragon": 1952,
+            "npc_dota_badguys_tower2_mid": 1912,
+            "npc_dota_neutral_kobold_taskmaster": 1152,
+            "npc_dota_badguys_tower3_mid": 761,
+            "npc_dota_badguys_range_rax_mid": 1052,
+            "npc_dota_badguys_melee_rax_mid": 472,
+            "npc_dota_badguys_fillers": 3171,
+            "npc_dota_badguys_tower3_bot": 776,
+            "npc_dota_badguys_melee_rax_bot": 886,
+            "npc_dota_badguys_range_rax_bot": 636,
+            "npc_dota_badguys_tower3_top": 703,
+            "npc_dota_badguys_range_rax_top": 847,
+            "npc_dota_badguys_melee_rax_top": 967,
+            "npc_dota_badguys_tower4": 2415
+        },
+        "damage_taken": {
+            "npc_dota_hero_windrunner": 3518,
+            "npc_dota_creep_badguys_melee": 713,
+            "npc_dota_creep_badguys_ranged": 183,
+            "npc_dota_hero_earth_spirit": 171,
+            "npc_dota_neutral_harpy_storm": 9,
+            "npc_dota_neutral_forest_troll_berserker": 141,
+            "npc_dota_neutral_centaur_outrunner": 11,
+            "npc_dota_neutral_centaur_khan": 55,
+            "npc_dota_badguys_tower1_bot": 319,
+            "npc_dota_hero_faceless_void": 1264,
+            "npc_dota_hero_pudge": 874,
+            "npc_dota_neutral_polar_furbolg_champion": 162,
+            "npc_dota_neutral_polar_furbolg_ursa_warrior": 53,
+            "npc_dota_neutral_ghost": 49,
+            "npc_dota_neutral_fel_beast": 48,
+            "npc_dota_neutral_dark_troll": 81,
+            "npc_dota_neutral_ice_shaman": 64,
+            "npc_dota_dark_troll_warlord_skeleton_warrior": 109,
+            "npc_dota_neutral_warpine_raider": 91,
+            "npc_dota_neutral_black_dragon": 1,
+            "npc_dota_neutral_black_drake": 11,
+            "npc_dota_hero_nevermore": 1298,
+            "npc_dota_neutral_kobold_taskmaster": 33,
+            "npc_dota_badguys_tower3_mid": 73,
+            "npc_dota_badguys_tower3_bot": 71,
+            "npc_dota_badguys_tower4": 289
+        },
+        "deaths": 1,
+        "denies": 30,
+        "dn_t": [
+            0,
+            1,
+            4,
+            7,
+            10,
+            12,
+            13,
+            21,
+            25,
+            26,
+            26,
+            29,
+            29,
+            29,
+            29,
+            29,
+            29,
+            29,
+            29,
+            29,
+            29,
+            29,
+            29,
+            29,
+            29,
+            30
+        ],
+        "gpm": 672,
+        "gold_t": [
+            0,
+            261,
+            548,
+            767,
+            1088,
+            1392,
+            1826,
+            2163,
+            2591,
+            3106,
+            3504,
+            3936,
+            4584,
+            5052,
+            5870,
+            6471,
+            7372,
+            7878,
+            8457,
+            9435,
+            10005,
+            11172,
+            12666,
+            14729,
+            15594,
+            16585
+        ],
+        "hero_damage": 29905,
+        "hero_healing": 0,
+        "hero_id": 35,
+        "item_0": 172,
+        "item_1": 75,
+        "item_2": 63,
+        "item_3": 75,
+        "item_4": 135,
+        "item_5": 168,
+        "item_neutral": 212,
+        "kill_streaks": {
+            "3": 1,
+            "4": 1,
+            "5": 1,
+            "6": 1,
+            "7": 1,
+            "8": 1,
+            "9": 1,
+            "10": 1,
+            "11": 1,
+            "12": 1,
+            "13": 1,
+            "14": 1
+        },
+        "killed": {
+            "npc_dota_creep_badguys_ranged": 28,
+            "npc_dota_creep_badguys_melee": 91,
+            "npc_dota_creep_goodguys_melee": 22,
+            "npc_dota_creep_goodguys_ranged": 7,
+            "npc_dota_goodguys_siege": 1,
+            "npc_dota_hero_nevermore": 3,
+            "npc_dota_hero_earth_spirit": 4,
+            "npc_dota_badguys_siege": 2,
+            "npc_dota_badguys_tower1_mid": 1,
+            "npc_dota_neutral_harpy_storm": 1,
+            "npc_dota_neutral_forest_troll_berserker": 6,
+            "npc_dota_neutral_centaur_outrunner": 1,
+            "npc_dota_neutral_centaur_khan": 1,
+            "npc_dota_hero_windrunner": 3,
+            "npc_dota_badguys_tower1_bot": 1,
+            "npc_dota_neutral_polar_furbolg_ursa_warrior": 1,
+            "npc_dota_neutral_polar_furbolg_champion": 1,
+            "npc_dota_neutral_ghost": 1,
+            "npc_dota_neutral_fel_beast": 2,
+            "npc_dota_neutral_dark_troll": 4,
+            "npc_dota_dark_troll_warlord_skeleton_warrior": 5,
+            "npc_dota_hero_faceless_void": 3,
+            "npc_dota_hero_pudge": 3,
+            "npc_dota_neutral_ice_shaman": 1,
+            "npc_dota_neutral_dark_troll_warlord": 1,
+            "npc_dota_neutral_warpine_raider": 2,
+            "npc_dota_badguys_tower2_bot": 1,
+            "npc_dota_neutral_black_dragon": 1,
+            "npc_dota_neutral_black_drake": 2,
+            "npc_dota_neutral_kobold_taskmaster": 2,
+            "npc_dota_badguys_tower2_mid": 1,
+            "npc_dota_badguys_range_rax_mid": 1,
+            "npc_dota_badguys_tower3_bot": 1,
+            "npc_dota_badguys_range_rax_bot": 1,
+            "npc_dota_badguys_melee_rax_bot": 1,
+            "npc_dota_badguys_fillers": 4,
+            "npc_dota_badguys_range_rax_top": 1,
+            "npc_dota_badguys_melee_rax_top": 1
+        },
+        "kills": 16,
+        "kills_log": [
+            {
+                "time": 497,
+                "key": "npc_dota_hero_nevermore"
+            },
+            {
+                "time": 576,
+                "key": "npc_dota_hero_earth_spirit"
+            },
+            {
+                "time": 687,
+                "key": "npc_dota_hero_earth_spirit"
+            },
+            {
+                "time": 751,
+                "key": "npc_dota_hero_windrunner"
+            },
+            {
+                "time": 861,
+                "key": "npc_dota_hero_earth_spirit"
+            },
+            {
+                "time": 931,
+                "key": "npc_dota_hero_faceless_void"
+            },
+            {
+                "time": 944,
+                "key": "npc_dota_hero_pudge"
+            },
+            {
+                "time": 1130,
+                "key": "npc_dota_hero_faceless_void"
+            },
+            {
+                "time": 1245,
+                "key": "npc_dota_hero_earth_spirit"
+            },
+            {
+                "time": 1263,
+                "key": "npc_dota_hero_faceless_void"
+            },
+            {
+                "time": 1275,
+                "key": "npc_dota_hero_pudge"
+            },
+            {
+                "time": 1280,
+                "key": "npc_dota_hero_nevermore"
+            },
+            {
+                "time": 1339,
+                "key": "npc_dota_hero_windrunner"
+            },
+            {
+                "time": 1357,
+                "key": "npc_dota_hero_pudge"
+            },
+            {
+                "time": 1447,
+                "key": "npc_dota_hero_windrunner"
+            },
+            {
+                "time": 1507,
+                "key": "npc_dota_hero_nevermore"
+            }
+        ],
+        "last_hits": 167,
+        "level": 20,
+        "lh_t": [
+            0,
+            2,
+            7,
+            10,
+            15,
+            20,
+            28,
+            32,
+            40,
+            45,
+            46,
+            53,
+            59,
+            61,
+            74,
+            82,
+            86,
+            95,
+            106,
+            113,
+            125,
+            139,
+            145,
+            156,
+            162,
+            167
+        ],
+        "max_hero_hit": {
+            "type": "max_hero_hit",
+            "time": 1456,
+            "max": true,
+            "inflictor": "sniper_assassinate",
+            "unit": "npc_dota_hero_sniper",
+            "key": "npc_dota_hero_earth_spirit",
+            "value": 525,
+            "slot": 2,
+            "player_slot": 2
+        },
+        "multi_kills": {
+            "2": 2,
+            "3": 1
+        },
+        "net_worth": 17232,
+        "obs_placed": 0,
+        "party_id": 0,
+        "permanent_buffs": [],
+        "purchase_log": [
+            {
+                "time": -89,
+                "key": "circlet"
+            },
+            {
+                "time": -89,
+                "key": "slippers"
+            },
+            {
+                "time": -89,
+                "key": "tango"
+            },
+            {
+                "time": -89,
+                "key": "circlet"
+            },
+            {
+                "time": 78,
+                "key": "wraith_band"
+            },
+            {
+                "time": 87,
+                "key": "slippers"
+            },
+            {
+                "time": 164,
+                "key": "wraith_band"
+            },
+            {
+                "time": 257,
+                "key": "boots"
+            },
+            {
+                "time": 312,
+                "key": "gloves"
+            },
+            {
+                "time": 383,
+                "key": "boots_of_elves"
+            },
+            {
+                "time": 407,
+                "key": "power_treads"
+            },
+            {
+                "time": 499,
+                "key": "lifesteal"
+            },
+            {
+                "time": 647,
+                "key": "quarterstaff"
+            },
+            {
+                "time": 681,
+                "key": "mask_of_madness"
+            },
+            {
+                "time": 694,
+                "key": "tpscroll"
+            },
+            {
+                "time": 789,
+                "key": "javelin"
+            },
+            {
+                "time": 964,
+                "key": "demon_edge"
+            },
+            {
+                "time": 1053,
+                "key": "blitz_knuckles"
+            },
+            {
+                "time": 1141,
+                "key": "blight_stone"
+            },
+            {
+                "time": 1169,
+                "key": "monkey_king_bar"
+            },
+            {
+                "time": 1205,
+                "key": "tpscroll"
+            },
+            {
+                "time": 1205,
+                "key": "tpscroll"
+            },
+            {
+                "time": 1286,
+                "key": "mithril_hammer"
+            },
+            {
+                "time": 1319,
+                "key": "mithril_hammer"
+            },
+            {
+                "time": 1353,
+                "key": "desolator"
+            },
+            {
+                "time": 1394,
+                "key": "broadsword"
+            },
+            {
+                "time": 1394,
+                "key": "blades_of_attack"
+            },
+            {
+                "time": 1394,
+                "key": "lesser_crit"
+            },
+            {
+                "time": 1495,
+                "key": "hyperstone"
+            },
+            {
+                "time": 1495,
+                "key": "moon_shard"
+            },
+            {
+                "time": 1495,
+                "key": "hyperstone"
+            }
+        ],
+        "rune_pickups": 4,
+        "runes_log": [
+            {
+                "time": 490,
+                "key": 0
+            },
+            {
+                "time": 843,
+                "key": 6
+            },
+            {
+                "time": 998,
+                "key": 2
+            },
+            {
+                "time": 1206,
+                "key": 2
+            }
+        ],
+        "sen_placed": 0,
+        "stuns": 0.09994628,
+        "tower_damage": 14038,
+        "xpm": 717,
+        "xp_t": [
+            0,
+            240,
+            779,
+            1113,
+            1656,
+            2115,
+            2674,
+            3156,
+            3645,
+            4289,
+            4529,
+            5133,
+            5485,
+            5969,
+            6548,
+            7348,
+            8396,
+            8786,
+            9471,
+            10556,
+            11421,
+            12166,
+            13471,
+            15896,
+            16255,
+            17200
+        ],
+        "personaname": "Unknown",
+        "duration": 1512,
+        "is_radiant": true,
+        "win": 1,
+        "total_gold": 16934,
+        "total_xp": 18068,
+        "kills_per_min": 0.6349206349206349,
+        "kda": 15,
+        "lane": 2,
+        "lane_role": 2,
+        "is_roaming": false,
+        "life_state_dead": 30,
+        "rank_tier": null,
+        "damage_inflictor": {
+            "null": 22534,
+            "sniper_shrapnel": 5744,
+            "sniper_assassinate": 1627
+        },
+        "damage_inflictor_received": {
+            "null": 3318,
+            "windrunner_powershot": 1485,
+            "earth_spirit_rolling_boulder": 46,
+            "earth_spirit_boulder_smash": 90,
+            "orb_of_venom": 2,
+            "faceless_void_time_lock": 110,
+            "chipped_vest": 299,
+            "maelstrom": 525,
+            "nevermore_requiem": 759,
+            "pudge_meat_hook": 290,
+            "pudge_rot": 201
+        },
+        "damage_targets": {
+            "null": {
+                "npc_dota_hero_windrunner": 2136,
+                "npc_dota_hero_earth_spirit": 5164,
+                "npc_dota_hero_faceless_void": 3979,
+                "npc_dota_hero_pudge": 5473,
+                "npc_dota_hero_nevermore": 5782
+            },
+            "sniper_shrapnel": {
+                "npc_dota_hero_windrunner": 1671,
+                "npc_dota_hero_earth_spirit": 1411,
+                "npc_dota_hero_faceless_void": 1500,
+                "npc_dota_hero_pudge": 538,
+                "npc_dota_hero_nevermore": 624
+            },
+            "sniper_assassinate": {
+                "npc_dota_hero_nevermore": 240,
+                "npc_dota_hero_faceless_void": 240,
+                "npc_dota_hero_earth_spirit": 765,
+                "npc_dota_hero_windrunner": 382
+            }
+        },
+        "obs_log": [],
+        "obs_left_log": [],
+        "sen_log": [],
+        "sen_left_log": [],
+        "ml_lane_role": 2
+    },
+    {
+        "match_id": 6676192106,
+        "ability_upgrades_arr": [
+            5159,
+            5158,
+            5159,
+            5158,
+            5158,
+            5161,
+            5159,
+            5159,
+            5158,
+            820,
+            5160,
+            5161,
+            5160,
+            5160,
+            7110,
+            5160,
+            5161
+        ],
+        "account_id": 175101847,
+        "additional_units": null,
+        "assists": 16,
+        "backpack_0": 16,
+        "backpack_1": 0,
+        "backpack_2": 0,
+        "buyback_log": [],
+        "camps_stacked": 1,
+        "damage": {
+            "npc_dota_creep_badguys_melee": 39691,
+            "npc_dota_creep_badguys_ranged": 12057,
+            "npc_dota_creep_goodguys_melee": 1415,
+            "npc_dota_creep_goodguys_ranged": 252,
+            "npc_dota_hero_nevermore": 6418,
+            "npc_dota_neutral_polar_furbolg_champion": 1731,
+            "npc_dota_neutral_polar_furbolg_ursa_warrior": 1256,
+            "npc_dota_badguys_siege": 1341,
+            "npc_dota_badguys_tower1_top": 222,
+            "npc_dota_neutral_forest_troll_berserker": 4371,
+            "npc_dota_neutral_kobold_taskmaster": 2098,
+            "npc_dota_neutral_giant_wolf": 2139,
+            "npc_dota_neutral_alpha_wolf": 1378,
+            "npc_dota_neutral_warpine_raider": 3826,
+            "npc_dota_hero_pudge": 2319,
+            "npc_dota_neutral_forest_troll_high_priest": 492,
+            "npc_dota_neutral_centaur_khan": 6290,
+            "npc_dota_neutral_centaur_outrunner": 3134,
+            "npc_dota_neutral_dark_troll": 2241,
+            "npc_dota_neutral_dark_troll_warlord": 2267,
+            "npc_dota_neutral_kobold_tunneler": 919,
+            "npc_dota_neutral_kobold": 2418,
+            "npc_dota_neutral_mud_golem": 1651,
+            "npc_dota_neutral_satyr_trickster": 2467,
+            "npc_dota_neutral_mud_golem_split": 2222,
+            "npc_dota_neutral_satyr_soulstealer": 3531,
+            "npc_dota_dark_troll_warlord_skeleton_warrior": 1842,
+            "npc_dota_neutral_wildkin": 1671,
+            "npc_dota_neutral_enraged_wildkin": 1939,
+            "npc_dota_badguys_tower1_bot": 199,
+            "npc_dota_neutral_harpy_scout": 1061,
+            "npc_dota_neutral_harpy_storm": 564,
+            "npc_dota_neutral_satyr_hellcaller": 2214,
+            "npc_dota_neutral_gnoll_assassin": 1656,
+            "npc_dota_badguys_tower2_top": 959,
+            "npc_dota_hero_windrunner": 3486,
+            "npc_dota_hero_faceless_void": 3305,
+            "npc_dota_hero_earth_spirit": 3057,
+            "npc_dota_badguys_tower2_mid": 123,
+            "npc_dota_badguys_tower3_bot": 138,
+            "npc_dota_badguys_range_rax_bot": 117,
+            "npc_dota_badguys_melee_rax_bot": 202,
+            "npc_dota_badguys_tower3_top": 307,
+            "npc_dota_badguys_range_rax_top": 317,
+            "npc_dota_badguys_melee_rax_top": 368,
+            "npc_dota_badguys_tower4": 43,
+            "npc_dota_badguys_fillers": 50
+        },
+        "damage_taken": {
+            "npc_dota_creep_badguys_melee": 1382,
+            "npc_dota_creep_badguys_ranged": 781,
+            "npc_dota_hero_nevermore": 2523,
+            "npc_dota_badguys_siege": 77,
+            "npc_dota_badguys_tower1_top": 140,
+            "npc_dota_neutral_forest_troll_berserker": 399,
+            "npc_dota_neutral_alpha_wolf": 172,
+            "npc_dota_neutral_giant_wolf": 67,
+            "npc_dota_neutral_warpine_raider": 925,
+            "npc_dota_hero_pudge": 1372,
+            "npc_dota_neutral_polar_furbolg_champion": 234,
+            "npc_dota_neutral_centaur_outrunner": 176,
+            "npc_dota_neutral_centaur_khan": 633,
+            "npc_dota_neutral_forest_troll_high_priest": 91,
+            "npc_dota_neutral_mud_golem_split": 64,
+            "npc_dota_neutral_satyr_trickster": 87,
+            "npc_dota_neutral_satyr_soulstealer": 81,
+            "npc_dota_neutral_kobold": 39,
+            "npc_dota_neutral_kobold_tunneler": 16,
+            "npc_dota_neutral_kobold_taskmaster": 117,
+            "npc_dota_neutral_dark_troll": 244,
+            "npc_dota_neutral_dark_troll_warlord": 285,
+            "npc_dota_dark_troll_warlord_skeleton_warrior": 293,
+            "npc_dota_neutral_wildkin": 115,
+            "npc_dota_neutral_enraged_wildkin": 340,
+            "npc_dota_neutral_mud_golem": 61,
+            "npc_dota_neutral_polar_furbolg_ursa_warrior": 80,
+            "npc_dota_neutral_harpy_storm": 27,
+            "npc_dota_neutral_harpy_scout": 22,
+            "npc_dota_neutral_satyr_hellcaller": 162,
+            "npc_dota_neutral_gnoll_assassin": 80,
+            "npc_dota_badguys_tower2_top": 1499,
+            "npc_dota_hero_faceless_void": 1749,
+            "npc_dota_hero_windrunner": 1744,
+            "npc_dota_hero_earth_spirit": 840,
+            "npc_dota_badguys_tower2_mid": 1041,
+            "npc_dota_badguys_tower3_bot": 212,
+            "npc_dota_badguys_tower3_top": 1487,
+            "npc_dota_badguys_tower4": 285
+        },
+        "deaths": 2,
+        "denies": 13,
+        "dn_t": [
+            0,
+            1,
+            1,
+            4,
+            8,
+            9,
+            11,
+            11,
+            11,
+            11,
+            11,
+            12,
+            12,
+            12,
+            12,
+            12,
+            12,
+            12,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13
+        ],
+        "gpm": 580,
+        "gold_t": [
+            0,
+            222,
+            530,
+            824,
+            1232,
+            1487,
+            1872,
+            2741,
+            3045,
+            3669,
+            4046,
+            4680,
+            5133,
+            5945,
+            6409,
+            7148,
+            7958,
+            8551,
+            9294,
+            10351,
+            10457,
+            11141,
+            11654,
+            13071,
+            13916,
+            14521
+        ],
+        "hero_damage": 18585,
+        "hero_healing": 2971,
+        "hero_id": 36,
+        "item_0": 137,
+        "item_1": 34,
+        "item_2": 48,
+        "item_3": 692,
+        "item_4": 79,
+        "item_5": 16,
+        "item_neutral": 287,
+        "kill_streaks": {
+            "3": 1,
+            "4": 1
+        },
+        "killed": {
+            "npc_dota_creep_badguys_ranged": 35,
+            "npc_dota_creep_goodguys_melee": 10,
+            "npc_dota_creep_badguys_melee": 83,
+            "npc_dota_creep_goodguys_ranged": 3,
+            "npc_dota_hero_nevermore": 2,
+            "npc_dota_neutral_kobold_taskmaster": 5,
+            "npc_dota_neutral_forest_troll_berserker": 8,
+            "npc_dota_neutral_alpha_wolf": 2,
+            "npc_dota_neutral_giant_wolf": 4,
+            "npc_dota_neutral_warpine_raider": 4,
+            "npc_dota_hero_pudge": 2,
+            "npc_dota_neutral_polar_furbolg_champion": 2,
+            "npc_dota_neutral_centaur_outrunner": 8,
+            "npc_dota_neutral_centaur_khan": 5,
+            "npc_dota_neutral_forest_troll_high_priest": 1,
+            "npc_dota_neutral_mud_golem": 3,
+            "npc_dota_neutral_mud_golem_split": 8,
+            "npc_dota_neutral_satyr_trickster": 5,
+            "npc_dota_neutral_satyr_soulstealer": 5,
+            "npc_dota_neutral_kobold": 6,
+            "npc_dota_neutral_kobold_tunneler": 2,
+            "npc_dota_neutral_dark_troll": 4,
+            "npc_dota_neutral_dark_troll_warlord": 2,
+            "npc_dota_dark_troll_warlord_skeleton_warrior": 6,
+            "npc_dota_neutral_wildkin": 4,
+            "npc_dota_neutral_enraged_wildkin": 2,
+            "npc_dota_neutral_polar_furbolg_ursa_warrior": 1,
+            "npc_dota_neutral_harpy_scout": 2,
+            "npc_dota_neutral_harpy_storm": 1,
+            "npc_dota_neutral_satyr_hellcaller": 2,
+            "npc_dota_neutral_gnoll_assassin": 3,
+            "npc_dota_hero_windrunner": 1,
+            "npc_dota_hero_faceless_void": 1
+        },
+        "kills": 6,
+        "kills_log": [
+            {
+                "time": 407,
+                "key": "npc_dota_hero_nevermore"
+            },
+            {
+                "time": 482,
+                "key": "npc_dota_hero_pudge"
+            },
+            {
+                "time": 779,
+                "key": "npc_dota_hero_pudge"
+            },
+            {
+                "time": 1126,
+                "key": "npc_dota_hero_windrunner"
+            },
+            {
+                "time": 1351,
+                "key": "npc_dota_hero_faceless_void"
+            },
+            {
+                "time": 1353,
+                "key": "npc_dota_hero_nevermore"
+            }
+        ],
+        "last_hits": 213,
+        "level": 19,
+        "lh_t": [
+            0,
+            1,
+            6,
+            11,
+            18,
+            22,
+            28,
+            38,
+            45,
+            52,
+            70,
+            82,
+            90,
+            106,
+            114,
+            132,
+            149,
+            158,
+            178,
+            191,
+            191,
+            198,
+            199,
+            203,
+            211,
+            213
+        ],
+        "max_hero_hit": {
+            "type": "max_hero_hit",
+            "time": 1510,
+            "max": true,
+            "inflictor": "necrolyte_reapers_scythe",
+            "unit": "npc_dota_hero_necrolyte",
+            "key": "npc_dota_hero_windrunner",
+            "value": 515,
+            "slot": 3,
+            "player_slot": 3
+        },
+        "multi_kills": {
+            "2": 1
+        },
+        "net_worth": 14548,
+        "obs_placed": 1,
+        "party_id": 0,
+        "permanent_buffs": [
+            {
+                "permanent_buff": 14,
+                "stack_count": 1
+            }
+        ],
+        "purchase_log": [
+            {
+                "time": -78,
+                "key": "ring_of_protection"
+            },
+            {
+                "time": -77,
+                "key": "tango"
+            },
+            {
+                "time": -76,
+                "key": "branches"
+            },
+            {
+                "time": -76,
+                "key": "branches"
+            },
+            {
+                "time": -73,
+                "key": "magic_stick"
+            },
+            {
+                "time": -70,
+                "key": "branches"
+            },
+            {
+                "time": -70,
+                "key": "branches"
+            },
+            {
+                "time": 544,
+                "key": "relic"
+            },
+            {
+                "time": 693,
+                "key": "radiance"
+            },
+            {
+                "time": 693,
+                "key": "talisman_of_evasion"
+            },
+            {
+                "time": 742,
+                "key": "boots"
+            },
+            {
+                "time": 836,
+                "key": "ward_observer"
+            },
+            {
+                "time": 836,
+                "key": "ward_sentry"
+            },
+            {
+                "time": 1008,
+                "key": "cloak"
+            },
+            {
+                "time": 1008,
+                "key": "ring_of_regen"
+            },
+            {
+                "time": 1057,
+                "key": "ring_of_health"
+            },
+            {
+                "time": 1070,
+                "key": "hood_of_defiance"
+            },
+            {
+                "time": 1256,
+                "key": "voodoo_mask"
+            },
+            {
+                "time": 1305,
+                "key": "eternal_shroud"
+            },
+            {
+                "time": 1469,
+                "key": "ring_of_regen"
+            },
+            {
+                "time": 1469,
+                "key": "headdress"
+            },
+            {
+                "time": 1469,
+                "key": "chainmail"
+            },
+            {
+                "time": 1469,
+                "key": "mekansm"
+            }
+        ],
+        "rune_pickups": 2,
+        "runes_log": [
+            {
+                "time": 759,
+                "key": 1
+            },
+            {
+                "time": 800,
+                "key": 5
+            }
+        ],
+        "sen_placed": 1,
+        "stuns": 5.531909,
+        "tower_damage": 2995,
+        "xpm": 705,
+        "xp_t": [
+            0,
+            104,
+            406,
+            777,
+            1290,
+            1609,
+            2069,
+            3158,
+            3494,
+            4263,
+            4698,
+            5605,
+            6107,
+            7082,
+            7547,
+            8717,
+            10001,
+            10659,
+            11830,
+            12718,
+            12756,
+            13939,
+            14735,
+            15937,
+            16144,
+            17021
+        ],
+        "personaname": "seulgis bear",
+        "duration": 1512,
+        "is_radiant": true,
+        "win": 1,
+        "total_gold": 14616,
+        "total_xp": 17766,
+        "kills_per_min": 0.2380952380952381,
+        "kda": 7,
+        "lane": 3,
+        "lane_role": 3,
+        "is_roaming": false,
+        "life_state_dead": 106,
+        "rank_tier": 52,
+        "damage_inflictor": {
+            "necrolyte_heartstopper_aura": 5656,
+            "null": 1892,
+            "necrolyte_death_pulse": 2917,
+            "necrolyte_reapers_scythe": 1097,
+            "radiance": 7023
+        },
+        "damage_inflictor_received": {
+            "null": 4034,
+            "pudge_rot": 598,
+            "chipped_vest": 88,
+            "pudge_dismember": 396,
+            "faceless_void_time_dilation": 271,
+            "maelstrom": 261,
+            "urn_of_shadows": 75,
+            "faceless_void_time_lock": 34,
+            "windrunner_powershot": 543,
+            "pudge_meat_hook": 290,
+            "nevermore_requiem": 873,
+            "earth_spirit_boulder_smash": 236,
+            "spirit_vessel": 460,
+            "earth_spirit_rolling_boulder": 69
+        },
+        "damage_targets": {
+            "necrolyte_heartstopper_aura": {
+                "npc_dota_hero_nevermore": 2092,
+                "npc_dota_hero_pudge": 602,
+                "npc_dota_hero_windrunner": 976,
+                "npc_dota_hero_faceless_void": 924,
+                "npc_dota_hero_earth_spirit": 1062
+            },
+            "null": {
+                "npc_dota_hero_nevermore": 1072,
+                "npc_dota_hero_pudge": 596,
+                "npc_dota_hero_faceless_void": 224
+            },
+            "necrolyte_death_pulse": {
+                "npc_dota_hero_nevermore": 1125,
+                "npc_dota_hero_pudge": 322,
+                "npc_dota_hero_windrunner": 420,
+                "npc_dota_hero_faceless_void": 630,
+                "npc_dota_hero_earth_spirit": 420
+            },
+            "necrolyte_reapers_scythe": {
+                "npc_dota_hero_nevermore": 284,
+                "npc_dota_hero_pudge": 256,
+                "npc_dota_hero_faceless_void": 42,
+                "npc_dota_hero_windrunner": 515
+            },
+            "radiance": {
+                "npc_dota_hero_pudge": 543,
+                "npc_dota_hero_windrunner": 1575,
+                "npc_dota_hero_faceless_void": 1485,
+                "npc_dota_hero_nevermore": 1845,
+                "npc_dota_hero_earth_spirit": 1575
+            }
+        },
+        "obs_log": [
+            {
+                "time": 879,
+                "type": "obs_log",
+                "key": "[106, 154]",
+                "slot": 3,
+                "x": 106,
+                "y": 154,
+                "z": 132,
+                "entityleft": false,
+                "ehandle": 8357150,
+                "player_slot": 3
+            }
+        ],
+        "obs_left_log": [
+            {
+                "time": 1076,
+                "type": "obs_left_log",
+                "key": "[106, 154]",
+                "slot": 3,
+                "attackername": "npc_dota_hero_pudge",
+                "x": 106,
+                "y": 154,
+                "z": 132,
+                "entityleft": true,
+                "ehandle": 8357150,
+                "player_slot": 3
+            }
+        ],
+        "sen_log": [
+            {
+                "time": 883,
+                "type": "sen_log",
+                "key": "[100, 154]",
+                "slot": 3,
+                "x": 100,
+                "y": 154,
+                "z": 128,
+                "entityleft": false,
+                "ehandle": 8373723,
+                "player_slot": 3
+            }
+        ],
+        "sen_left_log": [
+            {
+                "time": 1303,
+                "type": "sen_left_log",
+                "key": "[100, 154]",
+                "slot": 3,
+                "attackername": "npc_dota_hero_necrolyte",
+                "x": 100,
+                "y": 154,
+                "z": 128,
+                "entityleft": true,
+                "ehandle": 8373723,
+                "player_slot": 3
+            }
+        ],
+        "ml_lane_role": 3
+    },
+    {
+        "match_id": 6676192106,
+        "ability_upgrades_arr": [
+            5334,
+            5336,
+            5334,
+            5335,
+            5334,
+            5337,
+            5334,
+            5336,
+            5336,
+            5921,
+            5336,
+            5337,
+            5335,
+            5335,
+            6900,
+            5335
+        ],
+        "account_id": 126651374,
+        "additional_units": null,
+        "assists": 23,
+        "backpack_0": 0,
+        "backpack_1": 0,
+        "backpack_2": 0,
+        "buyback_log": [],
+        "camps_stacked": 0,
+        "damage": {
+            "npc_dota_creep_badguys_melee": 25022,
+            "npc_dota_hero_faceless_void": 5631,
+            "npc_dota_creep_goodguys_ranged": 435,
+            "npc_dota_creep_goodguys_melee": 1350,
+            "npc_dota_creep_badguys_ranged": 7517,
+            "npc_dota_hero_earth_spirit": 4372,
+            "npc_dota_badguys_siege": 891,
+            "npc_dota_hero_windrunner": 4014,
+            "npc_dota_hero_nevermore": 2866,
+            "npc_dota_hero_pudge": 3405,
+            "npc_dota_badguys_tower1_bot": 128,
+            "npc_dota_neutral_centaur_outrunner": 414,
+            "npc_dota_neutral_polar_furbolg_champion": 337,
+            "npc_dota_neutral_polar_furbolg_ursa_warrior": 694,
+            "npc_dota_neutral_centaur_khan": 786,
+            "npc_dota_neutral_dark_troll": 1601,
+            "npc_dota_neutral_dark_troll_warlord": 1407,
+            "npc_dota_dark_troll_warlord_skeleton_warrior": 1412,
+            "npc_dota_neutral_wildkin": 852,
+            "npc_dota_neutral_enraged_wildkin": 1035,
+            "npc_dota_neutral_kobold_taskmaster": 250,
+            "npc_dota_neutral_forest_troll_berserker": 486,
+            "npc_dota_badguys_tower2_bot": 639,
+            "npc_dota_neutral_giant_wolf": 1197,
+            "npc_dota_neutral_alpha_wolf": 653,
+            "npc_dota_neutral_black_drake": 751,
+            "npc_dota_neutral_black_dragon": 200,
+            "npc_dota_neutral_warpine_raider": 1978,
+            "npc_dota_neutral_ogre_magi": 844,
+            "npc_dota_neutral_ogre_mauler": 1847,
+            "npc_dota_badguys_tower3_bot": 1052,
+            "npc_dota_badguys_range_rax_bot": 461,
+            "npc_dota_badguys_melee_rax_bot": 824,
+            "npc_dota_badguys_tower3_top": 1328,
+            "npc_dota_badguys_range_rax_top": 5,
+            "npc_dota_badguys_melee_rax_top": 930,
+            "npc_dota_badguys_fillers": 75,
+            "npc_dota_badguys_tower4": 332,
+            "npc_dota_badguys_fort": 162
+        },
+        "damage_taken": {
+            "npc_dota_creep_badguys_melee": 1225,
+            "npc_dota_hero_faceless_void": 2528,
+            "npc_dota_creep_badguys_ranged": 371,
+            "npc_dota_hero_earth_spirit": 3126,
+            "npc_dota_badguys_siege": 74,
+            "npc_dota_badguys_tower1_bot": 479,
+            "npc_dota_hero_windrunner": 3858,
+            "npc_dota_hero_pudge": 1076,
+            "npc_dota_badguys_tower2_bot": 378,
+            "npc_dota_neutral_polar_furbolg_champion": 79,
+            "npc_dota_neutral_polar_furbolg_ursa_warrior": 40,
+            "npc_dota_neutral_centaur_khan": 100,
+            "npc_dota_dark_troll_warlord_skeleton_warrior": 41,
+            "npc_dota_neutral_wildkin": 14,
+            "npc_dota_neutral_enraged_wildkin": 67,
+            "npc_dota_neutral_kobold_taskmaster": 10,
+            "npc_dota_neutral_forest_troll_berserker": 2,
+            "npc_dota_neutral_giant_wolf": 32,
+            "npc_dota_neutral_alpha_wolf": 65,
+            "npc_dota_neutral_black_drake": 14,
+            "npc_dota_neutral_black_dragon": 6,
+            "npc_dota_neutral_dark_troll": 25,
+            "npc_dota_neutral_dark_troll_warlord": 70,
+            "npc_dota_hero_nevermore": 1480,
+            "npc_dota_neutral_warpine_raider": 64,
+            "npc_dota_neutral_ogre_mauler": 36,
+            "npc_dota_neutral_ogre_magi": 3,
+            "npc_dota_badguys_tower3_bot": 840,
+            "npc_dota_badguys_tower3_top": 1008,
+            "npc_dota_badguys_tower4": 389,
+            "dota_fountain": 3083
+        },
+        "deaths": 0,
+        "denies": 13,
+        "dn_t": [
+            0,
+            1,
+            1,
+            2,
+            3,
+            6,
+            7,
+            9,
+            9,
+            9,
+            11,
+            12,
+            12,
+            12,
+            12,
+            12,
+            12,
+            12,
+            12,
+            12,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13
+        ],
+        "gpm": 493,
+        "gold_t": [
+            0,
+            213,
+            509,
+            837,
+            1101,
+            1632,
+            1902,
+            2249,
+            2355,
+            2500,
+            2811,
+            3240,
+            3916,
+            4122,
+            4643,
+            5232,
+            5945,
+            6354,
+            6797,
+            7513,
+            8069,
+            8690,
+            9262,
+            10119,
+            10845,
+            11914
+        ],
+        "hero_damage": 20288,
+        "hero_healing": 0,
+        "hero_id": 67,
+        "item_0": 20,
+        "item_1": 11,
+        "item_2": 147,
+        "item_3": 63,
+        "item_4": 125,
+        "item_5": 36,
+        "item_neutral": 828,
+        "kill_streaks": {
+            "3": 1,
+            "4": 1,
+            "5": 1,
+            "6": 1,
+            "7": 1,
+            "8": 1
+        },
+        "killed": {
+            "npc_dota_creep_badguys_melee": 65,
+            "npc_dota_creep_goodguys_ranged": 5,
+            "npc_dota_creep_badguys_ranged": 22,
+            "npc_dota_creep_goodguys_melee": 8,
+            "npc_dota_hero_faceless_void": 2,
+            "npc_dota_hero_windrunner": 3,
+            "npc_dota_badguys_siege": 2,
+            "npc_dota_neutral_polar_furbolg_ursa_warrior": 1,
+            "npc_dota_neutral_polar_furbolg_champion": 1,
+            "npc_dota_neutral_dark_troll_warlord": 2,
+            "npc_dota_dark_troll_warlord_skeleton_warrior": 4,
+            "npc_dota_neutral_wildkin": 2,
+            "npc_dota_neutral_enraged_wildkin": 1,
+            "npc_dota_hero_earth_spirit": 2,
+            "npc_dota_neutral_giant_wolf": 2,
+            "npc_dota_neutral_alpha_wolf": 1,
+            "npc_dota_neutral_dark_troll": 2,
+            "npc_dota_hero_nevermore": 1,
+            "npc_dota_neutral_warpine_raider": 2,
+            "npc_dota_neutral_ogre_magi": 1,
+            "npc_dota_neutral_ogre_mauler": 2,
+            "npc_dota_badguys_tower3_top": 1,
+            "npc_dota_badguys_tower4": 1
+        },
+        "kills": 8,
+        "kills_log": [
+            {
+                "time": 268,
+                "key": "npc_dota_hero_faceless_void"
+            },
+            {
+                "time": 676,
+                "key": "npc_dota_hero_windrunner"
+            },
+            {
+                "time": 862,
+                "key": "npc_dota_hero_windrunner"
+            },
+            {
+                "time": 927,
+                "key": "npc_dota_hero_earth_spirit"
+            },
+            {
+                "time": 1132,
+                "key": "npc_dota_hero_nevermore"
+            },
+            {
+                "time": 1460,
+                "key": "npc_dota_hero_faceless_void"
+            },
+            {
+                "time": 1510,
+                "key": "npc_dota_hero_earth_spirit"
+            },
+            {
+                "time": 1510,
+                "key": "npc_dota_hero_windrunner"
+            }
+        ],
+        "last_hits": 112,
+        "level": 18,
+        "lh_t": [
+            0,
+            1,
+            6,
+            12,
+            15,
+            21,
+            25,
+            29,
+            29,
+            30,
+            33,
+            41,
+            46,
+            46,
+            52,
+            57,
+            63,
+            68,
+            76,
+            82,
+            92,
+            100,
+            105,
+            105,
+            108,
+            112
+        ],
+        "max_hero_hit": {
+            "type": "max_hero_hit",
+            "time": 612,
+            "max": true,
+            "inflictor": "spectre_spectral_dagger",
+            "unit": "npc_dota_hero_spectre",
+            "key": "npc_dota_hero_faceless_void",
+            "value": 180,
+            "slot": 4,
+            "player_slot": 4
+        },
+        "multi_kills": {
+            "2": 1
+        },
+        "net_worth": 12843,
+        "obs_placed": 0,
+        "party_id": 0,
+        "permanent_buffs": [],
+        "purchase_log": [
+            {
+                "time": -59,
+                "key": "branches"
+            },
+            {
+                "time": -59,
+                "key": "branches"
+            },
+            {
+                "time": -56,
+                "key": "tango"
+            },
+            {
+                "time": -56,
+                "key": "circlet"
+            },
+            {
+                "time": -51,
+                "key": "magic_stick"
+            },
+            {
+                "time": 9,
+                "key": "quelling_blade"
+            },
+            {
+                "time": 136,
+                "key": "magic_wand"
+            },
+            {
+                "time": 178,
+                "key": "boots"
+            },
+            {
+                "time": 372,
+                "key": "vitality_booster"
+            },
+            {
+                "time": 561,
+                "key": "vanguard"
+            },
+            {
+                "time": 561,
+                "key": "ring_of_health"
+            },
+            {
+                "time": 589,
+                "key": "clarity"
+            },
+            {
+                "time": 650,
+                "key": "gloves"
+            },
+            {
+                "time": 684,
+                "key": "boots_of_elves"
+            },
+            {
+                "time": 686,
+                "key": "clarity"
+            },
+            {
+                "time": 729,
+                "key": "power_treads"
+            },
+            {
+                "time": 839,
+                "key": "blade_of_alacrity"
+            },
+            {
+                "time": 865,
+                "key": "boots_of_elves"
+            },
+            {
+                "time": 932,
+                "key": "yasha"
+            },
+            {
+                "time": 1212,
+                "key": "ultimate_orb"
+            },
+            {
+                "time": 1227,
+                "key": "manta"
+            }
+        ],
+        "rune_pickups": 1,
+        "runes_log": [
+            {
+                "time": 1,
+                "key": 5
+            }
+        ],
+        "sen_placed": 0,
+        "stuns": 0,
+        "tower_damage": 5861,
+        "xpm": 620,
+        "xp_t": [
+            0,
+            73,
+            305,
+            665,
+            887,
+            1504,
+            1773,
+            2054,
+            2306,
+            2511,
+            3159,
+            3424,
+            4254,
+            4996,
+            5294,
+            6122,
+            7285,
+            7496,
+            8045,
+            9475,
+            10311,
+            11023,
+            12097,
+            13313,
+            13520,
+            14879
+        ],
+        "personaname": "Innocentius",
+        "duration": 1512,
+        "is_radiant": true,
+        "win": 1,
+        "total_gold": 12423,
+        "total_xp": 15624,
+        "kills_per_min": 0.31746031746031744,
+        "kda": 31,
+        "lane": 1,
+        "lane_role": 1,
+        "is_roaming": false,
+        "life_state_dead": 0,
+        "rank_tier": 42,
+        "damage_inflictor": {
+            "spectre_spectral_dagger": 4882,
+            "null": 7643,
+            "spectre_dispersion": 4710,
+            "spectre_desolate": 3053
+        },
+        "damage_inflictor_received": {
+            "null": 4181,
+            "faceless_void_time_lock": 158,
+            "earth_spirit_rolling_boulder": 411,
+            "earth_spirit_boulder_smash": 1247,
+            "faceless_void_time_dilation": 654,
+            "orb_of_venom": 32,
+            "windrunner_powershot": 1703,
+            "pudge_rot": 647,
+            "chipped_vest": 65,
+            "earth_spirit_magnetize": 468,
+            "maelstrom": 1044,
+            "urn_of_shadows": 240,
+            "pudge_meat_hook": 184,
+            "pudge_dismember": 180,
+            "nevermore_requiem": 794,
+            "earth_spirit_geomagnetic_grip": 60
+        },
+        "damage_targets": {
+            "spectre_spectral_dagger": {
+                "npc_dota_hero_faceless_void": 1800,
+                "npc_dota_hero_earth_spirit": 775,
+                "npc_dota_hero_windrunner": 900,
+                "npc_dota_hero_pudge": 687,
+                "npc_dota_hero_nevermore": 720
+            },
+            "null": {
+                "npc_dota_hero_faceless_void": 2525,
+                "npc_dota_hero_earth_spirit": 1575,
+                "npc_dota_hero_windrunner": 1495,
+                "npc_dota_hero_nevermore": 829,
+                "npc_dota_hero_pudge": 1219
+            },
+            "spectre_dispersion": {
+                "npc_dota_hero_faceless_void": 588,
+                "npc_dota_hero_earth_spirit": 1681,
+                "npc_dota_hero_windrunner": 851,
+                "npc_dota_hero_pudge": 873,
+                "npc_dota_hero_nevermore": 717
+            },
+            "spectre_desolate": {
+                "npc_dota_hero_faceless_void": 718,
+                "npc_dota_hero_earth_spirit": 341,
+                "npc_dota_hero_windrunner": 768,
+                "npc_dota_hero_nevermore": 600,
+                "npc_dota_hero_pudge": 626
+            }
+        },
+        "obs_log": [],
+        "obs_left_log": [],
+        "sen_log": [],
+        "sen_left_log": [],
+        "ml_lane_role": 1
+    },
+    {
+        "match_id": 6676192106,
+        "ability_upgrades_arr": [
+            5131,
+            5132,
+            5131,
+            5130,
+            5131,
+            5133,
+            5131,
+            5132,
+            5132,
+            7890,
+            5132,
+            5133
+        ],
+        "account_id": null,
+        "additional_units": null,
+        "assists": 2,
+        "backpack_0": 0,
+        "backpack_1": 0,
+        "backpack_2": 0,
+        "buyback_log": [],
+        "camps_stacked": 0,
+        "damage": {
+            "npc_dota_hero_sniper": 3518,
+            "npc_dota_creep_goodguys_melee": 16552,
+            "npc_dota_creep_badguys_melee": 622,
+            "npc_dota_creep_goodguys_ranged": 2333,
+            "npc_dota_creep_badguys_ranged": 126,
+            "npc_dota_hero_shadow_shaman": 2552,
+            "npc_dota_goodguys_siege": 193,
+            "npc_dota_neutral_ghost": 530,
+            "npc_dota_neutral_fel_beast": 833,
+            "npc_dota_neutral_centaur_outrunner": 225,
+            "npc_dota_neutral_centaur_khan": 529,
+            "npc_dota_hero_spectre": 3858,
+            "npc_dota_hero_dazzle": 3363,
+            "npc_dota_neutral_dark_troll_warlord": 287,
+            "npc_dota_neutral_dark_troll": 230,
+            "npc_dota_observer_wards": 50,
+            "npc_dota_sentry_wards": 100,
+            "npc_dota_hero_necrolyte": 1744,
+            "illusion_npc_dota_hero_spectre": 1781,
+            "npc_dota_neutral_polar_furbolg_champion": 449,
+            "npc_dota_creep_goodguys_melee_upgraded": 1023,
+            "npc_dota_creep_goodguys_ranged_upgraded": 646
+        },
+        "damage_taken": {
+            "npc_dota_hero_sniper": 4189,
+            "npc_dota_creep_goodguys_ranged": 152,
+            "npc_dota_creep_goodguys_melee": 274,
+            "npc_dota_hero_shadow_shaman": 1708,
+            "npc_dota_neutral_fel_beast": 104,
+            "npc_dota_neutral_ghost": 173,
+            "npc_dota_hero_spectre": 4014,
+            "npc_dota_goodguys_siege": 56,
+            "npc_dota_hero_dazzle": 1583,
+            "npc_dota_goodguys_tower1_bot": 371,
+            "npc_dota_hero_necrolyte": 3486,
+            "npc_dota_creep_goodguys_ranged_upgraded": 45,
+            "npc_dota_creep_goodguys_melee_upgraded": 20
+        },
+        "deaths": 9,
+        "denies": 4,
+        "dn_t": [
+            0,
+            0,
+            0,
+            3,
+            3,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4
+        ],
+        "gpm": 269,
+        "gold_t": [
+            0,
+            179,
+            391,
+            654,
+            974,
+            1472,
+            1691,
+            1952,
+            2300,
+            2406,
+            2980,
+            3222,
+            3540,
+            3700,
+            3994,
+            4100,
+            4280,
+            4766,
+            5159,
+            5443,
+            5624,
+            5730,
+            6299,
+            6411,
+            6590,
+            6775
+        ],
+        "hero_damage": 15035,
+        "hero_healing": 0,
+        "hero_id": 21,
+        "item_0": 41,
+        "item_1": 29,
+        "item_2": 166,
+        "item_3": 77,
+        "item_4": 0,
+        "item_5": 16,
+        "item_neutral": 349,
+        "kill_streaks": {
+            "3": 1
+        },
+        "killed": {
+            "npc_dota_creep_goodguys_melee": 28,
+            "npc_dota_creep_badguys_ranged": 1,
+            "npc_dota_creep_goodguys_ranged": 6,
+            "npc_dota_creep_badguys_melee": 3,
+            "npc_dota_hero_shadow_shaman": 1,
+            "npc_dota_neutral_fel_beast": 2,
+            "npc_dota_neutral_ghost": 1,
+            "npc_dota_hero_dazzle": 3,
+            "npc_dota_hero_sniper": 1,
+            "npc_dota_neutral_centaur_khan": 1,
+            "npc_dota_observer_wards": 1,
+            "npc_dota_sentry_wards": 2,
+            "npc_dota_neutral_polar_furbolg_champion": 1,
+            "npc_dota_creep_goodguys_melee_upgraded": 1
+        },
+        "kills": 5,
+        "kills_log": [
+            {
+                "time": 249,
+                "key": "npc_dota_hero_shadow_shaman"
+            },
+            {
+                "time": 447,
+                "key": "npc_dota_hero_dazzle"
+            },
+            {
+                "time": 576,
+                "key": "npc_dota_hero_sniper"
+            },
+            {
+                "time": 671,
+                "key": "npc_dota_hero_dazzle"
+            },
+            {
+                "time": 1003,
+                "key": "npc_dota_hero_dazzle"
+            }
+        ],
+        "last_hits": 43,
+        "level": 12,
+        "lh_t": [
+            0,
+            0,
+            3,
+            7,
+            12,
+            14,
+            17,
+            20,
+            20,
+            20,
+            20,
+            23,
+            23,
+            23,
+            27,
+            27,
+            29,
+            29,
+            34,
+            34,
+            37,
+            37,
+            41,
+            41,
+            43,
+            43
+        ],
+        "max_hero_hit": {
+            "type": "max_hero_hit",
+            "time": 741,
+            "max": true,
+            "inflictor": "windrunner_powershot",
+            "unit": "npc_dota_hero_windrunner",
+            "key": "npc_dota_hero_sniper",
+            "value": 337,
+            "slot": 5,
+            "player_slot": 128
+        },
+        "multi_kills": {},
+        "net_worth": 6354,
+        "obs_placed": 3,
+        "party_id": 1,
+        "permanent_buffs": [
+            {
+                "permanent_buff": 12,
+                "stack_count": 0
+            }
+        ],
+        "purchase_log": [
+            {
+                "time": -88,
+                "key": "tango"
+            },
+            {
+                "time": -88,
+                "key": "ward_observer"
+            },
+            {
+                "time": -88,
+                "key": "circlet"
+            },
+            {
+                "time": -88,
+                "key": "mantle"
+            },
+            {
+                "time": -88,
+                "key": "branches"
+            },
+            {
+                "time": -88,
+                "key": "branches"
+            },
+            {
+                "time": 158,
+                "key": "bottle"
+            },
+            {
+                "time": 233,
+                "key": "null_talisman"
+            },
+            {
+                "time": 319,
+                "key": "ward_observer"
+            },
+            {
+                "time": 390,
+                "key": "javelin"
+            },
+            {
+                "time": 463,
+                "key": "tpscroll"
+            },
+            {
+                "time": 816,
+                "key": "mithril_hammer"
+            },
+            {
+                "time": 839,
+                "key": "maelstrom"
+            },
+            {
+                "time": 1007,
+                "key": "boots"
+            },
+            {
+                "time": 1035,
+                "key": "ward_sentry"
+            },
+            {
+                "time": 1035,
+                "key": "ward_sentry"
+            },
+            {
+                "time": 1035,
+                "key": "ward_sentry"
+            },
+            {
+                "time": 1036,
+                "key": "ward_observer"
+            },
+            {
+                "time": 1348,
+                "key": "aghanims_shard"
+            }
+        ],
+        "rune_pickups": 7,
+        "runes_log": [
+            {
+                "time": 1,
+                "key": 5
+            },
+            {
+                "time": 142,
+                "key": 7
+            },
+            {
+                "time": 171,
+                "key": 7
+            },
+            {
+                "time": 260,
+                "key": 7
+            },
+            {
+                "time": 431,
+                "key": 3
+            },
+            {
+                "time": 550,
+                "key": 5
+            }
+        ],
+        "sen_placed": 3,
+        "stuns": 34.224976,
+        "tower_damage": 0,
+        "xpm": 315,
+        "xp_t": [
+            0,
+            211,
+            594,
+            1048,
+            1373,
+            1760,
+            2215,
+            2377,
+            2570,
+            2700,
+            3472,
+            3806,
+            4058,
+            4170,
+            4504,
+            4598,
+            4743,
+            5131,
+            5550,
+            5682,
+            5833,
+            5895,
+            7497,
+            7624,
+            7888,
+            7956
+        ],
+        "personaname": "Unknown",
+        "duration": 1512,
+        "is_radiant": false,
+        "win": 0,
+        "total_gold": 6778,
+        "total_xp": 7938,
+        "kills_per_min": 0.19841269841269843,
+        "kda": 0,
+        "lane": 2,
+        "lane_role": 2,
+        "is_roaming": false,
+        "life_state_dead": 276,
+        "rank_tier": null,
+        "damage_inflictor": {
+            "null": 6917,
+            "windrunner_powershot": 5091,
+            "maelstrom": 3027
+        },
+        "damage_inflictor_received": {
+            "null": 5063,
+            "sniper_shrapnel": 1671,
+            "shadow_shaman_ether_shock": 315,
+            "spectre_dispersion": 851,
+            "dazzle_poison_touch": 1059,
+            "spectre_desolate": 768,
+            "dazzle_shadow_wave": 65,
+            "dazzle_bad_juju": 157,
+            "shadow_shaman_shackles": 263,
+            "spectre_spectral_dagger": 900,
+            "necrolyte_heartstopper_aura": 976,
+            "radiance": 1575,
+            "necrolyte_death_pulse": 420,
+            "sniper_assassinate": 382,
+            "necrolyte_reapers_scythe": 515
+        },
+        "damage_targets": {
+            "null": {
+                "npc_dota_hero_sniper": 1508,
+                "npc_dota_hero_shadow_shaman": 1038,
+                "npc_dota_hero_spectre": 1111,
+                "npc_dota_hero_dazzle": 2320,
+                "npc_dota_hero_necrolyte": 940
+            },
+            "windrunner_powershot": {
+                "npc_dota_hero_sniper": 1485,
+                "npc_dota_hero_spectre": 1703,
+                "npc_dota_hero_dazzle": 686,
+                "npc_dota_hero_necrolyte": 543,
+                "npc_dota_hero_shadow_shaman": 674
+            },
+            "maelstrom": {
+                "npc_dota_hero_spectre": 1044,
+                "npc_dota_hero_sniper": 525,
+                "npc_dota_hero_shadow_shaman": 840,
+                "npc_dota_hero_dazzle": 357,
+                "npc_dota_hero_necrolyte": 261
+            }
+        },
+        "obs_log": [
+            {
+                "time": -56,
+                "type": "obs_log",
+                "key": "[126, 126]",
+                "slot": 5,
+                "x": 126,
+                "y": 126,
+                "z": 128,
+                "entityleft": false,
+                "ehandle": 11323449,
+                "player_slot": 128
+            },
+            {
+                "time": 351,
+                "type": "obs_log",
+                "key": "[126, 126]",
+                "slot": 5,
+                "x": 126,
+                "y": 126,
+                "z": 128,
+                "entityleft": false,
+                "ehandle": 10011818,
+                "player_slot": 128
+            },
+            {
+                "time": 1183,
+                "type": "obs_log",
+                "key": "[164, 132]",
+                "slot": 5,
+                "x": 164,
+                "y": 132,
+                "z": 132,
+                "entityleft": false,
+                "ehandle": 8800315,
+                "player_slot": 128
+            }
+        ],
+        "obs_left_log": [
+            {
+                "time": 304,
+                "type": "obs_left_log",
+                "key": "[126, 126]",
+                "slot": 5,
+                "attackername": "npc_dota_hero_windrunner",
+                "x": 126,
+                "y": 126,
+                "z": 128,
+                "entityleft": true,
+                "ehandle": 11323449,
+                "player_slot": 128
+            },
+            {
+                "time": 448,
+                "type": "obs_left_log",
+                "key": "[126, 126]",
+                "slot": 5,
+                "attackername": "npc_dota_hero_shadow_shaman",
+                "x": 126,
+                "y": 126,
+                "z": 128,
+                "entityleft": true,
+                "ehandle": 10011818,
+                "player_slot": 128
+            }
+        ],
+        "sen_log": [
+            {
+                "time": 1064,
+                "type": "sen_log",
+                "key": "[162, 132]",
+                "slot": 5,
+                "x": 162,
+                "y": 132,
+                "z": 132,
+                "entityleft": false,
+                "ehandle": 4522301,
+                "player_slot": 128
+            },
+            {
+                "time": 1178,
+                "type": "sen_log",
+                "key": "[164, 132]",
+                "slot": 5,
+                "x": 164,
+                "y": 132,
+                "z": 132,
+                "entityleft": false,
+                "ehandle": 886048,
+                "player_slot": 128
+            },
+            {
+                "time": 1191,
+                "type": "sen_log",
+                "key": "[144, 120]",
+                "slot": 5,
+                "x": 144,
+                "y": 120,
+                "z": 132,
+                "entityleft": false,
+                "ehandle": 1869755,
+                "player_slot": 128
+            }
+        ],
+        "sen_left_log": [
+            {
+                "time": 1093,
+                "type": "sen_left_log",
+                "key": "[162, 132]",
+                "slot": 5,
+                "attackername": "npc_dota_hero_shadow_shaman",
+                "x": 162,
+                "y": 132,
+                "z": 132,
+                "entityleft": true,
+                "ehandle": 4522301,
+                "player_slot": 128
+            },
+            {
+                "time": 1599,
+                "type": "sen_left_log",
+                "key": "[164, 132]",
+                "slot": 5,
+                "attackername": "npc_dota_hero_windrunner",
+                "x": 164,
+                "y": 132,
+                "z": 132,
+                "entityleft": true,
+                "ehandle": 886048,
+                "player_slot": 128
+            },
+            {
+                "time": 1611,
+                "type": "sen_left_log",
+                "key": "[144, 120]",
+                "slot": 5,
+                "attackername": "npc_dota_hero_windrunner",
+                "x": 144,
+                "y": 120,
+                "z": 132,
+                "entityleft": true,
+                "ehandle": 1869755,
+                "player_slot": 128
+            }
+        ],
+        "ml_lane_role": 2
+    },
+    {
+        "match_id": 6676192106,
+        "ability_upgrades_arr": [
+            5062,
+            5063,
+            5062,
+            5063,
+            5062,
+            5063,
+            5062,
+            5063,
+            5064,
+            6016,
+            730,
+            5064,
+            730,
+            730,
+            6875
+        ],
+        "account_id": 224686598,
+        "additional_units": null,
+        "assists": 2,
+        "backpack_0": 0,
+        "backpack_1": 0,
+        "backpack_2": 0,
+        "buyback_log": [
+            {
+                "time": 1355,
+                "slot": 6,
+                "type": "buyback_log",
+                "player_slot": 129
+            }
+        ],
+        "camps_stacked": 0,
+        "damage": {
+            "npc_dota_creep_goodguys_melee": 12569,
+            "npc_dota_creep_badguys_melee": 427,
+            "npc_dota_creep_badguys_ranged": 99,
+            "npc_dota_hero_shadow_shaman": 2632,
+            "npc_dota_creep_goodguys_ranged": 3437,
+            "npc_dota_neutral_wildkin": 2529,
+            "npc_dota_hero_necrolyte": 2523,
+            "npc_dota_neutral_centaur_outrunner": 1894,
+            "illusion_npc_dota_hero_spectre": 7319,
+            "npc_dota_neutral_mud_golem": 3570,
+            "npc_dota_neutral_mud_golem_split": 2054,
+            "npc_dota_neutral_harpy_storm": 1248,
+            "npc_dota_neutral_harpy_scout": 1915,
+            "npc_dota_neutral_centaur_khan": 3281,
+            "npc_dota_neutral_dark_troll": 1138,
+            "npc_dota_neutral_dark_troll_warlord": 1244,
+            "npc_dota_dark_troll_warlord_skeleton_warrior": 910,
+            "npc_dota_neutral_enraged_wildkin": 3194,
+            "npc_dota_goodguys_siege": 555,
+            "npc_dota_neutral_kobold_taskmaster": 941,
+            "npc_dota_neutral_forest_troll_berserker": 2578,
+            "npc_dota_neutral_fel_beast": 1166,
+            "npc_dota_neutral_ghost": 557,
+            "npc_dota_neutral_warpine_raider": 4108,
+            "npc_dota_neutral_alpha_wolf": 768,
+            "npc_dota_neutral_giant_wolf": 1217,
+            "npc_dota_neutral_gnoll_assassin": 1324,
+            "npc_dota_neutral_black_dragon": 2062,
+            "npc_dota_neutral_black_drake": 2136,
+            "npc_dota_neutral_satyr_trickster": 443,
+            "npc_dota_neutral_satyr_hellcaller": 1268,
+            "npc_dota_neutral_satyr_soulstealer": 841,
+            "npc_dota_neutral_ice_shaman": 640,
+            "npc_dota_neutral_frostbitten_golem": 2105,
+            "npc_dota_hero_dazzle": 696,
+            "illusion_npc_dota_hero_sniper": 1293,
+            "npc_dota_neutral_polar_furbolg_champion": 1835,
+            "npc_dota_neutral_polar_furbolg_ursa_warrior": 2166,
+            "npc_dota_hero_spectre": 1480,
+            "npc_dota_hero_sniper": 1298,
+            "npc_dota_neutral_granite_golem": 1876,
+            "npc_dota_neutral_rock_golem": 1863,
+            "npc_dota_creep_goodguys_melee_upgraded": 360,
+            "npc_dota_creep_goodguys_ranged_upgraded": 120,
+            "npc_dota_shadow_shaman_ward_2": 14,
+            "npc_dota_creep_goodguys_melee_upgraded_mega": 240
+        },
+        "damage_taken": {
+            "npc_dota_hero_shadow_shaman": 2429,
+            "npc_dota_creep_goodguys_ranged": 348,
+            "npc_dota_creep_goodguys_melee": 376,
+            "npc_dota_hero_necrolyte": 6418,
+            "npc_dota_goodguys_siege": 30,
+            "npc_dota_hero_sniper": 6646,
+            "npc_dota_hero_spectre": 2866,
+            "npc_dota_neutral_mud_golem": 240,
+            "npc_dota_neutral_mud_golem_split": 148,
+            "npc_dota_neutral_harpy_storm": 52,
+            "npc_dota_neutral_harpy_scout": 137,
+            "npc_dota_neutral_centaur_khan": 302,
+            "npc_dota_neutral_centaur_outrunner": 243,
+            "npc_dota_neutral_dark_troll": 33,
+            "npc_dota_neutral_dark_troll_warlord": 230,
+            "npc_dota_dark_troll_warlord_skeleton_warrior": 188,
+            "npc_dota_neutral_wildkin": 215,
+            "npc_dota_neutral_enraged_wildkin": 238,
+            "npc_dota_neutral_forest_troll_berserker": 185,
+            "npc_dota_neutral_kobold_taskmaster": 26,
+            "npc_dota_neutral_ghost": 61,
+            "npc_dota_neutral_fel_beast": 63,
+            "npc_dota_neutral_warpine_raider": 268,
+            "npc_dota_neutral_alpha_wolf": 43,
+            "npc_dota_neutral_giant_wolf": 85,
+            "npc_dota_enraged_wildkin_tornado": 126,
+            "npc_dota_neutral_gnoll_assassin": 49,
+            "npc_dota_neutral_black_drake": 227,
+            "npc_dota_neutral_black_dragon": 167,
+            "npc_dota_neutral_satyr_hellcaller": 134,
+            "npc_dota_neutral_satyr_soulstealer": 64,
+            "npc_dota_neutral_frostbitten_golem": 150,
+            "npc_dota_neutral_ice_shaman": 265,
+            "npc_dota_neutral_polar_furbolg_champion": 93,
+            "npc_dota_neutral_polar_furbolg_ursa_warrior": 179,
+            "npc_dota_hero_dazzle": 725,
+            "npc_dota_neutral_rock_golem": 150,
+            "npc_dota_neutral_granite_golem": 60,
+            "npc_dota_creep_goodguys_ranged_upgraded": 30
+        },
+        "deaths": 7,
+        "denies": 3,
+        "dn_t": [
+            0,
+            1,
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3
+        ],
+        "gpm": 340,
+        "gold_t": [
+            0,
+            179,
+            432,
+            532,
+            672,
+            968,
+            1111,
+            1484,
+            1630,
+            1748,
+            2017,
+            2331,
+            2850,
+            3218,
+            3638,
+            4050,
+            4385,
+            5040,
+            5354,
+            5882,
+            6096,
+            6647,
+            7304,
+            7850,
+            8142,
+            8563
+        ],
+        "hero_damage": 8629,
+        "hero_healing": 0,
+        "hero_id": 11,
+        "item_0": 172,
+        "item_1": 63,
+        "item_2": 236,
+        "item_3": 36,
+        "item_4": 21,
+        "item_5": 11,
+        "item_neutral": 306,
+        "kill_streaks": {},
+        "killed": {
+            "npc_dota_creep_badguys_melee": 3,
+            "npc_dota_creep_goodguys_melee": 26,
+            "npc_dota_creep_goodguys_ranged": 9,
+            "npc_dota_neutral_mud_golem": 3,
+            "npc_dota_neutral_harpy_storm": 2,
+            "npc_dota_neutral_harpy_scout": 4,
+            "npc_dota_neutral_centaur_khan": 3,
+            "npc_dota_neutral_centaur_outrunner": 4,
+            "npc_dota_neutral_dark_troll": 2,
+            "npc_dota_neutral_dark_troll_warlord": 1,
+            "npc_dota_dark_troll_warlord_skeleton_warrior": 3,
+            "npc_dota_neutral_wildkin": 6,
+            "npc_dota_neutral_enraged_wildkin": 3,
+            "npc_dota_goodguys_siege": 1,
+            "npc_dota_neutral_kobold_taskmaster": 2,
+            "npc_dota_neutral_forest_troll_berserker": 4,
+            "npc_dota_neutral_fel_beast": 2,
+            "npc_dota_neutral_ghost": 1,
+            "npc_dota_neutral_warpine_raider": 4,
+            "npc_dota_neutral_alpha_wolf": 1,
+            "npc_dota_neutral_giant_wolf": 2,
+            "npc_dota_neutral_gnoll_assassin": 3,
+            "npc_dota_neutral_black_dragon": 1,
+            "npc_dota_neutral_black_drake": 2,
+            "npc_dota_neutral_satyr_trickster": 1,
+            "npc_dota_neutral_satyr_hellcaller": 1,
+            "npc_dota_neutral_satyr_soulstealer": 1,
+            "npc_dota_neutral_frostbitten_golem": 2,
+            "npc_dota_neutral_mud_golem_split": 4,
+            "npc_dota_neutral_polar_furbolg_champion": 2,
+            "npc_dota_neutral_polar_furbolg_ursa_warrior": 2,
+            "npc_dota_neutral_granite_golem": 1,
+            "npc_dota_neutral_rock_golem": 2,
+            "npc_dota_hero_necrolyte": 1,
+            "npc_dota_hero_shadow_shaman": 1,
+            "npc_dota_shadow_shaman_ward_2": 7
+        },
+        "kills": 2,
+        "kills_log": [
+            {
+                "time": 1279,
+                "key": "npc_dota_hero_necrolyte"
+            },
+            {
+                "time": 1341,
+                "key": "npc_dota_hero_shadow_shaman"
+            }
+        ],
+        "last_hits": 112,
+        "level": 15,
+        "lh_t": [
+            0,
+            0,
+            4,
+            4,
+            4,
+            9,
+            10,
+            14,
+            14,
+            14,
+            17,
+            25,
+            38,
+            44,
+            54,
+            62,
+            67,
+            80,
+            85,
+            91,
+            93,
+            102,
+            102,
+            102,
+            105,
+            112
+        ],
+        "max_hero_hit": {
+            "type": "max_hero_hit",
+            "time": 1118,
+            "max": true,
+            "inflictor": null,
+            "unit": "npc_dota_hero_nevermore",
+            "key": "npc_dota_hero_necrolyte",
+            "value": 203,
+            "slot": 6,
+            "player_slot": 129
+        },
+        "multi_kills": {},
+        "net_worth": 7461,
+        "obs_placed": 0,
+        "party_id": 1,
+        "permanent_buffs": [],
+        "purchase_log": [
+            {
+                "time": -88,
+                "key": "branches"
+            },
+            {
+                "time": -88,
+                "key": "faerie_fire"
+            },
+            {
+                "time": -88,
+                "key": "tango"
+            },
+            {
+                "time": -88,
+                "key": "magic_stick"
+            },
+            {
+                "time": -88,
+                "key": "branches"
+            },
+            {
+                "time": -88,
+                "key": "quelling_blade"
+            },
+            {
+                "time": 122,
+                "key": "gloves"
+            },
+            {
+                "time": 290,
+                "key": "magic_wand"
+            },
+            {
+                "time": 338,
+                "key": "boots"
+            },
+            {
+                "time": 467,
+                "key": "boots_of_elves"
+            },
+            {
+                "time": 494,
+                "key": "power_treads"
+            },
+            {
+                "time": 618,
+                "key": "flask"
+            },
+            {
+                "time": 692,
+                "key": "lifesteal"
+            },
+            {
+                "time": 807,
+                "key": "quarterstaff"
+            },
+            {
+                "time": 832,
+                "key": "mask_of_madness"
+            },
+            {
+                "time": 912,
+                "key": "boots_of_elves"
+            },
+            {
+                "time": 954,
+                "key": "boots_of_elves"
+            },
+            {
+                "time": 1070,
+                "key": "ogre_axe"
+            },
+            {
+                "time": 1086,
+                "key": "dragon_lance"
+            },
+            {
+                "time": 1282,
+                "key": "ogre_axe"
+            }
+        ],
+        "rune_pickups": 2,
+        "runes_log": [
+            {
+                "time": 1,
+                "key": 5
+            },
+            {
+                "time": 987,
+                "key": 5
+            }
+        ],
+        "sen_placed": 0,
+        "stuns": 0,
+        "tower_damage": 0,
+        "xpm": 442,
+        "xp_t": [
+            0,
+            113,
+            664,
+            880,
+            999,
+            1521,
+            1644,
+            1977,
+            2109,
+            2172,
+            2412,
+            2777,
+            3488,
+            4031,
+            4565,
+            5271,
+            5914,
+            6575,
+            6962,
+            7947,
+            8157,
+            8975,
+            9982,
+            10504,
+            10851,
+            11157
+        ],
+        "personaname": "braindead",
+        "duration": 1512,
+        "is_radiant": false,
+        "win": 0,
+        "total_gold": 8568,
+        "total_xp": 11138,
+        "kills_per_min": 0.07936507936507936,
+        "kda": 0,
+        "lane": 3,
+        "lane_role": 1,
+        "is_roaming": false,
+        "life_state_dead": 168,
+        "rank_tier": 35,
+        "damage_inflictor": {
+            "null": 4998,
+            "nevermore_requiem": 3631
+        },
+        "damage_inflictor_received": {
+            "null": 9409,
+            "shadow_shaman_ether_shock": 720,
+            "shadow_shaman_shackles": 98,
+            "necrolyte_heartstopper_aura": 2092,
+            "necrolyte_death_pulse": 1125,
+            "necrolyte_reapers_scythe": 284,
+            "sniper_assassinate": 240,
+            "spectre_desolate": 600,
+            "radiance": 1845,
+            "dazzle_bad_juju": 83,
+            "spectre_dispersion": 717,
+            "spectre_spectral_dagger": 720,
+            "dazzle_poison_touch": 527,
+            "sniper_shrapnel": 624
+        },
+        "damage_targets": {
+            "null": {
+                "npc_dota_hero_shadow_shaman": 1942,
+                "npc_dota_hero_necrolyte": 1650,
+                "npc_dota_hero_dazzle": 181,
+                "npc_dota_hero_sniper": 539,
+                "npc_dota_hero_spectre": 686
+            },
+            "nevermore_requiem": {
+                "npc_dota_hero_spectre": 794,
+                "npc_dota_hero_shadow_shaman": 690,
+                "npc_dota_hero_dazzle": 515,
+                "npc_dota_hero_sniper": 759,
+                "npc_dota_hero_necrolyte": 873
+            }
+        },
+        "obs_log": [],
+        "obs_left_log": [],
+        "sen_log": [],
+        "sen_left_log": [],
+        "ml_lane_role": 5
+    },
+    {
+        "match_id": 6676192106,
+        "ability_upgrades_arr": [
+            5075,
+            5076,
+            5075,
+            5076,
+            5076,
+            5077,
+            5076,
+            5074,
+            5074,
+            5074,
+            5074,
+            5077,
+            7142,
+            5075,
+            5075
+        ],
+        "account_id": null,
+        "additional_units": null,
+        "assists": 3,
+        "backpack_0": 0,
+        "backpack_1": 0,
+        "backpack_2": 0,
+        "buyback_log": [],
+        "camps_stacked": 2,
+        "damage": {
+            "npc_dota_neutral_enraged_wildkin": 3866,
+            "npc_dota_neutral_wildkin": 3169,
+            "npc_dota_neutral_centaur_khan": 4430,
+            "npc_dota_neutral_centaur_outrunner": 2927,
+            "npc_dota_hero_pudge": 10892,
+            "npc_dota_neutral_dark_troll_warlord": 2277,
+            "npc_dota_neutral_dark_troll": 2181,
+            "npc_dota_neutral_satyr_hellcaller": 6848,
+            "npc_dota_neutral_satyr_soulstealer": 7297,
+            "npc_dota_neutral_satyr_trickster": 3881,
+            "npc_dota_neutral_ogre_mauler": 4971,
+            "npc_dota_neutral_ogre_magi": 1912,
+            "npc_dota_hero_shadow_shaman": 1409,
+            "npc_dota_neutral_warpine_raider": 5286,
+            "npc_dota_neutral_alpha_wolf": 1238,
+            "npc_dota_neutral_giant_wolf": 2110,
+            "npc_dota_neutral_polar_furbolg_ursa_warrior": 3922,
+            "npc_dota_neutral_polar_furbolg_champion": 1840,
+            "npc_dota_goodguys_siege": 2883,
+            "npc_dota_creep_goodguys_ranged": 4607,
+            "npc_dota_creep_badguys_melee": 241,
+            "npc_dota_creep_goodguys_melee": 12218,
+            "npc_dota_hero_necrolyte": 1372,
+            "illusion_npc_dota_hero_spectre": 1237,
+            "npc_dota_neutral_mud_golem": 1558,
+            "npc_dota_neutral_mud_golem_split": 1188,
+            "npc_dota_hero_spectre": 1076,
+            "npc_dota_hero_sniper": 874,
+            "npc_dota_dark_troll_warlord_skeleton_warrior": 948,
+            "npc_dota_hero_dazzle": 167,
+            "npc_dota_observer_wards": 50
+        },
+        "damage_taken": {
+            "npc_dota_neutral_wildkin": 397,
+            "npc_dota_hero_pudge": 10892,
+            "npc_dota_neutral_centaur_outrunner": 386,
+            "npc_dota_neutral_dark_troll": 45,
+            "npc_dota_neutral_satyr_soulstealer": 468,
+            "npc_dota_neutral_satyr_trickster": 162,
+            "npc_dota_neutral_ogre_mauler": 292,
+            "npc_dota_neutral_ogre_magi": 261,
+            "npc_dota_neutral_warpine_raider": 156,
+            "npc_dota_neutral_alpha_wolf": 235,
+            "npc_dota_neutral_giant_wolf": 166,
+            "npc_dota_creep_goodguys_melee": 227,
+            "npc_dota_hero_shadow_shaman": 591,
+            "npc_dota_hero_necrolyte": 2319,
+            "npc_dota_hero_spectre": 3405,
+            "npc_dota_neutral_polar_furbolg_champion": 201,
+            "npc_dota_goodguys_siege": 48,
+            "npc_dota_neutral_mud_golem": 82,
+            "npc_dota_neutral_mud_golem_split": 25,
+            "npc_dota_creep_goodguys_ranged": 69,
+            "npc_dota_hero_sniper": 6011,
+            "npc_dota_hero_dazzle": 1127,
+            "npc_dota_neutral_satyr_hellcaller": 214,
+            "npc_dota_neutral_dark_troll_warlord": 127,
+            "npc_dota_neutral_polar_furbolg_ursa_warrior": 125,
+            "npc_dota_neutral_enraged_wildkin": 179
+        },
+        "deaths": 7,
+        "denies": 2,
+        "dn_t": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+        ],
+        "gpm": 369,
+        "gold_t": [
+            0,
+            179,
+            479,
+            799,
+            1125,
+            1407,
+            1729,
+            2183,
+            2693,
+            2914,
+            3368,
+            3721,
+            4312,
+            4720,
+            4826,
+            5226,
+            5332,
+            5564,
+            6260,
+            6909,
+            7165,
+            7996,
+            8472,
+            8822,
+            9014,
+            9279
+        ],
+        "hero_damage": 4898,
+        "hero_healing": 0,
+        "hero_id": 14,
+        "item_0": 188,
+        "item_1": 102,
+        "item_2": 692,
+        "item_3": 214,
+        "item_4": 218,
+        "item_5": 0,
+        "item_neutral": 290,
+        "kill_streaks": {},
+        "killed": {
+            "npc_dota_neutral_enraged_wildkin": 4,
+            "npc_dota_neutral_wildkin": 8,
+            "npc_dota_neutral_centaur_khan": 4,
+            "npc_dota_neutral_centaur_outrunner": 8,
+            "npc_dota_neutral_dark_troll_warlord": 2,
+            "npc_dota_neutral_dark_troll": 4,
+            "npc_dota_neutral_satyr_hellcaller": 6,
+            "npc_dota_neutral_satyr_trickster": 11,
+            "npc_dota_neutral_satyr_soulstealer": 11,
+            "npc_dota_neutral_ogre_mauler": 6,
+            "npc_dota_neutral_ogre_magi": 3,
+            "npc_dota_neutral_warpine_raider": 6,
+            "npc_dota_neutral_alpha_wolf": 2,
+            "npc_dota_neutral_giant_wolf": 4,
+            "npc_dota_neutral_polar_furbolg_ursa_warrior": 4,
+            "npc_dota_neutral_polar_furbolg_champion": 2,
+            "npc_dota_goodguys_siege": 4,
+            "npc_dota_creep_goodguys_ranged": 13,
+            "npc_dota_creep_badguys_melee": 2,
+            "npc_dota_creep_goodguys_melee": 19,
+            "npc_dota_neutral_mud_golem": 2,
+            "npc_dota_neutral_mud_golem_split": 4,
+            "npc_dota_dark_troll_warlord_skeleton_warrior": 3,
+            "npc_dota_observer_wards": 1
+        },
+        "kills": 0,
+        "kills_log": [],
+        "last_hits": 131,
+        "level": 15,
+        "lh_t": [
+            0,
+            0,
+            6,
+            13,
+            19,
+            23,
+            29,
+            37,
+            45,
+            47,
+            54,
+            62,
+            76,
+            85,
+            85,
+            96,
+            96,
+            96,
+            105,
+            115,
+            116,
+            130,
+            130,
+            131,
+            131,
+            131
+        ],
+        "max_hero_hit": {
+            "type": "max_hero_hit",
+            "time": 1270,
+            "max": true,
+            "inflictor": "pudge_meat_hook",
+            "unit": "npc_dota_hero_pudge",
+            "key": "npc_dota_hero_necrolyte",
+            "value": 290,
+            "slot": 7,
+            "player_slot": 130
+        },
+        "multi_kills": {},
+        "net_worth": 8149,
+        "obs_placed": 2,
+        "party_id": 2,
+        "permanent_buffs": [
+            {
+                "permanent_buff": 4,
+                "stack_count": 2
+            },
+            {
+                "permanent_buff": 6,
+                "stack_count": 1
+            }
+        ],
+        "purchase_log": [
+            {
+                "time": 47,
+                "key": "boots"
+            },
+            {
+                "time": 48,
+                "key": "clarity"
+            },
+            {
+                "time": 48,
+                "key": "clarity"
+            },
+            {
+                "time": 96,
+                "key": "wind_lace"
+            },
+            {
+                "time": 109,
+                "key": "ring_of_regen"
+            },
+            {
+                "time": 118,
+                "key": "clarity"
+            },
+            {
+                "time": 150,
+                "key": "tranquil_boots"
+            },
+            {
+                "time": 178,
+                "key": "clarity"
+            },
+            {
+                "time": 179,
+                "key": "clarity"
+            },
+            {
+                "time": 270,
+                "key": "clarity"
+            },
+            {
+                "time": 270,
+                "key": "clarity"
+            },
+            {
+                "time": 348,
+                "key": "clarity"
+            },
+            {
+                "time": 348,
+                "key": "clarity"
+            },
+            {
+                "time": 348,
+                "key": "clarity"
+            },
+            {
+                "time": 378,
+                "key": "ring_of_health"
+            },
+            {
+                "time": 495,
+                "key": "voodoo_mask"
+            },
+            {
+                "time": 497,
+                "key": "ring_of_regen"
+            },
+            {
+                "time": 502,
+                "key": "ward_observer"
+            },
+            {
+                "time": 502,
+                "key": "ward_sentry"
+            },
+            {
+                "time": 514,
+                "key": "clarity"
+            },
+            {
+                "time": 515,
+                "key": "clarity"
+            },
+            {
+                "time": 602,
+                "key": "tome_of_knowledge"
+            },
+            {
+                "time": 602,
+                "key": "cloak"
+            },
+            {
+                "time": 629,
+                "key": "hood_of_defiance"
+            },
+            {
+                "time": 651,
+                "key": "tpscroll"
+            },
+            {
+                "time": 652,
+                "key": "clarity"
+            },
+            {
+                "time": 652,
+                "key": "clarity"
+            },
+            {
+                "time": 761,
+                "key": "clarity"
+            },
+            {
+                "time": 794,
+                "key": "eternal_shroud"
+            },
+            {
+                "time": 909,
+                "key": "ward_observer"
+            },
+            {
+                "time": 910,
+                "key": "ward_observer"
+            },
+            {
+                "time": 910,
+                "key": "ward_observer"
+            },
+            {
+                "time": 916,
+                "key": "ward_sentry"
+            },
+            {
+                "time": 917,
+                "key": "smoke_of_deceit"
+            },
+            {
+                "time": 1306,
+                "key": "ward_observer"
+            },
+            {
+                "time": 1306,
+                "key": "ward_observer"
+            },
+            {
+                "time": 1466,
+                "key": "staff_of_wizardry"
+            },
+            {
+                "time": 1466,
+                "key": "fluffy_hat"
+            },
+            {
+                "time": 1466,
+                "key": "force_staff"
+            }
+        ],
+        "rune_pickups": 5,
+        "runes_log": [
+            {
+                "time": 184,
+                "key": 5
+            },
+            {
+                "time": 376,
+                "key": 5
+            },
+            {
+                "time": 541,
+                "key": 5
+            },
+            {
+                "time": 725,
+                "key": 5
+            },
+            {
+                "time": 1089,
+                "key": 5
+            }
+        ],
+        "sen_placed": 1,
+        "stuns": 13.763306,
+        "tower_damage": 0,
+        "xpm": 444,
+        "xp_t": [
+            0,
+            0,
+            298,
+            668,
+            872,
+            1193,
+            1551,
+            1957,
+            2549,
+            2796,
+            3233,
+            4556,
+            5386,
+            6223,
+            6249,
+            6720,
+            6750,
+            6815,
+            7545,
+            8545,
+            8914,
+            9969,
+            9997,
+            10717,
+            10977,
+            11198
+        ],
+        "personaname": "Unknown",
+        "duration": 1512,
+        "is_radiant": false,
+        "win": 0,
+        "total_gold": 9298,
+        "total_xp": 11188,
+        "kills_per_min": 0,
+        "kda": 0,
+        "lane": 5,
+        "lane_role": 4,
+        "is_roaming": false,
+        "life_state_dead": 272,
+        "rank_tier": null,
+        "damage_inflictor": {
+            "pudge_rot": 2115,
+            "null": 263,
+            "pudge_meat_hook": 1274,
+            "chipped_vest": 514,
+            "pudge_dismember": 732
+        },
+        "damage_inflictor_received": {
+            "shadow_shaman_shackles": 66,
+            "necrolyte_heartstopper_aura": 602,
+            "null": 7801,
+            "necrolyte_death_pulse": 322,
+            "shadow_shaman_ether_shock": 337,
+            "spectre_desolate": 626,
+            "necrolyte_reapers_scythe": 256,
+            "spectre_spectral_dagger": 687,
+            "radiance": 543,
+            "sniper_shrapnel": 538,
+            "spectre_dispersion": 873,
+            "dazzle_shadow_wave": 285,
+            "dazzle_poison_touch": 478,
+            "dazzle_bad_juju": 39
+        },
+        "damage_targets": {
+            "pudge_rot": {
+                "npc_dota_hero_pudge": 10892,
+                "npc_dota_hero_shadow_shaman": 564,
+                "npc_dota_hero_necrolyte": 598,
+                "npc_dota_hero_spectre": 647,
+                "npc_dota_hero_dazzle": 105,
+                "npc_dota_hero_sniper": 201
+            },
+            "null": {
+                "npc_dota_hero_shadow_shaman": 179,
+                "npc_dota_hero_sniper": 84
+            },
+            "pudge_meat_hook": {
+                "npc_dota_hero_shadow_shaman": 510,
+                "npc_dota_hero_spectre": 184,
+                "npc_dota_hero_necrolyte": 290,
+                "npc_dota_hero_sniper": 290
+            },
+            "chipped_vest": {
+                "npc_dota_hero_necrolyte": 88,
+                "npc_dota_hero_spectre": 65,
+                "npc_dota_hero_sniper": 299,
+                "npc_dota_hero_dazzle": 62
+            },
+            "pudge_dismember": {
+                "npc_dota_hero_necrolyte": 396,
+                "npc_dota_hero_spectre": 180,
+                "npc_dota_hero_shadow_shaman": 156
+            }
+        },
+        "obs_log": [
+            {
+                "time": 519,
+                "type": "obs_log",
+                "key": "[122, 144]",
+                "slot": 7,
+                "x": 122,
+                "y": 144,
+                "z": 132,
+                "entityleft": false,
+                "ehandle": 3361057,
+                "player_slot": 130
+            },
+            {
+                "time": 1078,
+                "type": "obs_log",
+                "key": "[106, 154]",
+                "slot": 7,
+                "x": 106,
+                "y": 154,
+                "z": 132,
+                "entityleft": false,
+                "ehandle": 6112550,
+                "player_slot": 130
+            }
+        ],
+        "obs_left_log": [
+            {
+                "time": 879,
+                "type": "obs_left_log",
+                "key": "[122, 144]",
+                "slot": 7,
+                "attackername": "npc_dota_hero_pudge",
+                "x": 122,
+                "y": 144,
+                "z": 132,
+                "entityleft": true,
+                "ehandle": 3361057,
+                "player_slot": 130
+            },
+            {
+                "time": 1438,
+                "type": "obs_left_log",
+                "key": "[106, 154]",
+                "slot": 7,
+                "attackername": "npc_dota_hero_pudge",
+                "x": 106,
+                "y": 154,
+                "z": 132,
+                "entityleft": true,
+                "ehandle": 6112550,
+                "player_slot": 130
+            }
+        ],
+        "sen_log": [
+            {
+                "time": 1074,
+                "type": "sen_log",
+                "key": "[104, 156]",
+                "slot": 7,
+                "x": 104,
+                "y": 156,
+                "z": 132,
+                "entityleft": false,
+                "ehandle": 8538328,
+                "player_slot": 130
+            }
+        ],
+        "sen_left_log": [
+            {
+                "time": 1494,
+                "type": "sen_left_log",
+                "key": "[104, 156]",
+                "slot": 7,
+                "attackername": "npc_dota_hero_pudge",
+                "x": 104,
+                "y": 156,
+                "z": 132,
+                "entityleft": true,
+                "ehandle": 8538328,
+                "player_slot": 130
+            }
+        ],
+        "ml_lane_role": 3
+    },
+    {
+        "match_id": 6676192106,
+        "ability_upgrades_arr": [
+            5609,
+            5608,
+            5609,
+            5608,
+            5608,
+            5612,
+            5608,
+            5610,
+            5609,
+            7661
+        ],
+        "account_id": null,
+        "additional_units": null,
+        "assists": 5,
+        "backpack_0": 0,
+        "backpack_1": 0,
+        "backpack_2": 0,
+        "buyback_log": [],
+        "camps_stacked": 0,
+        "damage": {
+            "npc_dota_hero_dazzle": 942,
+            "npc_dota_creep_goodguys_ranged": 3541,
+            "npc_dota_creep_goodguys_melee": 11238,
+            "npc_dota_hero_spectre": 3126,
+            "npc_dota_sentry_wards": 100,
+            "npc_dota_creep_badguys_melee": 120,
+            "npc_dota_hero_sniper": 171,
+            "npc_dota_hero_shadow_shaman": 474,
+            "npc_dota_neutral_kobold": 687,
+            "npc_dota_hero_necrolyte": 840,
+            "illusion_npc_dota_hero_spectre": 2839,
+            "illusion_npc_dota_hero_sniper": 1481,
+            "npc_dota_goodguys_siege": 68
+        },
+        "damage_taken": {
+            "npc_dota_hero_dazzle": 3750,
+            "npc_dota_hero_spectre": 4372,
+            "npc_dota_creep_goodguys_ranged": 234,
+            "npc_dota_creep_goodguys_melee": 329,
+            "npc_dota_goodguys_tower1_mid": 110,
+            "npc_dota_hero_sniper": 7340,
+            "npc_dota_goodguys_siege": 146,
+            "npc_dota_hero_shadow_shaman": 821,
+            "npc_dota_neutral_kobold": 39,
+            "npc_dota_hero_necrolyte": 3057,
+            "npc_dota_creep_goodguys_melee_upgraded": 59,
+            "npc_dota_creep_goodguys_ranged_upgraded": 14
+        },
+        "deaths": 8,
+        "denies": 1,
+        "dn_t": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+        ],
+        "gpm": 192,
+        "gold_t": [
+            0,
+            179,
+            279,
+            379,
+            519,
+            652,
+            758,
+            954,
+            1328,
+            1434,
+            1630,
+            1736,
+            1881,
+            2081,
+            2187,
+            2293,
+            2407,
+            2839,
+            2952,
+            3236,
+            3518,
+            3723,
+            4129,
+            4338,
+            4631,
+            4816
+        ],
+        "hero_damage": 5553,
+        "hero_healing": 66,
+        "hero_id": 107,
+        "item_0": 267,
+        "item_1": 181,
+        "item_2": 218,
+        "item_3": 214,
+        "item_4": 0,
+        "item_5": 0,
+        "item_neutral": 356,
+        "kill_streaks": {},
+        "killed": {
+            "npc_dota_sentry_wards": 2,
+            "npc_dota_creep_goodguys_melee": 18,
+            "npc_dota_creep_goodguys_ranged": 7,
+            "npc_dota_neutral_kobold": 2,
+            "npc_dota_creep_badguys_melee": 1
+        },
+        "kills": 0,
+        "kills_log": [],
+        "last_hits": 29,
+        "level": 10,
+        "lh_t": [
+            0,
+            0,
+            0,
+            2,
+            2,
+            2,
+            2,
+            2,
+            8,
+            8,
+            8,
+            8,
+            8,
+            9,
+            9,
+            9,
+            10,
+            13,
+            14,
+            14,
+            18,
+            20,
+            25,
+            25,
+            29,
+            29
+        ],
+        "max_hero_hit": {
+            "type": "max_hero_hit",
+            "time": 1353,
+            "max": true,
+            "inflictor": "earth_spirit_boulder_smash",
+            "unit": "npc_dota_hero_earth_spirit",
+            "key": "npc_dota_hero_necrolyte",
+            "value": 236,
+            "slot": 8,
+            "player_slot": 131
+        },
+        "multi_kills": {},
+        "net_worth": 4577,
+        "obs_placed": 2,
+        "party_id": 2,
+        "permanent_buffs": [],
+        "purchase_log": [
+            {
+                "time": -60,
+                "key": "sobi_mask"
+            },
+            {
+                "time": -60,
+                "key": "ring_of_protection"
+            },
+            {
+                "time": -60,
+                "key": "circlet"
+            },
+            {
+                "time": -58,
+                "key": "tango"
+            },
+            {
+                "time": 71,
+                "key": "tango"
+            },
+            {
+                "time": 71,
+                "key": "ward_observer"
+            },
+            {
+                "time": 71,
+                "key": "ward_sentry"
+            },
+            {
+                "time": 199,
+                "key": "orb_of_venom"
+            },
+            {
+                "time": 313,
+                "key": "tpscroll"
+            },
+            {
+                "time": 315,
+                "key": "ward_sentry"
+            },
+            {
+                "time": 315,
+                "key": "ward_observer"
+            },
+            {
+                "time": 316,
+                "key": "smoke_of_deceit"
+            },
+            {
+                "time": 479,
+                "key": "urn_of_shadows"
+            },
+            {
+                "time": 482,
+                "key": "clarity"
+            },
+            {
+                "time": 483,
+                "key": "tpscroll"
+            },
+            {
+                "time": 603,
+                "key": "ward_observer"
+            },
+            {
+                "time": 603,
+                "key": "ward_sentry"
+            },
+            {
+                "time": 690,
+                "key": "boots"
+            },
+            {
+                "time": 696,
+                "key": "ward_sentry"
+            },
+            {
+                "time": 696,
+                "key": "ward_sentry"
+            },
+            {
+                "time": 786,
+                "key": "wind_lace"
+            },
+            {
+                "time": 882,
+                "key": "tranquil_boots"
+            },
+            {
+                "time": 882,
+                "key": "ring_of_regen"
+            },
+            {
+                "time": 1193,
+                "key": "vitality_booster"
+            },
+            {
+                "time": 1436,
+                "key": "spirit_vessel"
+            }
+        ],
+        "rune_pickups": 4,
+        "runes_log": [
+            {
+                "time": 361,
+                "key": 5
+            },
+            {
+                "time": 963,
+                "key": 5
+            },
+            {
+                "time": 1293,
+                "key": 5
+            },
+            {
+                "time": 1462,
+                "key": 5
+            }
+        ],
+        "sen_placed": 4,
+        "stuns": 24.06095,
+        "tower_damage": 0,
+        "xpm": 252,
+        "xp_t": [
+            0,
+            45,
+            234,
+            434,
+            654,
+            847,
+            871,
+            951,
+            1363,
+            1487,
+            1684,
+            1910,
+            2068,
+            2136,
+            2350,
+            2416,
+            2561,
+            3005,
+            3552,
+            4232,
+            4629,
+            4894,
+            5233,
+            5825,
+            6240,
+            6351
+        ],
+        "personaname": "Unknown",
+        "duration": 1512,
+        "is_radiant": false,
+        "win": 0,
+        "total_gold": 4838,
+        "total_xp": 6350,
+        "kills_per_min": 0,
+        "kda": 0,
+        "lane": 1,
+        "lane_role": 3,
+        "is_roaming": false,
+        "life_state_dead": 198,
+        "rank_tier": null,
+        "damage_inflictor": {
+            "earth_spirit_rolling_boulder": 1003,
+            "null": 1123,
+            "earth_spirit_boulder_smash": 1933,
+            "orb_of_venom": 47,
+            "urn_of_shadows": 459,
+            "earth_spirit_magnetize": 468,
+            "earth_spirit_geomagnetic_grip": 60,
+            "spirit_vessel": 460
+        },
+        "damage_inflictor_received": {
+            "null": 8348,
+            "dazzle_poison_touch": 1980,
+            "spectre_dispersion": 1681,
+            "dazzle_shadow_wave": 554,
+            "spectre_spectral_dagger": 775,
+            "sniper_shrapnel": 1411,
+            "spectre_desolate": 341,
+            "dazzle_bad_juju": 108,
+            "shadow_shaman_ether_shock": 300,
+            "sniper_assassinate": 765,
+            "necrolyte_heartstopper_aura": 1062,
+            "radiance": 1575,
+            "necrolyte_death_pulse": 420,
+            "shadow_shaman_shackles": 20
+        },
+        "damage_targets": {
+            "earth_spirit_rolling_boulder": {
+                "npc_dota_hero_dazzle": 237,
+                "npc_dota_hero_spectre": 411,
+                "npc_dota_hero_sniper": 46,
+                "npc_dota_hero_shadow_shaman": 240,
+                "npc_dota_hero_necrolyte": 69
+            },
+            "null": {
+                "npc_dota_hero_dazzle": 335,
+                "npc_dota_hero_spectre": 668,
+                "npc_dota_hero_sniper": 33,
+                "npc_dota_hero_shadow_shaman": 87
+            },
+            "earth_spirit_boulder_smash": {
+                "npc_dota_hero_spectre": 1247,
+                "npc_dota_hero_dazzle": 360,
+                "npc_dota_hero_sniper": 90,
+                "npc_dota_hero_necrolyte": 236
+            },
+            "orb_of_venom": {
+                "npc_dota_hero_dazzle": 10,
+                "npc_dota_hero_spectre": 32,
+                "npc_dota_hero_sniper": 2,
+                "npc_dota_hero_shadow_shaman": 3
+            },
+            "urn_of_shadows": {
+                "npc_dota_hero_shadow_shaman": 144,
+                "npc_dota_hero_spectre": 240,
+                "npc_dota_hero_necrolyte": 75
+            },
+            "earth_spirit_magnetize": {
+                "npc_dota_hero_spectre": 468
+            },
+            "earth_spirit_geomagnetic_grip": {
+                "npc_dota_hero_spectre": 60
+            },
+            "spirit_vessel": {
+                "npc_dota_hero_necrolyte": 460
+            }
+        },
+        "obs_log": [
+            {
+                "time": 466,
+                "type": "obs_log",
+                "key": "[166, 90]",
+                "slot": 8,
+                "x": 166,
+                "y": 90,
+                "z": 128,
+                "entityleft": false,
+                "ehandle": 12273439,
+                "player_slot": 131
+            },
+            {
+                "time": 821,
+                "type": "obs_log",
+                "key": "[186, 124]",
+                "slot": 8,
+                "x": 186,
+                "y": 124,
+                "z": 132,
+                "entityleft": false,
+                "ehandle": 4638826,
+                "player_slot": 131
+            }
+        ],
+        "obs_left_log": [
+            {
+                "time": 796,
+                "type": "obs_left_log",
+                "key": "[166, 90]",
+                "slot": 8,
+                "attackername": "npc_dota_hero_dazzle",
+                "x": 166,
+                "y": 90,
+                "z": 128,
+                "entityleft": true,
+                "ehandle": 12273439,
+                "player_slot": 131
+            },
+            {
+                "time": 1076,
+                "type": "obs_left_log",
+                "key": "[186, 124]",
+                "slot": 8,
+                "attackername": "npc_dota_hero_shadow_shaman",
+                "x": 186,
+                "y": 124,
+                "z": 128,
+                "entityleft": true,
+                "ehandle": 4638826,
+                "player_slot": 131
+            }
+        ],
+        "sen_log": [
+            {
+                "time": 134,
+                "type": "sen_log",
+                "key": "[164, 98]",
+                "slot": 8,
+                "x": 164,
+                "y": 98,
+                "z": 128,
+                "entityleft": false,
+                "ehandle": 4327071,
+                "player_slot": 131
+            },
+            {
+                "time": 329,
+                "type": "sen_log",
+                "key": "[156, 92]",
+                "slot": 8,
+                "x": 156,
+                "y": 92,
+                "z": 128,
+                "entityleft": false,
+                "ehandle": 7128488,
+                "player_slot": 131
+            },
+            {
+                "time": 657,
+                "type": "sen_log",
+                "key": "[172, 100]",
+                "slot": 8,
+                "x": 172,
+                "y": 100,
+                "z": 128,
+                "entityleft": false,
+                "ehandle": 11781617,
+                "player_slot": 131
+            },
+            {
+                "time": 823,
+                "type": "sen_log",
+                "key": "[186, 124]",
+                "slot": 8,
+                "x": 186,
+                "y": 124,
+                "z": 132,
+                "entityleft": false,
+                "ehandle": 6047507,
+                "player_slot": 131
+            }
+        ],
+        "sen_left_log": [
+            {
+                "time": 200,
+                "type": "sen_left_log",
+                "key": "[164, 98]",
+                "slot": 8,
+                "attackername": "npc_dota_hero_dazzle",
+                "x": 164,
+                "y": 98,
+                "z": 128,
+                "entityleft": true,
+                "ehandle": 4327071,
+                "player_slot": 131
+            },
+            {
+                "time": 749,
+                "type": "sen_left_log",
+                "key": "[156, 92]",
+                "slot": 8,
+                "attackername": "npc_dota_hero_earth_spirit",
+                "x": 156,
+                "y": 92,
+                "z": 128,
+                "entityleft": true,
+                "ehandle": 7128488,
+                "player_slot": 131
+            },
+            {
+                "time": 1074,
+                "type": "sen_left_log",
+                "key": "[186, 124]",
+                "slot": 8,
+                "attackername": "npc_dota_hero_dazzle",
+                "x": 186,
+                "y": 124,
+                "z": 128,
+                "entityleft": true,
+                "ehandle": 6047507,
+                "player_slot": 131
+            },
+            {
+                "time": 1077,
+                "type": "sen_left_log",
+                "key": "[172, 100]",
+                "slot": 8,
+                "attackername": "npc_dota_hero_earth_spirit",
+                "x": 172,
+                "y": 100,
+                "z": 128,
+                "entityleft": true,
+                "ehandle": 11781617,
+                "player_slot": 131
+            }
+        ],
+        "ml_lane_role": 1
+    },
+    {
+        "match_id": 6676192106,
+        "ability_upgrades_arr": [
+            5182,
+            5184,
+            5691,
+            5184,
+            5184,
+            5185,
+            5184,
+            5182,
+            5182,
+            5182,
+            5691,
+            5185
+        ],
+        "account_id": null,
+        "additional_units": null,
+        "assists": 5,
+        "backpack_0": 11,
+        "backpack_1": 0,
+        "backpack_2": 0,
+        "buyback_log": [
+            {
+                "time": 1355,
+                "slot": 9,
+                "type": "buyback_log",
+                "player_slot": 132
+            }
+        ],
+        "camps_stacked": 0,
+        "damage": {
+            "npc_dota_creep_goodguys_melee": 16855,
+            "npc_dota_creep_badguys_ranged": 229,
+            "npc_dota_hero_spectre": 2528,
+            "npc_dota_creep_goodguys_ranged": 4210,
+            "npc_dota_hero_dazzle": 2014,
+            "npc_dota_neutral_harpy_scout": 263,
+            "npc_dota_neutral_forest_troll_berserker": 119,
+            "npc_dota_courier": 115,
+            "npc_dota_goodguys_siege": 309,
+            "npc_dota_creep_badguys_melee": 484,
+            "npc_dota_hero_shadow_shaman": 1498,
+            "npc_dota_hero_sniper": 1264,
+            "npc_dota_neutral_satyr_hellcaller": 1487,
+            "npc_dota_neutral_satyr_soulstealer": 850,
+            "npc_dota_neutral_kobold_taskmaster": 314,
+            "npc_dota_hero_necrolyte": 1749,
+            "npc_dota_neutral_satyr_trickster": 239,
+            "npc_dota_creep_goodguys_melee_upgraded": 220,
+            "npc_dota_creep_goodguys_ranged_upgraded": 761
+        },
+        "damage_taken": {
+            "npc_dota_hero_spectre": 5631,
+            "npc_dota_creep_goodguys_ranged": 438,
+            "npc_dota_goodguys_tower1_bot": 193,
+            "npc_dota_creep_goodguys_melee": 1051,
+            "npc_dota_hero_dazzle": 4390,
+            "npc_dota_neutral_forest_troll_berserker": 64,
+            "npc_dota_neutral_harpy_storm": 10,
+            "npc_dota_hero_sniper": 5719,
+            "npc_dota_hero_shadow_shaman": 1416,
+            "npc_dota_hero_necrolyte": 3305,
+            "npc_dota_neutral_satyr_hellcaller": 55,
+            "npc_dota_neutral_satyr_trickster": 45,
+            "npc_dota_neutral_satyr_soulstealer": 53,
+            "npc_dota_neutral_kobold_taskmaster": 10,
+            "npc_dota_neutral_centaur_outrunner": 21,
+            "npc_dota_creep_goodguys_melee_upgraded": 56,
+            "npc_dota_creep_goodguys_ranged_upgraded": 55
+        },
+        "deaths": 7,
+        "denies": 9,
+        "dn_t": [
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            2,
+            4,
+            8,
+            8,
+            9,
+            9,
+            9,
+            9,
+            9,
+            9,
+            9,
+            9,
+            9,
+            9,
+            9,
+            9,
+            9,
+            9,
+            9
+        ],
+        "gpm": 296,
+        "gold_t": [
+            0,
+            216,
+            437,
+            683,
+            1082,
+            1400,
+            1653,
+            1849,
+            2186,
+            2385,
+            2654,
+            2962,
+            3142,
+            3302,
+            3653,
+            3925,
+            4176,
+            4558,
+            5053,
+            5829,
+            6011,
+            6447,
+            6625,
+            6834,
+            7265,
+            7450
+        ],
+        "hero_damage": 9053,
+        "hero_healing": 0,
+        "hero_id": 41,
+        "item_0": 172,
+        "item_1": 36,
+        "item_2": 188,
+        "item_3": 63,
+        "item_4": 75,
+        "item_5": 7,
+        "item_neutral": 331,
+        "kill_streaks": {},
+        "killed": {
+            "npc_dota_creep_goodguys_melee": 48,
+            "npc_dota_creep_badguys_ranged": 3,
+            "npc_dota_creep_goodguys_ranged": 21,
+            "npc_dota_hero_dazzle": 1,
+            "npc_dota_neutral_harpy_scout": 1,
+            "npc_dota_courier": 1,
+            "npc_dota_goodguys_siege": 1,
+            "npc_dota_creep_badguys_melee": 6,
+            "npc_dota_hero_necrolyte": 1,
+            "npc_dota_neutral_satyr_hellcaller": 1,
+            "npc_dota_neutral_satyr_soulstealer": 1,
+            "npc_dota_neutral_satyr_trickster": 1,
+            "npc_dota_creep_goodguys_melee_upgraded": 1,
+            "npc_dota_creep_goodguys_ranged_upgraded": 2
+        },
+        "kills": 2,
+        "kills_log": [
+            {
+                "time": 263,
+                "key": "npc_dota_hero_dazzle"
+            },
+            {
+                "time": 1126,
+                "key": "npc_dota_hero_necrolyte"
+            }
+        ],
+        "last_hits": 78,
+        "level": 12,
+        "lh_t": [
+            0,
+            1,
+            4,
+            8,
+            14,
+            15,
+            19,
+            19,
+            23,
+            25,
+            27,
+            32,
+            33,
+            33,
+            39,
+            43,
+            46,
+            48,
+            57,
+            60,
+            62,
+            71,
+            71,
+            71,
+            78,
+            78
+        ],
+        "max_hero_hit": {
+            "type": "max_hero_hit",
+            "time": 1439,
+            "max": true,
+            "inflictor": null,
+            "unit": "npc_dota_hero_faceless_void",
+            "key": "npc_dota_hero_necrolyte",
+            "value": 130,
+            "slot": 9,
+            "player_slot": 132
+        },
+        "multi_kills": {},
+        "net_worth": 6054,
+        "obs_placed": 0,
+        "party_id": 2,
+        "permanent_buffs": [
+            {
+                "permanent_buff": 6,
+                "stack_count": 1
+            }
+        ],
+        "purchase_log": [
+            {
+                "time": -88,
+                "key": "quelling_blade"
+            },
+            {
+                "time": -88,
+                "key": "slippers"
+            },
+            {
+                "time": -88,
+                "key": "circlet"
+            },
+            {
+                "time": -88,
+                "key": "faerie_fire"
+            },
+            {
+                "time": -88,
+                "key": "enchanted_mango"
+            },
+            {
+                "time": -88,
+                "key": "tango",
+                "charges": 6
+            },
+            {
+                "time": 112,
+                "key": "magic_stick"
+            },
+            {
+                "time": 144,
+                "key": "wraith_band"
+            },
+            {
+                "time": 217,
+                "key": "boots"
+            },
+            {
+                "time": 273,
+                "key": "branches"
+            },
+            {
+                "time": 273,
+                "key": "branches"
+            },
+            {
+                "time": 273,
+                "key": "magic_wand"
+            },
+            {
+                "time": 275,
+                "key": "tango"
+            },
+            {
+                "time": 480,
+                "key": "lifesteal"
+            },
+            {
+                "time": 531,
+                "key": "flask"
+            },
+            {
+                "time": 532,
+                "key": "tango"
+            },
+            {
+                "time": 746,
+                "key": "quarterstaff"
+            },
+            {
+                "time": 760,
+                "key": "mask_of_madness"
+            },
+            {
+                "time": 860,
+                "key": "gloves"
+            },
+            {
+                "time": 966,
+                "key": "power_treads"
+            },
+            {
+                "time": 966,
+                "key": "boots_of_elves"
+            },
+            {
+                "time": 1010,
+                "key": "tpscroll"
+            },
+            {
+                "time": 1131,
+                "key": "javelin"
+            },
+            {
+                "time": 1232,
+                "key": "tome_of_knowledge"
+            },
+            {
+                "time": 1300,
+                "key": "smoke_of_deceit"
+            },
+            {
+                "time": 1301,
+                "key": "smoke_of_deceit"
+            }
+        ],
+        "rune_pickups": 0,
+        "runes_log": [],
+        "sen_placed": 0,
+        "stuns": 15.296135,
+        "tower_damage": 0,
+        "xpm": 322,
+        "xp_t": [
+            0,
+            45,
+            279,
+            564,
+            881,
+            1096,
+            1524,
+            1741,
+            2119,
+            2277,
+            2465,
+            2729,
+            2981,
+            3207,
+            3535,
+            3780,
+            3925,
+            4511,
+            4847,
+            5718,
+            5948,
+            7304,
+            7332,
+            7769,
+            8024,
+            8135
+        ],
+        "personaname": "Unknown",
+        "duration": 1512,
+        "is_radiant": false,
+        "win": 0,
+        "total_gold": 7459,
+        "total_xp": 8114,
+        "kills_per_min": 0.07936507936507936,
+        "kda": 0,
+        "lane": 1,
+        "lane_role": 3,
+        "is_roaming": false,
+        "life_state_dead": 203,
+        "rank_tier": null,
+        "damage_inflictor": {
+            "null": 6489,
+            "faceless_void_time_lock": 397,
+            "faceless_void_time_dilation": 2167
+        },
+        "damage_inflictor_received": {
+            "spectre_spectral_dagger": 1800,
+            "null": 9407,
+            "spectre_dispersion": 588,
+            "dazzle_poison_touch": 1536,
+            "dazzle_shadow_wave": 880,
+            "spectre_desolate": 718,
+            "sniper_shrapnel": 1500,
+            "sniper_assassinate": 240,
+            "dazzle_bad_juju": 128,
+            "shadow_shaman_shackles": 373,
+            "shadow_shaman_ether_shock": 210,
+            "necrolyte_heartstopper_aura": 924,
+            "radiance": 1485,
+            "necrolyte_death_pulse": 630,
+            "necrolyte_reapers_scythe": 42
+        },
+        "damage_targets": {
+            "null": {
+                "npc_dota_hero_spectre": 1716,
+                "npc_dota_hero_dazzle": 1253,
+                "npc_dota_hero_shadow_shaman": 922,
+                "npc_dota_hero_sniper": 1154,
+                "npc_dota_hero_necrolyte": 1444
+            },
+            "faceless_void_time_lock": {
+                "npc_dota_hero_spectre": 158,
+                "npc_dota_hero_dazzle": 29,
+                "npc_dota_hero_sniper": 110,
+                "npc_dota_hero_shadow_shaman": 66,
+                "npc_dota_hero_necrolyte": 34
+            },
+            "faceless_void_time_dilation": {
+                "npc_dota_hero_dazzle": 732,
+                "npc_dota_hero_spectre": 654,
+                "npc_dota_hero_shadow_shaman": 510,
+                "npc_dota_hero_necrolyte": 271
+            }
+        },
+        "obs_log": [],
+        "obs_left_log": [],
+        "sen_log": [],
+        "sen_left_log": [],
+        "ml_lane_role": 4
+    }
+]

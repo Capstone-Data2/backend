@@ -25,6 +25,6 @@ def JSONResponseReturn(params, players):
     for param in params:
         values = {}
         for player in players:
-            values.update({player["hero_id"]: player[param]})
+            values.update({str(player["hero_id"]): player[param]})
         resp.update({param: values})
     return resp

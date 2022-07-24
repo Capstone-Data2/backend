@@ -44,7 +44,7 @@ class RecentMatches(APIView):
       return Response(status=status.HTTP_201_CREATED)
     else:
       filter = request.data['filter']
-    get_data_set(filter)
+    get_data_set(db, filter)
     return Response(status=status.HTTP_201_CREATED)
 
 class Match(APIView):
@@ -189,7 +189,7 @@ class Items(APIView):
     player_items = {}
     for player in players:
       items = player['purchase_log']
-      player_items.update({player['hero_id']: items})
+      player_items.update({str(player['hero_id']): items})
 
     return Response(player_items, status=status.HTTP_200_OK)
 
