@@ -24,17 +24,35 @@ common_obj = [obj['kills'], obj['deaths'], obj['assists'], obj['gpm'], obj['xpm'
 common_core_obj = [obj['last_hits'], obj['hero_damage']]
 common_supp_obj = [obj['stuns'], obj["obs_placed"], obj["sen_placed"]]
 
-def test_posfeatures():
-    assert posfeatures(1) == common_features + common_core_features
-    assert posfeatures(2) == common_features + common_core_features + ["rune_pickups"]
-    assert posfeatures(3) == common_features + common_core_features + ["stuns", "tower_damage"]
-    assert posfeatures(4) == common_features + common_sup_features
-    assert posfeatures(5) == common_features + common_sup_features
+class TestPosFeatures:
+    def test_posfeatures1(self):
+        assert posfeatures(1) == common_features + common_core_features
+    
+    def test_posfeatures2(self):
+        assert posfeatures(2) == common_features + common_core_features + ["rune_pickups"]
+    
+    def test_posfeatures3(self):
+        assert posfeatures(3) == common_features + common_core_features + ["stuns", "tower_damage"]
+    
+    def test_posfeatures4(self):
+        assert posfeatures(4) == common_features + common_sup_features
+    
+    def test_posfeatures5(self):
+        assert posfeatures(5) == common_features + common_sup_features
 
-def test_positionFiller():
-    assert positionFiller(obj, 1) == common_obj + common_core_obj
-    assert positionFiller(obj, 2) == common_obj + common_core_obj + [obj['rune_pickups']]
-    assert positionFiller(obj, 3) == common_obj + common_core_obj + [obj['stuns'], obj['tower_damage']]
-    assert positionFiller(obj, 4) == common_obj + common_supp_obj
-    assert positionFiller(obj, 5) == common_obj + common_supp_obj
+class TestPositionFiller:
+    def test_positionFiller1(self):
+         assert positionFiller(obj, 1) == common_obj + common_core_obj
+
+    def test_positionFiller2(self):
+          assert positionFiller(obj, 2) == common_obj + common_core_obj + [obj['rune_pickups']]
+    
+    def test_positionFiller3(self):
+        assert positionFiller(obj, 3) == common_obj + common_core_obj + [obj['stuns'], obj['tower_damage']]
+    
+    def test_positionFiller4(self):
+        assert positionFiller(obj, 4) == common_obj + common_supp_obj
+    
+    def test_positionFiller5(self):
+        assert positionFiller(obj, 5) == common_obj + common_supp_obj
 
