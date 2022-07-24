@@ -154,7 +154,7 @@ class Performance(APIView):
           '% of Gold @ 10' : round(percentageGoldGained(selected_player['gold_t'][10]), 2),
           'ML Score': round(predictModel(rank, selected_player['ml_lane_role'], [positionFiller(selected_player, selected_player['ml_lane_role'])])*100, 2)
         }
-        response.update({selected_player['hero_id']: resp})
+        response.update({str(selected_player['hero_id']): resp})
       
       return Response(response)
     
@@ -231,10 +231,10 @@ class Log(APIView):
     count = 0
     for player in players:  
       player_kill_log = {
-        player['hero_id']: player['kills_log']
+        str(player['hero_id']): player['kills_log']
       }
       player_rune_log = {
-        player['hero_id']: player['runes_log']
+        str(player['hero_id']): player['runes_log']
       }
       player_kills.append(player_kill_log)
       player_runes.append(player_rune_log)

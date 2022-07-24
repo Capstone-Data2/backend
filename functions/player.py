@@ -82,14 +82,18 @@ def lowestGPMFiveMin(gold_array):
             min = interval
             min_count = count
         count = count + 1
-    return (min / 5, min_count)
+    return [min / 5, min_count]
 
 
 def killParticipation(radiant, dire_score, radiant_score, kills, assists):
-    if radiant:
-        return (kills + assists) / radiant_score
+    if((radiant==True and radiant_score==0) or (radiant==False and dire_score == 0)):
+        return 0
     else:
-        return (kills + assists) / dire_score
+        if radiant:
+            
+            return (kills + assists) / radiant_score
+        else:
+            return (kills + assists) / dire_score
 
 
 def killsPerMinTen(kills_log):
