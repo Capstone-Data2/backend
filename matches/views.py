@@ -52,6 +52,8 @@ class Match(APIView):
   
   def get(self, request, match_id, *args, **kwargs):
     data, rank, match, players = dataAccess(db, match_id)
+    if(data == None ):
+      return Response(status=status.HTTP_204_NO_CONTENT)    
     match = getTimeDiff(match)
 
     radiant_win = 0
@@ -113,17 +115,17 @@ class Match(APIView):
           }
           parsed_res = parse(response, match_id)
           if parsed_res[0]:
-            insertMatch(match, "allmatches")
+            insertMatch(db, match, "allmatches")
             data = sanitizeMatch(parsed_res[1], avg_rank)
             if data != False:
-              insertData(data, match_id, avg_rank)
+              insertData(db, data, match_id, avg_rank)
               return Response(status=status.HTTP_201_CREATED)
           else:
             return Response({"error": "Match can't be parsed right now, please try again later"},status=status.HTTP_503_SERVICE_UNAVAILABLE)
         else:
           return Response({"error": "Ranked only pls"},status=status.HTTP_400_BAD_REQUEST)
       else:
-        return Response({"error": "Match does not exist"},status=status.HTTP_400_BAD_REQUEST)
+        return Response({"error": "Match does not exist"},status=status.HTTP_204_NO_CONTENT)
     else:
       return Response({"error": "Match already in DB"},status=status.HTTP_400_BAD_REQUEST)
 
