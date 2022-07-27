@@ -47,6 +47,17 @@ class RecentMatches(APIView):
       filter = request.data['filter']
     get_data_set(db, filter)
     return Response(status=status.HTTP_201_CREATED)
+  
+  def delete(self, request):
+    data = db.allmatches.find()
+    for match in data:
+      if db.allmatches.count_documents({'match_id': match['match_id']}) > 1:
+        del_matches = db.allmatches.find({'match_id': match['match_id']})
+        coll = findRank(del_matches[0]["avg_rank_tier"])
+        db[coll+"matches_data"].delete_many({'match_id': match['match_id']})
+        db[coll+"matches_players"].delete_many({'match_id': match['match_id']})
+        db.allmatches.delete_many({'match_id': match["match_id"]})
+    return Response(status=status.HTTP_200_OK)
 
 class Match(APIView):
   
@@ -123,10 +134,12 @@ class Match(APIView):
           else:
             return Response({"error": "Match can't be parsed right now, please try again later"},status=status.HTTP_503_SERVICE_UNAVAILABLE)
         else:
+          print("noranked")
           return Response({"error": "Ranked only pls"},status=status.HTTP_400_BAD_REQUEST)
       else:
         return Response({"error": "Match does not exist"},status=status.HTTP_204_NO_CONTENT)
     else:
+      print("indb")
       return Response({"error": "Match already in DB"},status=status.HTTP_400_BAD_REQUEST)
 
 class Performance(APIView):

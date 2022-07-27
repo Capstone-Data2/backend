@@ -176,8 +176,7 @@ def parse(response, match_id):
             time.sleep(15)
             y = requests.get(f'https://api.opendota.com/api/request/{x["job"]["jobId"]}').json()
             
-            print(y)
-            if len(y) == 0:
+            if y is None or len(y) == 0:
                 time.sleep(1)
                 response = requests.get(f'https://api.opendota.com/api/matches/{match_id}').json()
                 if response["radiant_gold_adv"] == None:

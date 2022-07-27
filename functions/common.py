@@ -13,6 +13,8 @@ def dataAccess(db, match_id, hero_id=None):
         return None, None, None, None
         
     match = db[rank + match_data].find_one({"match_id": match_id, }, {"_id": 0})
+    if match == None:
+        return None, None, None, None
     if hero_id == None:
         players = []
         for player in match["players"]:
