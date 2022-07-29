@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-w%1y$gs788fx+s3kf3_8aqu(ur0pixwa+_yz0bfa95-vo(dhh7'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['data2backend.azurewebsites.net', '*']
 
@@ -32,7 +32,10 @@ CORS_ALLOWED_ORIGINS = [
     "https://frontend-blue-seven.vercel.app",
     "https://frontend-capstone-data2.vercel.app",
     "https://frontend-git-main-capstone-data2.vercel.app",
-    "https://frontend-8va9gu7df-capstone-data2.vercel.app"
+    "https://frontend-8va9gu7df-capstone-data2.vercel.app",
+    "https://capstone-data2.vercel.app",
+    "https://frontend-git-main-sverrep.vercel.app",
+    "https://frontend-sverrep.vercel.app",
 ]
 
 # Application definition
